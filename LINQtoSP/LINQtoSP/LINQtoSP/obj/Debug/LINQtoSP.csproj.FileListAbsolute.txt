@@ -1,0 +1,10 @@
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\LINQtoSP\LINQtoSP\LINQtoSP\obj\Debug\LINQtoSP.csproj.AssemblyReference.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\LINQtoSP\LINQtoSP\LINQtoSP\obj\Debug\LINQtoSP.form.resources
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\LINQtoSP\LINQtoSP\LINQtoSP\obj\Debug\LINQtoSP.Properties.Resources.resources
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\LINQtoSP\LINQtoSP\LINQtoSP\obj\Debug\LINQtoSP.csproj.GenerateResource.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\LINQtoSP\LINQtoSP\LINQtoSP\obj\Debug\LINQtoSP.csproj.CoreCompileInputs.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\LINQtoSP\LINQtoSP\LINQtoSP\bin\Debug\LINQtoSP.exe.config
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\LINQtoSP\LINQtoSP\LINQtoSP\bin\Debug\LINQtoSP.exe
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\LINQtoSP\LINQtoSP\LINQtoSP\bin\Debug\LINQtoSP.pdb
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\LINQtoSP\LINQtoSP\LINQtoSP\obj\Debug\LINQtoSP.exe
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\LINQtoSP\LINQtoSP\LINQtoSP\obj\Debug\LINQtoSP.pdb
