@@ -17,31 +17,53 @@ namespace LINQtoSP
         public form()
         {
             InitializeComponent();
+            this.listarClientes(); //incluir esto permite actualizar una vez inicializado el formulario
         }
+        void listarClientes()
+        {
+            GridDatos.DataSource = ClienteLinq.spListarClientes();//aquí lo que conseguimos es que el listado aparezca en la grid de datos
+        }
+        private void form_Load(object sender, EventArgs e)
+        {
+            this.listarClientes();
+        }
+
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             ClienteLinq.insertarCliente(TxtNombre.Text, TxtApellido1.Text, TxtApellido2.Text, TxtTelefono.Text);
+            this.listarClientes();
         }
 
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
             ClienteLinq.ModificarCliente(TxtNombre.Text, TxtApellido1.Text, TxtApellido2.Text, TxtTelefono.Text);
+            this.listarClientes();
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             ClienteLinq.EliminarCliente(TxtNombre.Text);
+            this.listarClientes();
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-
+            GridDatos.DataSource = ClienteLinq.BuscarCliente(TxtBuscar.Text);
         }
 
         private void TxtNombre_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnNuevo_Click(object sender, EventArgs e)
+        {
+            TxtNombre.Text = "";
+            TxtApellido1.Text = "";
+            TxtApellido2.Text = "";
+            TxtTelefono.Text = "";
+            TxtBuscar.Text = "";
         }
     }
 }

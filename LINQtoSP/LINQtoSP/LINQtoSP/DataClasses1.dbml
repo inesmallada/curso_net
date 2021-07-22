@@ -27,4 +27,12 @@
       <Column Name="Telefno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.spListarClientes" Method="spListarClientes">
+    <ElementType Name="spListarClientesResult">
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apellido1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apellido2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Telefno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

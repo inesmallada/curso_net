@@ -129,6 +129,7 @@ namespace LINQtoSP
             this.BtnNuevo.TabIndex = 9;
             this.BtnNuevo.Text = "Nuevo";
             this.BtnNuevo.UseVisualStyleBackColor = true;
+            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // BtnGuardar
             // 
@@ -190,7 +191,7 @@ namespace LINQtoSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(648, 533);
+            this.ClientSize = new System.Drawing.Size(654, 522);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.label5);
@@ -209,6 +210,7 @@ namespace LINQtoSP
             this.Controls.Add(this.label1);
             this.Name = "form";
             this.Text = "LINQ";
+            this.Load += new System.EventHandler(this.form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

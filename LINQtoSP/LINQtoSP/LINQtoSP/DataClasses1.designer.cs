@@ -89,6 +89,13 @@ namespace LINQtoSP
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nombre);
 			return ((ISingleResult<BuscarClienteResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spListarClientes")]
+		public ISingleResult<spListarClientesResult> spListarClientes()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<spListarClientesResult>)(result.ReturnValue));
+		}
 	}
 	
 	public partial class BuscarClienteResult
@@ -103,6 +110,86 @@ namespace LINQtoSP
 		private string _Telefno;
 		
 		public BuscarClienteResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(50)")]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this._Nombre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Apellido1", DbType="VarChar(50)")]
+		public string Apellido1
+		{
+			get
+			{
+				return this._Apellido1;
+			}
+			set
+			{
+				if ((this._Apellido1 != value))
+				{
+					this._Apellido1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Apellido2", DbType="VarChar(50)")]
+		public string Apellido2
+		{
+			get
+			{
+				return this._Apellido2;
+			}
+			set
+			{
+				if ((this._Apellido2 != value))
+				{
+					this._Apellido2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Telefno", DbType="VarChar(50)")]
+		public string Telefno
+		{
+			get
+			{
+				return this._Telefno;
+			}
+			set
+			{
+				if ((this._Telefno != value))
+				{
+					this._Telefno = value;
+				}
+			}
+		}
+	}
+	
+	public partial class spListarClientesResult
+	{
+		
+		private string _Nombre;
+		
+		private string _Apellido1;
+		
+		private string _Apellido2;
+		
+		private string _Telefno;
+		
+		public spListarClientesResult()
 		{
 		}
 		
