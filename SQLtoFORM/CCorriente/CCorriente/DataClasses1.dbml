@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CCorriente" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ASATA401\SQLEXPRESSINES;Initial Catalog=CCorriente;Persist Security Info=True;User ID=sa" SettingsObjectName="CCorriente.Properties.Settings" SettingsPropertyName="CCorrienteConnectionString1" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.spListarInfo" Method="spListarInfo">
+    <ElementType Name="spListarInfoResult">
+      <Column Name="IDCLIENTE" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="APELLIDOS" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NOMBRES" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BuscarApellidos" Method="BuscarApellidos">
+    <Parameter Name="Apellidos" Parameter="apellidos" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="BuscarApellidosResult">
+      <Column Name="IDCLIENTE" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="APELLIDOS" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NOMBRES" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BuscarCliente" Method="BuscarCliente">
+    <Parameter Name="IDCliente" Parameter="iDCliente" Type="System.String" DbType="VarChar(5)" />
+    <ElementType Name="BuscarClienteResult">
+      <Column Name="IDCLIENTE" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="APELLIDOS" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NOMBRES" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BuscarNombre" Method="BuscarNombre">
+    <Parameter Name="Nombres" Parameter="nombres" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="BuscarNombreResult">
+      <Column Name="IDCLIENTE" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="APELLIDOS" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NOMBRES" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.EliminarCliente" Method="EliminarCliente">
+    <Parameter Name="IDCliente" Parameter="iDCliente" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insertarCliente" Method="insertarCliente">
+    <Parameter Name="IDCliente" Parameter="iDCliente" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="Apellidos" Parameter="apellidos" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Nombres" Parameter="nombres" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ModificarCliente" Method="ModificarCliente">
+    <Parameter Name="IDCliente" Parameter="iDCliente" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="Apellidos" Parameter="apellidos" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="Nombres" Parameter="nombres" Type="System.String" DbType="VarChar(30)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

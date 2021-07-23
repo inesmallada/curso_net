@@ -1,0 +1,9 @@
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\SQLtoFORM\CCorriente\CCorriente\bin\Debug\CCorriente.exe.config
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\SQLtoFORM\CCorriente\CCorriente\bin\Debug\CCorriente.exe
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\SQLtoFORM\CCorriente\CCorriente\bin\Debug\CCorriente.pdb
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\SQLtoFORM\CCorriente\CCorriente\obj\Debug\CCorriente.Form1.resources
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\SQLtoFORM\CCorriente\CCorriente\obj\Debug\CCorriente.Properties.Resources.resources
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\SQLtoFORM\CCorriente\CCorriente\obj\Debug\CCorriente.csproj.GenerateResource.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\SQLtoFORM\CCorriente\CCorriente\obj\Debug\CCorriente.csproj.CoreCompileInputs.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\SQLtoFORM\CCorriente\CCorriente\obj\Debug\CCorriente.exe
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\SQLtoFORM\CCorriente\CCorriente\obj\Debug\CCorriente.pdb
