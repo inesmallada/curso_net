@@ -48,14 +48,16 @@ namespace CCorriente
             // 
             // TxtBuscar2
             // 
+            this.TxtBuscar2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.TxtBuscar2.Location = new System.Drawing.Point(305, 34);
             this.TxtBuscar2.Name = "TxtBuscar2";
-            this.TxtBuscar2.Size = new System.Drawing.Size(210, 20);
+            this.TxtBuscar2.Size = new System.Drawing.Size(208, 20);
             this.TxtBuscar2.TabIndex = 1;
             this.TxtBuscar2.TextChanged += new System.EventHandler(this.TxtBuscar2_TextChanged);
             // 
             // GridDatos
             // 
+            this.GridDatos.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.GridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridDatos.Location = new System.Drawing.Point(27, 69);
             this.GridDatos.Name = "GridDatos";
@@ -64,42 +66,50 @@ namespace CCorriente
             // 
             // BtnAgregar
             // 
+            this.BtnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnAgregar.ForeColor = System.Drawing.Color.Snow;
             this.BtnAgregar.Location = new System.Drawing.Point(223, 284);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(70, 25);
             this.BtnAgregar.TabIndex = 3;
             this.BtnAgregar.Text = "Agregar";
-            this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.Location = new System.Drawing.Point(330, 284);
+            this.BtnEliminar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnEliminar.ForeColor = System.Drawing.Color.Snow;
+            this.BtnEliminar.Location = new System.Drawing.Point(334, 284);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(70, 25);
             this.BtnEliminar.TabIndex = 4;
             this.BtnEliminar.Text = "Eliminar";
-            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.UseVisualStyleBackColor = false;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnModificar
             // 
+            this.BtnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnModificar.ForeColor = System.Drawing.Color.Snow;
             this.BtnModificar.Location = new System.Drawing.Point(443, 284);
             this.BtnModificar.Name = "BtnModificar";
             this.BtnModificar.Size = new System.Drawing.Size(70, 25);
             this.BtnModificar.TabIndex = 5;
             this.BtnModificar.Text = "Modificar";
-            this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.UseVisualStyleBackColor = false;
             this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnBuscar
             // 
+            this.BtnBuscar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnBuscar.ForeColor = System.Drawing.Color.Snow;
             this.BtnBuscar.Location = new System.Drawing.Point(229, 30);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(70, 25);
             this.BtnBuscar.TabIndex = 6;
             this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.UseVisualStyleBackColor = false;
             this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // label1
@@ -132,6 +142,7 @@ namespace CCorriente
             // 
             // TxtIdcliente
             // 
+            this.TxtIdcliente.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.TxtIdcliente.Location = new System.Drawing.Point(594, 114);
             this.TxtIdcliente.Name = "TxtIdcliente";
             this.TxtIdcliente.Size = new System.Drawing.Size(100, 20);
@@ -139,6 +150,7 @@ namespace CCorriente
             // 
             // TxtNombre
             // 
+            this.TxtNombre.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.TxtNombre.Location = new System.Drawing.Point(594, 155);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(100, 20);
@@ -146,6 +158,7 @@ namespace CCorriente
             // 
             // TxtApellidos
             // 
+            this.TxtApellidos.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.TxtApellidos.Location = new System.Drawing.Point(594, 200);
             this.TxtApellidos.Name = "TxtApellidos";
             this.TxtApellidos.Size = new System.Drawing.Size(100, 20);
@@ -154,9 +167,10 @@ namespace CCorriente
             // BtnSalir
             // 
             this.BtnSalir.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BtnSalir.Location = new System.Drawing.Point(632, 284);
+            this.BtnSalir.ForeColor = System.Drawing.Color.Snow;
+            this.BtnSalir.Location = new System.Drawing.Point(657, 284);
             this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(52, 25);
+            this.BtnSalir.Size = new System.Drawing.Size(37, 25);
             this.BtnSalir.TabIndex = 13;
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.UseVisualStyleBackColor = false;
@@ -164,6 +178,7 @@ namespace CCorriente
             // 
             // cBoxItems
             // 
+            this.cBoxItems.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.cBoxItems.FormattingEnabled = true;
             this.cBoxItems.Items.AddRange(new object[] {
             "IdCliente",
@@ -180,6 +195,7 @@ namespace CCorriente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(715, 339);
             this.Controls.Add(this.cBoxItems);
             this.Controls.Add(this.BtnSalir);
