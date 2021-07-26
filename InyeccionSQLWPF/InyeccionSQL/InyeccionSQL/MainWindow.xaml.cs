@@ -21,7 +21,7 @@ namespace InyeccionSQL
     /// </summary>
     public partial class MainWindow : Window
     {
-        private SqlConnection conexion =new SqlConnection("server = Data Source=ASATA401\\SQLEXPRESSINES;Initial Catalog=InyeccionSQL;Persist Security Info=True;User ID=sa; Password=1234");
+        private SqlConnection conexion =new SqlConnection("Data Source=ASATA401\\SQLEXPRESSINES;Initial Catalog=InyeccionSQL;Persist Security Info=True;User ID=sa; Password=1234");
         public MainWindow()
         {
             InitializeComponent();
@@ -65,9 +65,9 @@ namespace InyeccionSQL
         private void BtnModificar_Click(object sender, RoutedEventArgs e)
         {
             conexion.Open();
-            string ID = TxtIDInsertar.Text;
-            string nombre = TxtNombreInsertar.Text;
-            string edad = TxtEdadInsertar.Text;
+            string ID = TxtIDModificar.Text;
+            string nombre = TxtNombreModificar.Text;
+            string edad = TxtEdadModificar.Text;
             string cadena = "Update Personas set nombre='" + nombre + "', edad=" + edad + "where id=" + ID;
             SqlCommand comando = new SqlCommand(cadena, conexion);
             int cant;
@@ -88,7 +88,7 @@ namespace InyeccionSQL
         private void BtnBorrar_Click(object sender, RoutedEventArgs e)
         {
             conexion.Open();
-            string ID= TxtIDInsertar.Text;
+            string ID = TxtIDEliminar.Text;
             string cadena = "delete from Personas where id=" + ID;
             SqlCommand comando = new SqlCommand(cadena, conexion);
             int cant;
@@ -113,12 +113,15 @@ namespace InyeccionSQL
             SqlDataReader registro = comando.ExecuteReader();
             if (registro.Read())
             {
-                TxtNombreInsertar.Text = registro["nombre"].ToString();
-                TxtEdadInsertar.Text = registro["edad"].ToString();
+                TxtNombreModificar.Text = registro["nombre"].ToString();
+                TxtEdadModificar.Text = registro["edad"].ToString();
                 //no sé qué botón IsEnabled=true
             }
             else
                 MessageBox.Show("No existe un artículo con el código ingresado");
+            conexion.Close();
         }
+
+
     }
 }

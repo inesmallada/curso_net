@@ -11,6 +11,7 @@
             <ColumnDefinition Width="7*"/>
             <ColumnDefinition Width="92*"/>
         </Grid.ColumnDefinitions>
+        <Border BorderBrush="#FF7A7575" BorderThickness="1" HorizontalAlignment="Left" Height="317" Margin="545,-2,-4,0" VerticalAlignment="Top" Width="195" Grid.Column="1"/>
         <Border BorderBrush="#FF7A7575" BorderThickness="1" HorizontalAlignment="Left" Height="317" Margin="334,-2,0,0" VerticalAlignment="Top" Width="211" Grid.Column="1"/>
         <Border BorderBrush="#FF7A7575" BorderThickness="1" HorizontalAlignment="Left" Height="317" Margin="139,-2,0,0" VerticalAlignment="Top" Width="195" Grid.Column="1"/>
         <Border BorderBrush="#FF7A7575" BorderThickness="1" HorizontalAlignment="Left" Height="317" Margin="0,-2,0,0" VerticalAlignment="Top" Width="195" Grid.ColumnSpan="2"/>
@@ -44,7 +45,6 @@
 
         </StackPanel>
         <Grid x:Name="GridDatos" HorizontalAlignment="Left" Height="313" Margin="550,2,0,0" VerticalAlignment="Top" Width="186" Grid.Column="1" />
-        <Border BorderBrush="#FF7A7575" BorderThickness="1" HorizontalAlignment="Left" Height="317" Margin="545,-2,-4,0" VerticalAlignment="Top" Width="195" Grid.Column="1"/>
         <Border HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="195" BorderBrush="#FF5B5858" Grid.ColumnSpan="2" Margin="0,0,0,-103">
             <Grid>
                 <Label x:Name="insertar" Content="INSERTAR" Width="97" HorizontalAlignment="Center" Margin="53,50,45,341" FontWeight="Bold" FontStyle="Italic"/>
