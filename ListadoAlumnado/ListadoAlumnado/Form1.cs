@@ -35,34 +35,42 @@ namespace ListadoAlumnado
         //Botón para insertar alumnado
         private void button1_Click(object sender, EventArgs e)
         {
-            conexion.Open();
-            string nombre = TxtNombre.Text;
-            string DNI = TxtDNI.Text;
-            string Turno = cbTurno.Text;
-            string genero = cbGenero.Text;
-            int Repetidor;
-            string modulo = cbModulo.Text;
-            string especialidad = cbEspecialidad.Text;
-            if (chbRepetidor.Checked == true)
+            if ((TxtNombre.Text == "") || (TxtDNI.Text == "") || (cbTurno.Text == "") || (cbGenero.Text == "") || (cbModulo.Text == "") || (cbEspecialidad.Text == ""))
             {
-                Repetidor = 1;
+                MessageBox.Show("Error al insertar datos");
             }
             else
             {
-                Repetidor = 0;
+
+                conexion.Open();
+                string nombre = TxtNombre.Text;
+                string DNI = TxtDNI.Text;
+                string Turno = cbTurno.Text;
+                string genero = cbGenero.Text;
+                int Repetidor;
+                string modulo = cbModulo.Text;
+                string especialidad = cbEspecialidad.Text;
+                if (chbRepetidor.Checked == true)
+                {
+                    Repetidor = 1;
+                }
+                else
+                {
+                    Repetidor = 0;
+                }
+
+                string cadena = "insert into ListadoAlumnado(nombre, DNI, Turno, Género, Repetidor,Módulo, especialidad) values('" + nombre + "','" + DNI + "','" + Turno + "','" + genero + "'," + Repetidor + ",'" + modulo + "','" + especialidad + "')";
+
+                SqlCommand comando = new SqlCommand(cadena, conexion);
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Los datos se guardaron correctamente");
+                TxtNombre.Text = "";
+                TxtDNI.Text = "";
+                cbTurno.Text = "";
+                cbGenero.Text = "";
+                conexion.Close();
+                this.listaAlumnos();
             }
-
-            string cadena = "insert into ListadoAlumnado(nombre, DNI, Turno, Género, Repetidor,Módulo, especialidad) values('" + nombre + "','"+DNI+ "','"+Turno +"','"+ genero + "',"+Repetidor+",'"+modulo + "','"+especialidad+"')";
-
-            SqlCommand comando = new SqlCommand(cadena, conexion);
-            comando.ExecuteNonQuery();
-            MessageBox.Show("Los datos se guardaron correctamente");
-            TxtNombre.Text = "";
-            TxtDNI.Text = "";
-            cbTurno.Text = "";
-            cbGenero.Text = "";
-            conexion.Close();
-            this.listaAlumnos();
         }
 
         //Botón para filtrar por código
