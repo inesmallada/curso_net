@@ -45,12 +45,12 @@ namespace ListadoAlumnado
             this.cbModulo = new System.Windows.Forms.ComboBox();
             this.chbRepetidor = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.TxtCodigo2 = new System.Windows.Forms.TextBox();
-            this.BtnCodigo = new System.Windows.Forms.Button();
-            this.TxtDNI2 = new System.Windows.Forms.TextBox();
             this.BtnDNI = new System.Windows.Forms.Button();
+            this.TxtDNI2 = new System.Windows.Forms.TextBox();
+            this.BtnCodigo = new System.Windows.Forms.Button();
+            this.TxtCodigo2 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -164,7 +164,7 @@ namespace ListadoAlumnado
             "TODOS",
             "COMPUTACION E INFORMATICA",
             "DESARROLLO WEB",
-            "DESARROLLO MULTIPLATAFORMA"});
+            "MULTIPLATAFORMA"});
             this.cbEspecialidad.Location = new System.Drawing.Point(90, 141);
             this.cbEspecialidad.Name = "cbEspecialidad";
             this.cbEspecialidad.Size = new System.Drawing.Size(121, 21);
@@ -216,14 +216,39 @@ namespace ListadoAlumnado
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Búsqueda";
             // 
-            // label7
+            // BtnDNI
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Código";
+            this.BtnDNI.Location = new System.Drawing.Point(123, 49);
+            this.BtnDNI.Name = "BtnDNI";
+            this.BtnDNI.Size = new System.Drawing.Size(37, 23);
+            this.BtnDNI.TabIndex = 21;
+            this.BtnDNI.Text = "ok";
+            this.BtnDNI.UseVisualStyleBackColor = true;
+            this.BtnDNI.Click += new System.EventHandler(this.BtnDNI_Click);
+            // 
+            // TxtDNI2
+            // 
+            this.TxtDNI2.Location = new System.Drawing.Point(47, 52);
+            this.TxtDNI2.Name = "TxtDNI2";
+            this.TxtDNI2.Size = new System.Drawing.Size(70, 20);
+            this.TxtDNI2.TabIndex = 20;
+            // 
+            // BtnCodigo
+            // 
+            this.BtnCodigo.Location = new System.Drawing.Point(123, 22);
+            this.BtnCodigo.Name = "BtnCodigo";
+            this.BtnCodigo.Size = new System.Drawing.Size(37, 23);
+            this.BtnCodigo.TabIndex = 19;
+            this.BtnCodigo.Text = "ok";
+            this.BtnCodigo.UseVisualStyleBackColor = true;
+            this.BtnCodigo.Click += new System.EventHandler(this.BtnCodigo_Click);
+            // 
+            // TxtCodigo2
+            // 
+            this.TxtCodigo2.Location = new System.Drawing.Point(47, 22);
+            this.TxtCodigo2.Name = "TxtCodigo2";
+            this.TxtCodigo2.Size = new System.Drawing.Size(70, 20);
+            this.TxtCodigo2.TabIndex = 17;
             // 
             // label8
             // 
@@ -234,37 +259,14 @@ namespace ListadoAlumnado
             this.label8.TabIndex = 18;
             this.label8.Text = "DNI";
             // 
-            // TxtCodigo2
+            // label7
             // 
-            this.TxtCodigo2.Location = new System.Drawing.Point(47, 22);
-            this.TxtCodigo2.Name = "TxtCodigo2";
-            this.TxtCodigo2.Size = new System.Drawing.Size(70, 20);
-            this.TxtCodigo2.TabIndex = 17;
-            // 
-            // BtnCodigo
-            // 
-            this.BtnCodigo.Location = new System.Drawing.Point(123, 22);
-            this.BtnCodigo.Name = "BtnCodigo";
-            this.BtnCodigo.Size = new System.Drawing.Size(37, 23);
-            this.BtnCodigo.TabIndex = 19;
-            this.BtnCodigo.Text = "ok";
-            this.BtnCodigo.UseVisualStyleBackColor = true;
-            // 
-            // TxtDNI2
-            // 
-            this.TxtDNI2.Location = new System.Drawing.Point(47, 52);
-            this.TxtDNI2.Name = "TxtDNI2";
-            this.TxtDNI2.Size = new System.Drawing.Size(70, 20);
-            this.TxtDNI2.TabIndex = 20;
-            // 
-            // BtnDNI
-            // 
-            this.BtnDNI.Location = new System.Drawing.Point(123, 49);
-            this.BtnDNI.Name = "BtnDNI";
-            this.BtnDNI.Size = new System.Drawing.Size(37, 23);
-            this.BtnDNI.TabIndex = 21;
-            this.BtnDNI.Text = "ok";
-            this.BtnDNI.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Código";
             // 
             // button1
             // 
@@ -284,6 +286,7 @@ namespace ListadoAlumnado
             this.button2.TabIndex = 18;
             this.button2.Text = "BAJA";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -293,6 +296,7 @@ namespace ListadoAlumnado
             this.button3.TabIndex = 19;
             this.button3.Text = "MODI";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridView1
             // 

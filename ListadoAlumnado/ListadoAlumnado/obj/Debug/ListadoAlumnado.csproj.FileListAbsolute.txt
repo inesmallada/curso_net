@@ -1,0 +1,10 @@
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\ListadoAlumnado\ListadoAlumnado\bin\Debug\ListadoAlumnado.exe.config
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\ListadoAlumnado\ListadoAlumnado\bin\Debug\ListadoAlumnado.exe
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\ListadoAlumnado\ListadoAlumnado\bin\Debug\ListadoAlumnado.pdb
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\ListadoAlumnado\ListadoAlumnado\obj\Debug\ListadoAlumnado.Form1.resources
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\ListadoAlumnado\ListadoAlumnado\obj\Debug\ListadoAlumnado.Properties.Resources.resources
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\ListadoAlumnado\ListadoAlumnado\obj\Debug\ListadoAlumnado.csproj.GenerateResource.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\ListadoAlumnado\ListadoAlumnado\obj\Debug\ListadoAlumnado.csproj.CoreCompileInputs.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\ListadoAlumnado\ListadoAlumnado\obj\Debug\ListadoAlumnado.exe
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\ListadoAlumnado\ListadoAlumnado\obj\Debug\ListadoAlumnado.pdb
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\ListadoAlumnado\ListadoAlumnado\obj\Debug\ListadoAlumnado.csproj.AssemblyReference.cache

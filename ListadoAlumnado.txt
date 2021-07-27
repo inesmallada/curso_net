@@ -1,4 +1,8 @@
-ï»¿using System;
+
+//ListadoAlumnado
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,7 +36,7 @@ namespace ListadoAlumnado
         }
 
 
-        //BotÃ³n para insertar alumnado
+        //Botón para insertar alumnado
         private void button1_Click(object sender, EventArgs e)
         {
             conexion.Open();
@@ -52,7 +56,7 @@ namespace ListadoAlumnado
                 Repetidor = 0;
             }
 
-            string cadena = "insert into ListadoAlumnado(nombre, DNI, Turno, GÃ©nero, Repetidor,MÃ³dulo, especialidad) values('" + nombre + "','"+DNI+ "','"+Turno +"','"+ genero + "',"+Repetidor+",'"+modulo + "','"+especialidad+"')";
+            string cadena = "insert into ListadoAlumnado(nombre, DNI, Turno, Género, Repetidor,Módulo, especialidad) values('" + nombre + "','"+DNI+ "','"+Turno +"','"+ genero + "',"+Repetidor+",'"+modulo + "','"+especialidad+"')";
 
             SqlCommand comando = new SqlCommand(cadena, conexion);
             comando.ExecuteNonQuery();
@@ -65,13 +69,13 @@ namespace ListadoAlumnado
             this.listaAlumnos();
         }
 
-        //BotÃ³n para filtrar por cÃ³digo
+        //Botón para filtrar por código
         private void BtnCodigo_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = listarAlumnado.spBuscar1(int.Parse(TxtCodigo2.Text));
         }
 
-        //BotÃ³n para filtrar por DNI
+        //Botón para filtrar por DNI
 
         private void BtnDNI_Click(object sender, EventArgs e)
         {
@@ -79,7 +83,7 @@ namespace ListadoAlumnado
         }
 
 
-        //BotÃ³n Modificar
+        //Botón Modificar
         private void button3_Click(object sender, EventArgs e)
         {
               conexion.Open();
@@ -100,13 +104,13 @@ namespace ListadoAlumnado
 
               string modulo = cbModulo.Text;
               string especialidad = cbEspecialidad.Text;
-              string cadena = "Update ListadoAlumnado set nombre='" + nombre + "', DNI='" + DNI + "', Turno='"+Turno+"', GÃ©nero='"+genero+"', Repetidor="+Repetidor+", MÃ³dulo='"+modulo+"', especialidad='"+especialidad+"' where DNI=" + DNI;
+              string cadena = "Update ListadoAlumnado set nombre='" + nombre + "', DNI='" + DNI + "', Turno='"+Turno+"', Género='"+genero+"', Repetidor="+Repetidor+", Módulo='"+modulo+"', especialidad='"+especialidad+"' where DNI=" + DNI;
               SqlCommand comando = new SqlCommand(cadena, conexion);
               int cant;
               cant = comando.ExecuteNonQuery();
               if (cant == 1)
               {
-                  MessageBox.Show("Se modificaron los datos del artÃ­culo");
+                  MessageBox.Show("Se modificaron los datos del artículo");
                 TxtNombre.Text = "";
                 TxtDNI.Text = "";
                 cbTurno.Text = "";
@@ -115,7 +119,7 @@ namespace ListadoAlumnado
                 cbEspecialidad.Text = "";
               }
               else
-                  MessageBox.Show("No existe un artÃ­culo con el DNI ingresado");
+                  MessageBox.Show("No existe un artículo con el DNI ingresado");
                 conexion.Close();
                 this.listaAlumnos();
           }
@@ -130,10 +134,10 @@ namespace ListadoAlumnado
             cant = comando.ExecuteNonQuery();
             if (cant == 1)
             {
-                MessageBox.Show("Se borrÃ³ el artÃ­culo");
+                MessageBox.Show("Se borró el artículo");
             }
             else
-                MessageBox.Show("no existe un artÃ­culo con el cÃ³digo ingresado");
+                MessageBox.Show("no existe un artículo con el código ingresado");
             conexion.Close();
             this.listaAlumnos();
         }
