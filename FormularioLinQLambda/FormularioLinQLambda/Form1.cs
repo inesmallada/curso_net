@@ -45,7 +45,7 @@ namespace FormularioLinQLambda
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             Products MyProduct = new Products();
-            MyProduct.ProductName = TxtProd.Text.ToString();
+            MyProduct.ProductName = TxtProd.Text;
             MyProduct.UnitPrice = int.Parse(TxtPrec.Text);
             MyProduct.UnitsInStock = short.Parse(TxtStock.Text);
             MyProduct.CategoryID = int.Parse(TxtCat.Text);
@@ -69,8 +69,7 @@ namespace FormularioLinQLambda
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
             MessageBox.Show(cbProducto.SelectedItem.ToString());
-            Products MyProducto = baseDatos.Products.Single(p =>
-            p.ProductName == cbProducto.SelectedItem.ToString());
+            Products MyProducto = baseDatos.Products.Single(p => p.ProductName == cbProducto.SelectedItem.ToString());
             MyProducto.ProductName = cbProducto.SelectedItem.ToString();
             MyProducto.UnitPrice= int.Parse(TxtPrec.Text);
             MyProducto.UnitsInStock = short.Parse(TxtStock.Text);
@@ -79,9 +78,6 @@ namespace FormularioLinQLambda
             cargarGrid();
             cargarCombo();
         }
-
-
-
         private void GridDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
