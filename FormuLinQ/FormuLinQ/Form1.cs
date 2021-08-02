@@ -20,25 +20,25 @@ namespace FormuLinQ
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            cargarCombo();
+            cargarBusqueda();
             cargarGrid();
         }
-        void cargarCombo()
+        void cargarBusqueda()
         {
-            var cargarCombo = from p in baseDatos.Empleados
-                              select p.Nombre;
-            cbNombre2.DataSource = cargarCombo;
+            var cargarBusqueda = from Empleados in baseDatos.Empleados
+                              select Empleados.Nombre;
+            cbNombre2.DataSource = cargarBusqueda;
         }
 
         void cargarGrid()
         {
-            var cargarGrid = from p in baseDatos.Empleados select p;
+            var cargarGrid = from Empleados in baseDatos.Empleados select Empleados;
             GridDatos.DataSource = cargarGrid;
+            int num = cargarGrid.Count();
+            TxtRows.Text = num.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
-        
-       
         {
             try
             {
@@ -50,7 +50,7 @@ namespace FormuLinQ
                 MyEmpleado.Casado = chkMarried.Checked;
                 baseDatos.Empleados.InsertOnSubmit(MyEmpleado);
                 baseDatos.SubmitChanges();
-                cargarCombo();
+                cargarBusqueda();
                 cargarGrid();
             }
 
@@ -60,15 +60,13 @@ namespace FormuLinQ
             }
         }
 
-         
-
         private void button3_Click(object sender, EventArgs e)
         {
-            Empleados MyEmpleado = baseDatos.Empleados.Single(p => p.Nombre == cbNombre2.SelectedItem.ToString());
+            Empleados MyEmpleado = baseDatos.Empleados.Single(Empleados => Empleados.Nombre == cbNombre2.SelectedItem.ToString());
             baseDatos.Empleados.DeleteOnSubmit(MyEmpleado);
             baseDatos.SubmitChanges();
             cargarGrid();
-            cargarCombo();
+            cargarBusqueda();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -82,7 +80,7 @@ namespace FormuLinQ
             MyEmpleada.Casado = chkMarried.Checked;
             baseDatos.SubmitChanges();
             cargarGrid();
-            cargarCombo();
+            cargarBusqueda();
         }
 
         private void button1_Click(object sender, EventArgs e)
