@@ -1,0 +1,10 @@
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\FormuLinQ\FormuLinQ\obj\Debug\FormuLinQ.csproj.AssemblyReference.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\FormuLinQ\FormuLinQ\obj\Debug\FormuLinQ.Form1.resources
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\FormuLinQ\FormuLinQ\obj\Debug\FormuLinQ.Properties.Resources.resources
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\FormuLinQ\FormuLinQ\obj\Debug\FormuLinQ.csproj.GenerateResource.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\FormuLinQ\FormuLinQ\obj\Debug\FormuLinQ.csproj.CoreCompileInputs.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\FormuLinQ\FormuLinQ\bin\Debug\FormuLinQ.exe.config
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\FormuLinQ\FormuLinQ\bin\Debug\FormuLinQ.exe
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\FormuLinQ\FormuLinQ\bin\Debug\FormuLinQ.pdb
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\FormuLinQ\FormuLinQ\obj\Debug\FormuLinQ.exe
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\FormuLinQ\FormuLinQ\obj\Debug\FormuLinQ.pdb
