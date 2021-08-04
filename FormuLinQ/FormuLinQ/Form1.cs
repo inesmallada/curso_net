@@ -91,7 +91,6 @@ namespace FormuLinQ
 
                            select Empleados;
                 GridDatos.DataSource = busqueda;
-
         }
     }
 }

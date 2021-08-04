@@ -1,0 +1,10 @@
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\HUCANET_Formu\HUCANET_Formu\obj\Debug\HUCANET_Formu.csproj.AssemblyReference.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\HUCANET_Formu\HUCANET_Formu\obj\Debug\HUCANET_Formu.Form1.resources
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\HUCANET_Formu\HUCANET_Formu\obj\Debug\HUCANET_Formu.Properties.Resources.resources
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\HUCANET_Formu\HUCANET_Formu\obj\Debug\HUCANET_Formu.csproj.GenerateResource.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\HUCANET_Formu\HUCANET_Formu\obj\Debug\HUCANET_Formu.csproj.CoreCompileInputs.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\HUCANET_Formu\HUCANET_Formu\bin\Debug\HUCANET_Formu.exe.config
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\HUCANET_Formu\HUCANET_Formu\bin\Debug\HUCANET_Formu.exe
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\HUCANET_Formu\HUCANET_Formu\bin\Debug\HUCANET_Formu.pdb
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\HUCANET_Formu\HUCANET_Formu\obj\Debug\HUCANET_Formu.exe
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\HUCANET_Formu\HUCANET_Formu\obj\Debug\HUCANET_Formu.pdb

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HOSPITAL" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ASATA401\SQLEXPRESSINES;Initial Catalog=HOSPITAL;Persist Security Info=True;User ID=sa" SettingsObjectName="HUCANET_Formu.Properties.Settings" SettingsPropertyName="HOSPITALConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Enfermo" Member="Enfermo">
+    <Type Name="Enfermo">
+      <Column Name="inscripcion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Dir" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fecha_Nac" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="S" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="NSS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cod_Hospital" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
