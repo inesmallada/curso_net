@@ -187,7 +187,6 @@ namespace Ejercicio_Filtros
             //Fecha inscripcion ambos checkeado
             DateTime desde = DatePicker1.DisplayDate;
             DateTime hasta = DatePicker2.DisplayDate;
-
             cargarGridFechaI(desde, hasta);
 
         }
