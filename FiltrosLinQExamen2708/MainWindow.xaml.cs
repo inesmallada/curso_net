@@ -181,14 +181,73 @@ namespace Ejercicio_Filtros
 
         }
 
-     
+        void cargarGridFechaC(DateTime date3, DateTime date4)
+        {
+            string curso = ComboBox1.Text;
+           CheckBox3.IsEnabled =false;
+
+            if (CheckBox3.IsChecked == true && CheckBox2.IsChecked==true)
+            {
+                var listagrid = from f in filtros.DatosFiltrosLINQ where f.Curso == curso && f.Fecha_Cont >= date3 && f.Fecha_Cont <= date4 select f;
+                DGV1.ItemsSource = listagrid;
+            }
+            else {
+                MessageBox.Show("Error. Seleccione el campo por el que quiera filtrar.");
+            }
+        }
+
+
+        void cargarGridFechas(DateTime date, DateTime date2, DateTime date3, DateTime date4)
+        {
+            string curso = ComboBox1.Text;
+            CheckBox3.IsChecked = true; 
+
+            var listagrid = from f in filtros.DatosFiltrosLINQ where f.Curso == curso && f.Fecha_Ins >= date && f.Fecha_Ins <= date2 && f.Fecha_Cont >= date3 && f.Fecha_Cont <= date4 select f;
+            DGV1.ItemsSource = listagrid;
+        }
+
+
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //Fecha inscripcion ambos checkeado
-            DateTime desde = DatePicker1.DisplayDate;
-            DateTime hasta = DatePicker2.DisplayDate;
-            cargarGridFechaI(desde, hasta);
+            DateTime date = DatePicker1.DisplayDate;
+            DateTime date2 = DatePicker2.DisplayDate;
+            cargarGridFechaI(date, date2);
+
+            //Fecha_Cont //CoNTRATACION
+            DateTime date3 = DatePicker3.DisplayDate;
+            DateTime date4 = DatePicker4.DisplayDate;
+            cargarGridFechaC(date3, date4);
+
+
+
+
+            //Método para cargar filtro por fecha de inscripción
+
+            if (CheckBox1.IsChecked == true && CheckBox2.IsChecked == true)
+                cargarGridFechaI(DatePicker1.DisplayDate, DatePicker2.DisplayDate);
+
+            //Método para cargar filtro por fecha de contratación
+            else if (CheckBox4.IsChecked == true && CheckBox5.IsChecked == true)
+                cargarGridFechaC(DatePicker3.DisplayDate, DatePicker4.DisplayDate);
+
+            //Método para cargar filtro por todas
+
+            else if (CheckBox1.IsChecked == true && CheckBox2.IsChecked == true && CheckBox4.IsChecked == true && CheckBox5.IsChecked == true) cargarTodas(DatePicker1.DisplayDate, DatePicker2.DisplayDate, DatePicker3.DisplayDate, DatePicker4.DisplayDate);
+               }
+        void cargarTodas(DateTime f1, DateTime f2, DateTime f3, DateTime f4)
+                {
+                    var listagrid = from f in filtros.DatosFiltrosLINQ
+                                    where
+                                    f.Fecha_Ins >= f1 && f.Fecha_Ins <= f2 &&
+
+                                    f.Fecha_Cont >= f3 && f.Fecha_Cont <= f4
+                                    select f;
+                    DGV1.ItemsSource = listagrid;
+                }
+
 
         }
     }
-}
+
