@@ -51,7 +51,7 @@ namespace Repaso_Agosto
             this.btnAlante = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -147,7 +147,6 @@ namespace Repaso_Agosto
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(100, 20);
             this.txtApellidos.TabIndex = 9;
-            this.txtApellidos.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtTlfno
             // 
@@ -200,6 +199,7 @@ namespace Repaso_Agosto
             this.Registrar.TabIndex = 16;
             this.Registrar.Text = "Registrar";
             this.Registrar.UseVisualStyleBackColor = true;
+            this.Registrar.Click += new System.EventHandler(this.Registrar_Click);
             // 
             // btnEliminar
             // 
@@ -209,6 +209,7 @@ namespace Repaso_Agosto
             this.btnEliminar.TabIndex = 17;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnInicio
             // 
@@ -250,20 +251,21 @@ namespace Repaso_Agosto
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label8.Location = new System.Drawing.Point(247, 20);
+            this.label8.Location = new System.Drawing.Point(254, 9);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 15);
             this.label8.TabIndex = 22;
             this.label8.Text = "CLIENTES";
             // 
-            // button2
+            // btnBuscar
             // 
-            this.button2.Location = new System.Drawing.Point(225, 48);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "BUSCAR";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBuscar.Location = new System.Drawing.Point(225, 43);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 23;
+            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dataGridView
             // 
@@ -281,6 +283,7 @@ namespace Repaso_Agosto
             this.btnModificar.TabIndex = 25;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // Form1
             // 
@@ -289,7 +292,7 @@ namespace Repaso_Agosto
             this.ClientSize = new System.Drawing.Size(597, 423);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.dataGridView);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAlante);
@@ -344,7 +347,7 @@ namespace Repaso_Agosto
         private System.Windows.Forms.Button btnAlante;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button btnModificar;
     }
