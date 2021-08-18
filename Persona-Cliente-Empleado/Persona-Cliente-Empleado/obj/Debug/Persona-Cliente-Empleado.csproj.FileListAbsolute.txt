@@ -1,0 +1,4 @@
+C:\Users\AsataTarde\source\repos\Persona-Cliente-Empleado\Persona-Cliente-Empleado\obj\Debug\Persona-Cliente-Empleado.csproj.AssemblyReference.cache
+C:\Users\AsataTarde\source\repos\Persona-Cliente-Empleado\Persona-Cliente-Empleado\obj\Debug\Persona-Cliente-Empleado.csproj.CoreCompileInputs.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\Persona-Cliente-Empleado\Persona-Cliente-Empleado\obj\Debug\Persona-Cliente-Empleado.csproj.AssemblyReference.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\Persona-Cliente-Empleado\Persona-Cliente-Empleado\obj\Debug\Persona-Cliente-Empleado.csproj.CoreCompileInputs.cache
