@@ -219,6 +219,7 @@ namespace Repaso_Agosto
             this.btnInicio.TabIndex = 18;
             this.btnInicio.Text = "|<";
             this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // btnAtras
             // 
@@ -228,6 +229,7 @@ namespace Repaso_Agosto
             this.btnAtras.TabIndex = 19;
             this.btnAtras.Text = "<";
             this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // btnAlante
             // 
@@ -237,6 +239,7 @@ namespace Repaso_Agosto
             this.btnAlante.TabIndex = 20;
             this.btnAlante.Text = ">";
             this.btnAlante.UseVisualStyleBackColor = true;
+            this.btnAlante.Click += new System.EventHandler(this.btnAlante_Click);
             // 
             // button1
             // 
@@ -246,6 +249,7 @@ namespace Repaso_Agosto
             this.button1.TabIndex = 21;
             this.button1.Text = ">|";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
