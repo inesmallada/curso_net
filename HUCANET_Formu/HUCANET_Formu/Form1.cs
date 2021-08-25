@@ -16,8 +16,10 @@ namespace HUCANET_Formu
         {
             InitializeComponent();
         }
+        //DEFINIMOS EL DATACLASES O MEJOR DICHO EL CONTEXTO DE CLASE
         DataClasses1DataContext baseDatos = new DataClasses1DataContext();
 
+        //CON LINQ HACEMOS UNA CONSULTA PARA QUE CARGUE EL GRID
          void cargarGrid()
         {
             var cargarGrid = from Enfermo in baseDatos.Enfermo select Enfermo;
@@ -67,6 +69,7 @@ namespace HUCANET_Formu
             dtpNac.Text = "";
         }
 
+        //CARGAMOS EL GRID CUANDO SE ABRA EL FORMULARIO: FORM LOAD
         private void Form1_Load(object sender, EventArgs e)
         {
             cargarGrid();

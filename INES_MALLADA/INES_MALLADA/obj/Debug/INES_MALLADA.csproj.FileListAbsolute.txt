@@ -1,0 +1,10 @@
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\INES_MALLADA\INES_MALLADA\obj\Debug\INES_MALLADA.csproj.AssemblyReference.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\INES_MALLADA\INES_MALLADA\obj\Debug\INES_MALLADA.EXAMEN.resources
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\INES_MALLADA\INES_MALLADA\obj\Debug\INES_MALLADA.Properties.Resources.resources
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\INES_MALLADA\INES_MALLADA\obj\Debug\INES_MALLADA.csproj.GenerateResource.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\INES_MALLADA\INES_MALLADA\obj\Debug\INES_MALLADA.csproj.CoreCompileInputs.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\INES_MALLADA\INES_MALLADA\bin\Debug\INES_MALLADA.exe.config
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\INES_MALLADA\INES_MALLADA\bin\Debug\INES_MALLADA.exe
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\INES_MALLADA\INES_MALLADA\bin\Debug\INES_MALLADA.pdb
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\INES_MALLADA\INES_MALLADA\obj\Debug\INES_MALLADA.exe
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\INES_MALLADA\INES_MALLADA\obj\Debug\INES_MALLADA.pdb

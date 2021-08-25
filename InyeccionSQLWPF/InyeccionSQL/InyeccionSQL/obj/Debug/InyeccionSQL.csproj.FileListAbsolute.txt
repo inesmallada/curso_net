@@ -12,3 +12,5 @@ C:\Users\AsataTarde\Desktop\inesmallada\curso_net\InyeccionSQLWPF\InyeccionSQL\I
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\InyeccionSQLWPF\InyeccionSQL\InyeccionSQL\obj\Debug\InyeccionSQL.csproj.CoreCompileInputs.cache
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\InyeccionSQLWPF\InyeccionSQL\InyeccionSQL\obj\Debug\InyeccionSQL.exe
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\InyeccionSQLWPF\InyeccionSQL\InyeccionSQL\obj\Debug\InyeccionSQL.pdb
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\InyeccionSQLWPF\InyeccionSQL\InyeccionSQL\obj\Debug\InyeccionSQL.csproj.AssemblyReference.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\InyeccionSQLWPF\InyeccionSQL\InyeccionSQL\obj\Debug\InyeccionSQL_Content.g.cs

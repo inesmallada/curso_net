@@ -78,9 +78,18 @@
         </EntityType>
         <Association Name="DEPARTAMENTOEMPLEADO">
           <End Type="Model1.DEPARTAMENTO" Role="DEPARTAMENTO" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
           </End>
           <End Type="Model1.EMPLEADO" Role="EMPLEADO" Multiplicity="*" >
           </End>
+          <ReferentialConstraint>
+            <Principal Role="DEPARTAMENTO">
+              <PropertyRef Name="ID_DEPARTAMENTO" />
+            </Principal>
+            <Dependent Role="EMPLEADO">
+              <PropertyRef Name="ID_DEPARTAMENTO" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
         <EntityType Name="PUESTO">
           <Key>
@@ -104,15 +113,33 @@
         </EntityType>
         <Association Name="PUESTOEMPLEADO">
           <End Type="Model1.PUESTO" Role="PUESTO" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
           </End>
           <End Type="Model1.EMPLEADO" Role="EMPLEADO" Multiplicity="*" >
           </End>
+          <ReferentialConstraint>
+            <Principal Role="PUESTO">
+              <PropertyRef Name="ID_PUESTO" />
+            </Principal>
+            <Dependent Role="EMPLEADO">
+              <PropertyRef Name="ID_PUESTO" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
         <Association Name="NIVEL_RIESGOPUESTO">
           <End Type="Model1.NIVEL_RIESGO" Role="NIVEL_RIESGO" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
           </End>
           <End Type="Model1.PUESTO" Role="PUESTO" Multiplicity="*" >
           </End>
+          <ReferentialConstraint>
+            <Principal Role="NIVEL_RIESGO">
+              <PropertyRef Name="ID_NIVEL_RIESGO" />
+            </Principal>
+            <Dependent Role="PUESTO">
+              <PropertyRef Name="ID_NIVEL_RIESGO" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
         <EntityType Name="REGISTRO_TRANSACCION">
           <Key>
@@ -128,9 +155,18 @@
         </EntityType>
         <Association Name="EMPLEADOREGISTRO_TRANSACCION">
           <End Type="Model1.EMPLEADO" Role="EMPLEADO" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
           </End>
           <End Type="Model1.REGISTRO_TRANSACCION" Role="REGISTRO_TRANSACCION" Multiplicity="*" >
           </End>
+          <ReferentialConstraint>
+            <Principal Role="EMPLEADO">
+              <PropertyRef Name="Id_EMPLEADO" />
+            </Principal>
+            <Dependent Role="REGISTRO_TRANSACCION">
+              <PropertyRef Name="ID_EMPLEADO" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
         <EntityType Name="TIPO_DE_INGRESO">
           <Key>
@@ -142,9 +178,18 @@
         </EntityType>
         <Association Name="TIPO_DE_INGRESOREGISTRO_TRANSACCION">
           <End Type="Model1.TIPO_DE_INGRESO" Role="TIPO_DE_INGRESO" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
           </End>
           <End Type="Model1.REGISTRO_TRANSACCION" Role="REGISTRO_TRANSACCION" Multiplicity="*" >
           </End>
+          <ReferentialConstraint>
+            <Principal Role="TIPO_DE_INGRESO">
+              <PropertyRef Name="ID_TIPO_INGRESO" />
+            </Principal>
+            <Dependent Role="REGISTRO_TRANSACCION">
+              <PropertyRef Name="ID_TIPO_INGRESO" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
         <EntityType Name="REGISTRO_TRANSACCION_DEDUCCION">
           <Key>
@@ -160,9 +205,18 @@
         </EntityType>
         <Association Name="EMPLEADOREGISTRO_TRANSACCION_DEDUCCION">
           <End Type="Model1.EMPLEADO" Role="EMPLEADO" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
           </End>
           <End Type="Model1.REGISTRO_TRANSACCION_DEDUCCION" Role="REGISTRO_TRANSACCION_DEDUCCION" Multiplicity="*" >
           </End>
+          <ReferentialConstraint>
+            <Principal Role="EMPLEADO">
+              <PropertyRef Name="Id_EMPLEADO" />
+            </Principal>
+            <Dependent Role="REGISTRO_TRANSACCION_DEDUCCION">
+              <PropertyRef Name="ID_EMPLEADO" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
         <EntityType Name="TIPO_DE_DEDUCCION">
           <Key>
@@ -174,9 +228,18 @@
         </EntityType>
         <Association Name="TIPO_DE_DEDUCCIONREGISTRO_TRANSACCION_DEDUCCION">
           <End Type="Model1.TIPO_DE_DEDUCCION" Role="TIPO_DE_DEDUCCION" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
           </End>
           <End Type="Model1.REGISTRO_TRANSACCION_DEDUCCION" Role="REGISTRO_TRANSACCION_DEDUCCION" Multiplicity="*" >
           </End>
+          <ReferentialConstraint>
+            <Principal Role="TIPO_DE_DEDUCCION">
+              <PropertyRef Name="ID_TIPO_DEDUCCION" />
+            </Principal>
+            <Dependent Role="REGISTRO_TRANSACCION_DEDUCCION">
+              <PropertyRef Name="ID_TIPO_DEDUCCION" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
       </Schema>
     </edmx:ConceptualModels>
