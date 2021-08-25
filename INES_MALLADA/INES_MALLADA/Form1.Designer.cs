@@ -29,7 +29,6 @@ namespace INES_MALLADA
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,15 +42,7 @@ namespace INES_MALLADA
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.cbSeleccion = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.eXAMENDataSet = new INES_MALLADA.EXAMENDataSet();
-            this.pRODUCTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pRODUCTOSTableAdapter = new INES_MALLADA.EXAMENDataSetTableAdapters.PRODUCTOSTableAdapter();
-            this.nombreProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioUnidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidadStockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eXAMENDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -159,49 +150,11 @@ namespace INES_MALLADA
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombreProductoDataGridViewTextBoxColumn,
-            this.precioUnidadDataGridViewTextBoxColumn,
-            this.unidadStockDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.pRODUCTOSBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(24, 203);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(345, 303);
             this.dataGridView1.TabIndex = 12;
-            // 
-            // eXAMENDataSet
-            // 
-            this.eXAMENDataSet.DataSetName = "EXAMENDataSet";
-            this.eXAMENDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pRODUCTOSBindingSource
-            // 
-            this.pRODUCTOSBindingSource.DataMember = "PRODUCTOS";
-            this.pRODUCTOSBindingSource.DataSource = this.eXAMENDataSet;
-            // 
-            // pRODUCTOSTableAdapter
-            // 
-            this.pRODUCTOSTableAdapter.ClearBeforeFill = true;
-            // 
-            // nombreProductoDataGridViewTextBoxColumn
-            // 
-            this.nombreProductoDataGridViewTextBoxColumn.DataPropertyName = "NombreProducto";
-            this.nombreProductoDataGridViewTextBoxColumn.HeaderText = "NombreProducto";
-            this.nombreProductoDataGridViewTextBoxColumn.Name = "nombreProductoDataGridViewTextBoxColumn";
-            // 
-            // precioUnidadDataGridViewTextBoxColumn
-            // 
-            this.precioUnidadDataGridViewTextBoxColumn.DataPropertyName = "PrecioUnidad";
-            this.precioUnidadDataGridViewTextBoxColumn.HeaderText = "PrecioUnidad";
-            this.precioUnidadDataGridViewTextBoxColumn.Name = "precioUnidadDataGridViewTextBoxColumn";
-            // 
-            // unidadStockDataGridViewTextBoxColumn
-            // 
-            this.unidadStockDataGridViewTextBoxColumn.DataPropertyName = "UnidadStock";
-            this.unidadStockDataGridViewTextBoxColumn.HeaderText = "UnidadStock";
-            this.unidadStockDataGridViewTextBoxColumn.Name = "unidadStockDataGridViewTextBoxColumn";
             // 
             // EXAMEN
             // 
@@ -225,8 +178,6 @@ namespace INES_MALLADA
             this.Text = "EXAMEN";
             this.Load += new System.EventHandler(this.EXAMEN_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eXAMENDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,12 +198,6 @@ namespace INES_MALLADA
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.ComboBox cbSeleccion;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private EXAMENDataSet eXAMENDataSet;
-        private System.Windows.Forms.BindingSource pRODUCTOSBindingSource;
-        private EXAMENDataSetTableAdapters.PRODUCTOSTableAdapter pRODUCTOSTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreProductoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioUnidadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn unidadStockDataGridViewTextBoxColumn;
     }
 }
 

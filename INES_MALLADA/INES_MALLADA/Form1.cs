@@ -51,18 +51,13 @@ namespace INES_MALLADA
                         //OBTENEMOS LOS VALORES QUE CONTENGAN LA CADENA DE BÚSQUEDA.
                         //LA CADENA BUSCAR CON CONTAINS
                         PRODUCTOS MyProducto = dbEXAMEN.PRODUCTOS.Single(P =>P.NombreProducto.Contains(txtBusqueda.Text));
-
                         //CON ESTO CARGAMOS LOS TEXTBOX DE ABAJO PARA PODER MODIFICAR SUS VALORES EN CASO DE PEDIRLO
-                        
                         txtNombre.Text = MyProducto.NombreProducto;
                         txtPrecio.Text = MyProducto.PrecioUnidad.ToString();
                         txtStock.Text = MyProducto.UnidadStock.ToString();
-                        
-
                         //CON LINQ CARGAMOS EL GRID CON EL NOMBRE/CONTENIDO FILTRADO
                         //FILTRADO Y REFRESCAMOS
                         var buscarNombre = from PRODUCTOS in dbEXAMEN.PRODUCTOS where PRODUCTOS.NombreProducto.Contains(txtBusqueda.Text) select PRODUCTOS;
-
                         //CARGAMOS EL DATAGRID CON EL NOMBRE FILTRADO Y REFRESCAMOS EL GRID
                         dataGridView1.DataSource = buscarNombre;
                     }
@@ -90,22 +85,17 @@ namespace INES_MALLADA
                 {
                     //DEFINIMOS UN OBJETO TIPO USUARIO
                     PRODUCTOS MyProductos = new PRODUCTOS();
-
                     MyProductos.NombreProducto = txtNombre.Text;
                     MyProductos.PrecioUnidad = int.Parse(txtPrecio.Text);
                     MyProductos.UnidadStock = short.Parse(txtStock.Text);
-
                     //INSERTONSUBMIT LO QUE ES AÑADIR EL REGISTRO EN LA DDBB
                     dbEXAMEN.PRODUCTOS.InsertOnSubmit(MyProductos);
-
                     //SUBMITCHANGES HACE EL COMMIT (CONFIRMACIÓN)
                     dbEXAMEN.SubmitChanges();
-                
                     //CARGAMOS EL GRID Y comboBox
                     CargarGrid();
                     CargarCombo();
                 }
-
             }//FIN TRY
                 catch
                 {
@@ -128,11 +118,11 @@ namespace INES_MALLADA
                     //CARGAMOS EL GRID Y comboBox
                     CargarGrid();
                     CargarCombo();
-            }//FIN TRY
+               }//FIN TRY
                 catch
-                {
+               {
                     if (cbSeleccion.Text == "") MessageBox.Show("INTRODUCE EL NOMBRE DEL PRODUCTO A ELIMINAR");
-                }
+               }
         }//FIN ELIMINAR
 
         //BOTON PARA MODIFICAR UN REGISTRO
