@@ -1,0 +1,6 @@
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\UF1844\UF1844\bin\Debug\UF1844.exe.config
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\UF1844\UF1844\bin\Debug\UF1844.exe
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\UF1844\UF1844\bin\Debug\UF1844.pdb
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\UF1844\UF1844\obj\Debug\UF1844.csproj.CoreCompileInputs.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\UF1844\UF1844\obj\Debug\UF1844.exe
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\UF1844\UF1844\obj\Debug\UF1844.pdb

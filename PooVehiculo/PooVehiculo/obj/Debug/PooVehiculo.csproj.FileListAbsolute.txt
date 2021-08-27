@@ -1,0 +1,7 @@
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\PooVehiculo\PooVehiculo\obj\Debug\PooVehiculo.csproj.AssemblyReference.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\PooVehiculo\PooVehiculo\obj\Debug\PooVehiculo.csproj.CoreCompileInputs.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\PooVehiculo\PooVehiculo\bin\Debug\PooVehiculo.exe.config
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\PooVehiculo\PooVehiculo\bin\Debug\PooVehiculo.exe
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\PooVehiculo\PooVehiculo\bin\Debug\PooVehiculo.pdb
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\PooVehiculo\PooVehiculo\obj\Debug\PooVehiculo.exe
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\PooVehiculo\PooVehiculo\obj\Debug\PooVehiculo.pdb
