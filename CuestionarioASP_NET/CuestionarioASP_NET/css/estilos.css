@@ -1,0 +1,35 @@
+﻿body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: lightblue; 
+    width: 780px;
+   
+}
+h2 {
+    background-color: dodgerblue;
+    border: 1px solid white;
+}
+div {
+    padding:1em, 1em;
+}
+#button1 {
+    border-radius: 5px;
+    background-color: dodgerblue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+div.imagenes {
+    width:359px;
+    margin-top: 2em;
+}
+img {
+    width: 100px;
+    height: 63px;
+    margin-left: 0px;
+}
+

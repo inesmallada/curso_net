@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EXAMEN" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ASATA401\SQLEXPRESSINES;Initial Catalog=EXAMEN;Persist Security Info=True;User ID=sa" SettingsObjectName="UF1846.Properties.Settings" SettingsPropertyName="EXAMENConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PRODUCTOS" Member="PRODUCTOS">
+    <Type Name="PRODUCTOS">
+      <Column Name="NombreProducto" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PrecioUnidad" Type="System.Decimal" DbType="Decimal(20,2)" CanBeNull="true" />
+      <Column Name="UnidadStock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_ELIMINARPRODUCTO" Method="SP_ELIMINARPRODUCTO">
+    <Parameter Name="NOMBREPRODUCTO" Parameter="nOMBREPRODUCTO" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_INSERTAPRODUCTO" Method="SP_INSERTAPRODUCTO">
+    <Parameter Name="NOMBREPRODUCTO" Parameter="nOMBREPRODUCTO" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="PRECIOUNIDAD" Parameter="pRECIOUNIDAD" Type="System.Decimal" DbType="Decimal(20,2)" />
+    <Parameter Name="UNIDADSTOCK" Parameter="uNIDADSTOCK" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_MODPRODUCTO" Method="SP_MODPRODUCTO">
+    <Parameter Name="NOMBREPRODUCTO" Parameter="nOMBREPRODUCTO" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="PRECIOUNIDAD" Parameter="pRECIOUNIDAD" Type="System.Decimal" DbType="Decimal(20,2)" />
+    <Parameter Name="UNIDADSTOCK" Parameter="uNIDADSTOCK" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SP_CargarGrid" Method="SP_CargarGrid">
+    <ElementType Name="SP_CargarGridResult">
+      <Column Name="NombreProducto" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioUnidad" Type="System.Decimal" DbType="Decimal(20,2)" CanBeNull="true" />
+      <Column Name="UnidadStock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_CargarComboBox" Method="SP_CargarComboBox">
+    <ElementType Name="SP_CargarComboBoxResult">
+      <Column Name="NombreProducto" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_CONSULTAPRODUCTO" Method="SP_CONSULTAPRODUCTO">
+    <Parameter Name="NOMBREPRODUCTO" Parameter="nOMBREPRODUCTO" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="SP_CONSULTAPRODUCTOResult">
+      <Column Name="NombreProducto" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PrecioUnidad" Type="System.Decimal" DbType="Decimal(20,2)" CanBeNull="true" />
+      <Column Name="UnidadStock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

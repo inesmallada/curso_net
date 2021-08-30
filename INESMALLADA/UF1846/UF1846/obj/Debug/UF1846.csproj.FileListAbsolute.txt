@@ -1,0 +1,9 @@
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\UF1846\UF1846\bin\Debug\UF1846.exe.config
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\UF1846\UF1846\bin\Debug\UF1846.exe
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\UF1846\UF1846\bin\Debug\UF1846.pdb
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\UF1846\UF1846\obj\Debug\UF1846.form.resources
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\UF1846\UF1846\obj\Debug\UF1846.Properties.Resources.resources
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\UF1846\UF1846\obj\Debug\UF1846.csproj.GenerateResource.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\UF1846\UF1846\obj\Debug\UF1846.csproj.CoreCompileInputs.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\UF1846\UF1846\obj\Debug\UF1846.exe
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\UF1846\UF1846\obj\Debug\UF1846.pdb
