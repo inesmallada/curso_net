@@ -31,7 +31,12 @@
             <asp:TextBox ID="TextBox6" runat="server" Width="277px"></asp:TextBox>
             <br />
             País de origen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:ListBox ID="ListBox1" runat="server" Height="23px" Width="247px"></asp:ListBox>
+            <asp:ListBox ID="ListBox1" runat="server" Height="23px" Width="247px">
+                <asp:ListItem>España</asp:ListItem>
+                <asp:ListItem>Francia</asp:ListItem>
+                <asp:ListItem>Portugal</asp:ListItem>
+                <asp:ListItem>Italia</asp:ListItem>
+            </asp:ListBox>
             <br />
             Provincia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="TextBox7" runat="server" Width="169px"></asp:TextBox>
             <br />
@@ -39,15 +44,17 @@
             <asp:TextBox ID="TextBox8" runat="server" Width="104px"></asp:TextBox>
             <br />
             Género&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:RadioButton ID="RadioButton1" runat="server"  />
+            <asp:RadioButton ID="RadioButton1" GroupName="genero" runat="server" Text="Hombre"  />
         &nbsp;
-            <asp:RadioButton ID="RadioButton2" runat="server"  />
+            <asp:RadioButton ID="RadioButton2" GroupName="genero" runat="server" Text="Mujer"  />
+            &nbsp;&nbsp;
+            <asp:RadioButton ID="RadioButton3" GroupName="genero" runat="server" Text="Otres" />
             <br />
             <asp:Label ID="Label3" runat="server" Text="Fecha de nacimiento"></asp:Label>
-        &nbsp;(dd/mm/aaaa)<asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+        &nbsp;<asp:TextBox ID="TextBox10" runat="server" Width="124px"></asp:TextBox>
             <br />
-            Comentarios&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox9" runat="server" Height="212px" Width="413px"></asp:TextBox>
+            (dd/mm/aaaa)&nbsp; <br />
+            Comentarios&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="TextBox9" runat="server" Height="212px" Width="413px"></asp:TextBox>
             <br />
             <br />
             Acepto los términos y condiciones&nbsp;&nbsp;
