@@ -66,9 +66,9 @@
             </div>
 
 
-            <br />
+            <%--<br />
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="*El correo no es correcto" Font-Size="10px" ForeColor="Maroon" ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"></asp:RegularExpressionValidator>
-            <br />
+            <br />--%>
          
         </div>
     </form>

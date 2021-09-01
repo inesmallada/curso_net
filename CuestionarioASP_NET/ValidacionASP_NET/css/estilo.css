@@ -3,6 +3,20 @@
     color: white;
     background-color: lightblue; 
     width: 780px;
-   
+    font-size: 10px;
 }
 
+div.conte {
+    overflow: auto;
+    clear: right;
+}
+.cont_label {
+    float: left;
+    display: inline-block;
+
+}
+
+div.left {
+    float: left;
+    
+}

@@ -52,7 +52,6 @@ C:\Users\AsataTarde\Desktop\inesmallada\curso_net\CuestionarioASP_NET\Validacion
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\CuestionarioASP_NET\ValidacionASP_NET\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\CuestionarioASP_NET\ValidacionASP_NET\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\CuestionarioASP_NET\ValidacionASP_NET\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\AsataTarde\Desktop\inesmallada\curso_net\CuestionarioASP_NET\ValidacionASP_NET\obj\Debug\ValidacionASP_NET.csproj.AssemblyReference.cache
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\CuestionarioASP_NET\ValidacionASP_NET\obj\Debug\ValidacionASP_NET.csproj.CoreCompileInputs.cache
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\CuestionarioASP_NET\ValidacionASP_NET\obj\Debug\ValidacionASP_NET.csproj.CopyComplete
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\CuestionarioASP_NET\ValidacionASP_NET\obj\Debug\ValidacionASP_NET.dll
