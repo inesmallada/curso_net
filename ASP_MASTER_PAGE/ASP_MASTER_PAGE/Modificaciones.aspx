@@ -1,10 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Altas.aspx.cs" Inherits="ASP_MASTER_PAGE.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Modificaciones.aspx.cs" Inherits="ASP_MASTER_PAGE.Bajas" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div>
-        <h2>Altas de clientes</h2>
+
+ <div>
+        <h2>Modificación de clientes</h2>
         <div>
             <label>Id:</label>
-            <asp:TextBox ID="txtID" runat="server" Width="245px"></asp:TextBox>
+            <asp:DropDownList ID="ddlID" runat="server" DataSourceID="SqlDataSource1" DataTextField="id" DataValueField="id">
+            </asp:DropDownList> 
+            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SimulacroSQLMartesConnectionString %>" SelectCommand="SELECT * FROM [Cliente]"></asp:SqlDataSource>
         </div>
         <div>
             <label>Nombre: </label>
@@ -28,10 +32,11 @@
         </div>
 
         <div>
-            <asp:Button ID="btnAnadir" runat="server" Text="Añadir" OnClick="btnAnadir_Click" />
-        </div>
-        <div>
-            <asp:Label ID="txtError" runat="server" Text=""></asp:Label>
+            <asp:Button ID="btnModi" runat="server" Text="Modificar" OnClick="btnModi_Click" />
         </div>
     </div>
+     <div>
+            <asp:Label ID="txtError2" runat="server" Text=""></asp:Label>
+     </div>
+
 </asp:Content>

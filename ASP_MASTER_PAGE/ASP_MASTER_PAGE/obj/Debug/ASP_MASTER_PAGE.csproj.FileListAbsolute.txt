@@ -69,7 +69,6 @@ C:\Users\AsataTarde\Desktop\inesmallada\curso_net\ASP_MASTER_PAGE\ASP_MASTER_PAG
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\ASP_MASTER_PAGE\ASP_MASTER_PAGE\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\ASP_MASTER_PAGE\ASP_MASTER_PAGE\bin\es\System.Web.Optimization.resources.dll
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\ASP_MASTER_PAGE\ASP_MASTER_PAGE\bin\es\Microsoft.AspNet.FriendlyUrls.resources.dll
-C:\Users\AsataTarde\Desktop\inesmallada\curso_net\ASP_MASTER_PAGE\ASP_MASTER_PAGE\obj\Debug\ASP_MASTER_PAGE.csproj.AssemblyReference.cache
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\ASP_MASTER_PAGE\ASP_MASTER_PAGE\obj\Debug\ASP_MASTER_PAGE.csproj.CoreCompileInputs.cache
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\ASP_MASTER_PAGE\ASP_MASTER_PAGE\obj\Debug\ASP_MASTER_PAGE.csproj.CopyComplete
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\ASP_MASTER_PAGE\ASP_MASTER_PAGE\obj\Debug\ASP_MASTER_PAGE.dll

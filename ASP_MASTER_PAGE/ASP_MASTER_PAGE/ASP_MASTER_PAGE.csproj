@@ -106,7 +106,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Bajas.aspx" />
+    <Content Include="Borrar.aspx" />
+    <Content Include="Modificaciones.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -127,7 +128,6 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Altas.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Modificacion.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -172,12 +172,19 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Bajas.aspx.cs">
-      <DependentUpon>Bajas.aspx</DependentUpon>
+    <Compile Include="Borrar.aspx.cs">
+      <DependentUpon>Borrar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Bajas.aspx.designer.cs">
-      <DependentUpon>Bajas.aspx</DependentUpon>
+    <Compile Include="Borrar.aspx.designer.cs">
+      <DependentUpon>Borrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Modificaciones.aspx.cs">
+      <DependentUpon>Modificaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modificaciones.aspx.designer.cs">
+      <DependentUpon>Modificaciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -195,13 +202,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Modificacion.aspx.cs">
-      <DependentUpon>Modificacion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Modificacion.aspx.designer.cs">
-      <DependentUpon>Modificacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
