@@ -83,4 +83,3 @@ C:\Users\AsataTarde\Desktop\inesmallada\curso_net\MVC_RAZOR\MVC_RAZOR\obj\Debug\
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\MVC_RAZOR\MVC_RAZOR\obj\Debug\MVC_RAZOR.csproj.CopyComplete
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\MVC_RAZOR\MVC_RAZOR\obj\Debug\MVC_RAZOR.dll
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\MVC_RAZOR\MVC_RAZOR\obj\Debug\MVC_RAZOR.pdb
-C:\Users\AsataTarde\Desktop\inesmallada\curso_net\MVC_RAZOR\MVC_RAZOR\obj\Debug\MVC_RAZOR.csproj.AssemblyReference.cache

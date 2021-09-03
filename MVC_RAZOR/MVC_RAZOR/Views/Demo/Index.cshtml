@@ -8,7 +8,7 @@
 
 <h2>Index</h2> @ViewBag.Mensaje
 <!--Y aquí volvemos a poner comentarios en html-->
-@{ 
+@{
     string titulo = "Página Principal";
     int dia = DateTime.Now.Day;
     int mes = DateTime.Now.Month;
@@ -18,20 +18,33 @@
     {
         cadena = "Estamos es la segunda parte del mes";
     }
-    else {
+    else
+    {
         cadena = "Estamos en la primer parte del mes";
     }
 }
+@* arroba/model MVC_RAZOR.Models.Libro*@
+
+@model IEnumerable<MVC_RAZOR.Models.Libro>
+
 <!DOCTYPE html>
 <html>
 <head>
-        <meta name="viewport" content="width=device-width"/>
+    <meta name="viewport" content="width=device-width" />
     <title>Index</title>
 </head>
 <body>
+    <ul>
+        @foreach (var libro in Model)
+        {
+            <p>El titulo del libro es <strong>@libro.Titulo (@libro.TipoLibro)</strong></p>
+        }
+    </ul>
+
     <div>
-            <h1>@titulo</h1>
-            <p>Fecha:@dia/@mes/@anio</p>
+
+        <h1>@titulo</h1>
+        <p>Fecha:@dia/@mes/@anio</p>
         <p>@cadena</p>
     </div>
 </body>
