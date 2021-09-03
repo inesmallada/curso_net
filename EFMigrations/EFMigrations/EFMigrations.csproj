@@ -135,6 +135,10 @@
     <Compile Include="Migrations\202109021807217_Initial.Designer.cs">
       <DependentUpon>202109021807217_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109031407011_Viernes.cs" />
+    <Compile Include="Migrations\202109031407011_Viernes.Designer.cs">
+      <DependentUpon>202109031407011_Viernes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ContextoEmpleados.cs" />
     <Compile Include="Models\Empleado.cs" />
@@ -201,6 +205,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202109021807217_Initial.resx">
       <DependentUpon>202109021807217_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109031407011_Viernes.resx">
+      <DependentUpon>202109031407011_Viernes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

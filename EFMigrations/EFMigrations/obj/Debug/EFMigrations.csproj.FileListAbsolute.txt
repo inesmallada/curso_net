@@ -89,3 +89,4 @@ C:\Users\AsataTarde\Desktop\inesmallada\curso_net\EFMigrations\EFMigrations\obj\
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\EFMigrations\EFMigrations\obj\Debug\EFMigrations.pdb
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\EFMigrations\EFMigrations\obj\Debug\EFMigrations.Migrations.Initial.resources
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\EFMigrations\EFMigrations\obj\Debug\EFMigrations.csproj.GenerateResource.cache
+C:\Users\AsataTarde\Desktop\inesmallada\curso_net\EFMigrations\EFMigrations\obj\Debug\EFMigrations.Migrations.Viernes.resources
