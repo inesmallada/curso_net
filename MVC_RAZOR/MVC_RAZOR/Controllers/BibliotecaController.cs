@@ -9,7 +9,7 @@ namespace MVC_RAZOR.Controllers
 {
     public class BibliotecaController : Controller
     {
-        BibliotecaController miBiblioteca = new BibliotecaController();
+        Biblioteca miBiblioteca = new Biblioteca();
         // GET: Biblioteca
         public ActionResult Index()
         {

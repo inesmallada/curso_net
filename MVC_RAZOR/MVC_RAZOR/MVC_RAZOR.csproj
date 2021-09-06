@@ -169,10 +169,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Demo\Index.cshtml" />
     <Content Include="Views\Tabla\Index.cshtml" />
+    <Content Include="Views\Biblioteca\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Biblioteca\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

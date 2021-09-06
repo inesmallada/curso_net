@@ -42,10 +42,26 @@
     </ul>
 
     <div>
-
         <h1>@titulo</h1>
         <p>Fecha:@dia/@mes/@anio</p>
         <p>@cadena</p>
+    </div>
+    <div>
+
+        @{
+            ViewBag.Title = "Index";
+        }
+        <h2>Index</h2>
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table>
+            <tr>
+                <th>
+                    Isbn
+                </th>
+            <tr>
+        </table>
     </div>
 </body>
 </html>
