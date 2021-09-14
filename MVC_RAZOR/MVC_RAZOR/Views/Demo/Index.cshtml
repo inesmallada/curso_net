@@ -37,7 +37,7 @@
     <ul>
         @foreach (var libro in Model)
         {
-            <p>El titulo del libro es <strong>@libro.Titulo (@libro.TipoLibro)</strong></p>
+            <li>El titulo del libro es <strong>@libro.Titulo (@libro.TipoLibro)</strong></li>
         }
     </ul>
 
@@ -57,10 +57,26 @@
         </p>
         <table>
             <tr>
-                <th>
-                    Isbn
-                </th>
+                <th>Isbn </th>
+                <th>Titulo</th>
+                <th>Tipo de libro</th>
+            </tr>
             <tr>
+                <td>@libro.Isbn</td>
+                <td>@libro.Titulo</td>
+                <td>@libro.TipoLibro</td>
+            </tr>
+            <tr>
+                <td>@libro.Isbn</td>
+                <td>@libro.Titulo</td>
+                <td>@libro.TipoLibro</td>
+            </tr>
+            <tr>
+                <td>@libro.Isbn</td>
+                <td>@libro.Titulo</td>
+                <td>@libro.TipoLibro</td>
+            </tr>
+
         </table>
     </div>
 </body>

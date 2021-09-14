@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using MVC_RAZOR.Models;
 
 namespace MVC_RAZOR.Models
 {
@@ -33,6 +34,21 @@ namespace MVC_RAZOR.Models
                 }
             };
         }
-    }    
+        public int NumeroLibros()
+        {
+            return Libros.Count();
+        }
+        public Libro ObtenerPorIsbn(string isbn)
+        {
+            foreach (var libroBuscar in Libros)
+            {
+                if (libroBuscar.Isbn == isbn)
+                {
+                    return libroBuscar;
+                }
+            }
+            return null;
+        }
+    } 
 }
    

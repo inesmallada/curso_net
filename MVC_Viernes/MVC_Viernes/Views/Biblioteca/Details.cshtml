@@ -1,0 +1,11 @@
+﻿@model MVC_Viernes.Models.Libro
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<p>@Html.ActionLink ("Edit", "Edit", new {id = Model.ISBN}) |
+    @Html.ActionLink ("Back to List", "Index") 
+    
+</p>

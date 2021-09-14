@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Conversion";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Conversion</title>"
+</head>
+
+<body>
+    <h2>Conversion</h2>
+    <div>
+        <p>Celsius a Fahrenheit</p>
+        <form method="post">
+            <div>
+                <label>CELSIUS:</label> <input type="text" name="celsius" value="@ViewBag.celsius" />
+                <input type="submit" name="btnTemp" value="Convertir" />
+                <p>RESULTADO</p>
+                <label>FAHRENHEIT:</label> <input type="text" name="fahren" value="@ViewBag.fahren" />
+            </div>
+             <div>
+                  <label>PULGADAS:</label> <input type="text" name="pulgadas" value="@ViewBag.pulgadas" />
+                   <input type="submit" name="btnMedida" value="Convertir" />
+                   <p>RESULTADO</p>
+                   <label>MILIMETROS:</label> <input type="text" name="mili" value="@ViewBag.mili" />
+             </div>
+        </form>
+    </div>
+    @Html.ActionLink("Volver al menú principalo", "Index")
+</body>
+</html>

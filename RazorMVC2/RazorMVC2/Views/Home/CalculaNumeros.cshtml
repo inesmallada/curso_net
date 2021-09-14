@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "CalculaNumeros";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <h2>CalculaNumeros</h2>
+
+    <div>
+        <form method="post">
+            <label>Numero 1:</label> <input type="text" name="num" value="@ViewBag.num" />
+            <label>Numero 2:</label> <input type="text" name="num2" value="@ViewBag.num2" />
+            <p>RESULTADO</p>
+            <label>SUMA:</label> <input type="text" name="suma" value="@ViewBag.sum" />
+            <label>RESTA:</label> <input type="text" name="resta" value="@ViewBag.rest" />
+            <label>MULTIPLICACION:</label> <input type="text" name="multi" value="@ViewBag.multi" />
+            <label>DIVISIÓN:</label> <input type="text" name="divi" value="@ViewBag.divi" />
+            <input type="submit" value="calcular" />
+        </form>
+    </div>
+    @Html.ActionLink("Volver al menú principalo", "Index")
+</body>
+</html>
+
+
