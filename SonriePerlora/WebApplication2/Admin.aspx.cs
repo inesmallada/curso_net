@@ -11,17 +11,29 @@ namespace WebApplication2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
         }
 
-        protected void btnAdmin_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
-            string s = System.Configuration.ConfigurationManager.ConnectionStrings["cadenaconexion1"].ConnectionString;
-            SqlConnection conexion = new SqlConnection(s);
-            conexion.Open();
-            SqlCommand comando = new SqlCommand("insert into usuarios(nombre,clave,mail) VALUES('" + this.txtNombre.Text + "','" + this.txtClave.Text + "','" + this.txtNombre.Text + "')", conexion);
-            comando.ExecuteNonQuery();
-            lblConfirmacion.Text = "Se registro el usuario";
-            conexion.Close();
+              //string s = System.Configuration.ConfigurationManager.ConnectionStrings["cadenaconexion1"].ConnectionString;
+      //SqlConnection conexion = new SqlConnection(s);
+      //conexion.Open();
+      var usuario = txtUsuario.Value;
+      var pass = txtPass.Value;
+          if (usuario == "admin" && pass == "1234")
+          {
+              Response.Redirect("Nomina.aspx", true);
+            }
+          else {
+              lblConfirmacion.Text = "Usuario no existente";
+          }
+          //SqlCommand comando = new SqlCommand("insert into usuarios(usuario,pass,tipo) VALUES('" + this.txtUsuario.Value + "','" + this.txtPass.Value + "')", conexion);
+          //comando.ExecuteNonQuery();
+          //conexion.Close();
+
+
+    
         }
     }
 }

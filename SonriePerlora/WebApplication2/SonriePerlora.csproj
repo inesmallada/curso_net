@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin.aspx" />
+    <Content Include="Admin2.aspx" />
     <Content Include="assets\favicon.ico" />
     <Content Include="assets\img\bg-masthead.jpg" />
     <Content Include="assets\img\portfolio\fullsize\1.jpg" />
@@ -87,6 +88,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="js\scripts.js" />
+    <Content Include="Nomina.aspx" />
     <Content Include="Personal.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -97,6 +99,13 @@
     </Compile>
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin2.aspx.cs">
+      <DependentUpon>Admin2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin2.aspx.designer.cs">
+      <DependentUpon>Admin2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cliente.aspx.cs">
       <DependentUpon>Cliente.aspx</DependentUpon>
@@ -114,6 +123,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Nomina.aspx.cs">
+      <DependentUpon>Nomina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nomina.aspx.designer.cs">
+      <DependentUpon>Nomina.aspx</DependentUpon>
     </Compile>
     <Compile Include="Personal.aspx.cs">
       <DependentUpon>Personal.aspx</DependentUpon>

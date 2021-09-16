@@ -114,3 +114,7 @@ C:\Users\AsataTarde\Desktop\inesmallada\curso_net\SonriePerlora\WebApplication2\
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\SonriePerlora\WebApplication2\obj\Debug\SonriePerlora.csproj.CopyComplete
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\SonriePerlora\WebApplication2\obj\Debug\WebApplication2.dll
 C:\Users\AsataTarde\Desktop\inesmallada\curso_net\SonriePerlora\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\AsataTarde\Desktop\curso_net\inesmallada\curso_net\SonriePerlora\WebApplication2\obj\Debug\SonriePerlora.csproj.AssemblyReference.cache
+C:\Users\AsataTarde\Desktop\curso_net\inesmallada\curso_net\SonriePerlora\WebApplication2\obj\Debug\SonriePerlora.csproj.CoreCompileInputs.cache
+C:\Users\AsataTarde\Desktop\curso_net\inesmallada\curso_net\SonriePerlora\WebApplication2\obj\Debug\WebApplication2.dll
+C:\Users\AsataTarde\Desktop\curso_net\inesmallada\curso_net\SonriePerlora\WebApplication2\obj\Debug\WebApplication2.pdb
