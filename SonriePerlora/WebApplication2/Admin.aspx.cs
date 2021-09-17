@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -14,26 +15,21 @@ namespace WebApplication2
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+      
+
+        protected void btnAcceso_Click(object sender, EventArgs e)
         {
-              //string s = System.Configuration.ConfigurationManager.ConnectionStrings["cadenaconexion1"].ConnectionString;
-      //SqlConnection conexion = new SqlConnection(s);
-      //conexion.Open();
-      var usuario = txtUsuario.Value;
-      var pass = txtPass.Value;
-          if (usuario == "admin" && pass == "1234")
-          {
-              Response.Redirect("Nomina.aspx", true);
+            var usuario = txtUsuario.Value;
+            var pass = txtPass.Value;
+            if (usuario == "admin" && pass == "1234")
+            {
+                Response.Redirect("Nomina.aspx", true);
             }
-          else {
-              lblConfirmacion.Text = "Usuario no existente";
-          }
-          //SqlCommand comando = new SqlCommand("insert into usuarios(usuario,pass,tipo) VALUES('" + this.txtUsuario.Value + "','" + this.txtPass.Value + "')", conexion);
-          //comando.ExecuteNonQuery();
-          //conexion.Close();
-
-
-    
+            else
+            {
+                lblConfirmacion.Text = "Usuario no existente";
+            }
+         
         }
     }
-}
+} 

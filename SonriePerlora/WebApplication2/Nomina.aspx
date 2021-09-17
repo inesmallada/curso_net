@@ -1,13 +1,13 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Nomina.aspx.cs" Inherits="WebApplication2.Nomina" %>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Administrador de Nóminas y personal laboral</title>
+        <title>Home</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap Icons-->
@@ -20,7 +20,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-    <body id="page-top" class="p-admin">
+    <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
@@ -35,10 +35,12 @@
                         <li class="nav-item"><a class="nav-link" href="#acceso">Acceso de Usuarios</a></li>
                     </ul>
                 </div>
-              
             </div>
         </nav>
-    <form id="form1" runat="server">
+          <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                  <form id="form1" runat="server">
          <!--Los datos de la empresa quizás ponerlos en la parte inicial de la página-->  
                         <div>
                             <asp:Label runat="server" Text="Label">Direccion de la empresa:</asp:Label>
@@ -95,14 +97,7 @@
                             <asp:TextBox ID="txtID_Departamento" runat="server" Width="150px"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtID_Departamento" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
-                    </div>
-                    <div class="w-40 float-end"> <!--Segunda columna-->
-                         <div class="mb-2">
-                            <asp:Label runat="server" Text="Label">Tipo de contrato:</asp:Label>
-                            <asp:TextBox ID="txtContrato" runat="server" Width="150px"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtContrato" ForeColor="Red"></asp:RequiredFieldValidator>
-                        </div>
-                         <div class="mb-2">
+                        <div class="mb-2">
                             <asp:Label runat="server" Text="Label">Puesto:</asp:Label>
                             <asp:DropDownList ID="ddlPuesto" runat="server">
                                  <asp:ListItem Value="Direccion">Direccion</asp:ListItem>
@@ -115,6 +110,14 @@
                              </asp:DropDownList>
                              <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="ddlPuesto" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
+                    </div>
+                   <%-- <div class="w-40 float-end"> <!--Segunda columna-->
+                         <div class="mb-2">
+                            <asp:Label runat="server" Text="Label">Tipo de contrato:</asp:Label>
+                            <asp:TextBox ID="txtContrato" runat="server" Width="150px"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtContrato" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </div>
+                        
                          <div class="mb-2">
                             <asp:Label runat="server" Text="Label">Tipo de jornada:</asp:Label>
                              <asp:DropDownList ID="ddlJornada" runat="server">
@@ -157,12 +160,12 @@
                           <div class="mb-2">
                             <asp:Label runat="server" Text="Label">IRPF:</asp:Label>
                             <asp:TextBox ID="txtIRPF" runat="server" Width="150px"></asp:TextBox>
-                        </div>
+                        </div>--%>
                           <%--<div class="mb-2">
                             <asp:Label runat="server" Text="Label">Periodo de Liquidación:</asp:Label>
                               <asp:Calendar ID="Calendar1" runat="server" Height="16px" Width="66px"></asp:Calendar>
                         </div>--%>
-                      </div>
+                   <%--   </div>
                           <div class="mb-2">
                             <asp:Label runat="server" Text="Label">Precio de la hora Extra:</asp:Label>
                              <asp:TextBox ID="txtPhoraExtra" runat="server" Width="150px"></asp:TextBox>
@@ -170,12 +173,18 @@
                           <div class="mb-2">
                             <asp:Label runat="server" Text="Label">Horas Trabajadas:</asp:Label>
                             <asp:TextBox ID="txthorasTrabajadas" runat="server" Width="150px"></asp:TextBox>
-                        </div>
-                        <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl" value="RegistroPersonal" id="btnRegistro" type="submit">Enviar</button></div>
-                        </div>
-                       </div>
-     
-    </form>
-</body>
+                        </div>--%>
+              </div>
+                        <!-- Submit Buttons-->
+                              <div class="d-grid">
+                                  <asp:Button ID="btnAlta" runat="server" class="btn btn-primary" Text="Alta"  />
+                               
+                               <asp:Button ID="btnBajaP" value="BajaP" runat="server" class="btn btn-primary" Text="Baja" />
+                               <asp:Button ID="btnModiP" value="ModiP" runat="server" class="btn btn-primary" Text="Modificación" />
+                               <asp:Button ID="btnConsultaP" value="ConsultaP" runat="server" class="btn btn-primary" Text="Consulta" />
+                            </div>
+             </form>
+          </div>
+        </header>
+    </body>
 </html>

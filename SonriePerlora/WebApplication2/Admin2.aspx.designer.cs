@@ -15,22 +15,22 @@ namespace WebApplication2
     {
 
         /// <summary>
-        /// Control datosPersonal.
+        /// Control datos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm datosPersonal;
+        protected global::System.Web.UI.HtmlControls.HtmlForm datos;
 
         /// <summary>
-        /// Control ID.
+        /// Control ID2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ID;
+        protected global::System.Web.UI.WebControls.TextBox ID2;
 
         /// <summary>
         /// Control Nombre.

@@ -35,7 +35,6 @@
                         <li class="nav-item"><a class="nav-link" href="#acceso">Acceso de Usuarios</a></li>
                     </ul>
                 </div>
-              
             </div>
         </nav>
         <!-- Masthead-->
@@ -57,7 +56,7 @@
                             </div>
                                <!-- Submit Button-->
                             <div class="d-grid">
-                                <asp:Button ID="Button1" class="btn btn-primary btn-xl" runat="server" OnClick="Button1_Click" Text="Acceso" />
+                               <asp:Button ID="btnAcceso" runat="server" class="btn btn-primary btn-xl" Text="Acceso" OnClick="btnAcceso_Click" />
                             </div>
                             <asp:Label ID="lblConfirmacion" runat="server" Text=""></asp:Label>              
                     </form>
@@ -84,6 +83,8 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <p>
+            &nbsp;</p>
     </body>
 </html>
 

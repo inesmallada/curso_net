@@ -60,13 +60,13 @@
                             <asp:Label runat="server" Text="Label">Código de cuenta:</asp:Label>
                         </div>
                 <div>
-                   <form runat="server" id="datosPersonal" server="perlora.database.windows.net">
+                   <form runat="server" id="datos" server="perlora.database.windows.net">
                     <div>
-                    <div class="w-50 float-start">
+                     <div class="w-50">
                         <div class="mb-2">
                             <asp:Label runat="server" Text="Label">ID Personal:</asp:Label>
                            
-                            <asp:TextBox ID="ID" runat="server" Width="150px"></asp:TextBox>
+                            <asp:TextBox ID="ID2" runat="server" Width="150px"></asp:TextBox>
                         </div>
                         <div  class="mb-2">
                             <asp:Label runat="server" Text="Label">Nombre:</asp:Label>
@@ -89,14 +89,12 @@
                         </div>
                         <div  class="mb-2">
                             <asp:Label runat="server" Text="Label">DNI:</asp:Label>
-                            
                             <asp:TextBox ID="DNI" runat="server" Width="150px"></asp:TextBox>
                         </div>
                       </div>
-                    <div class="w-50 float-start">
+                    <div class="w-50">
                         <div  class="mb-2">
                             <asp:Label runat="server" Text="Label">Número Seguridad Social:</asp:Label>
-                            
                             <asp:TextBox ID="NSS" runat="server" Width="150px"></asp:TextBox>
                         </div>
                         <div  class="mb-2">
@@ -182,7 +180,7 @@
                            
                             <asp:TextBox ID="Phora" runat="server" Width="150px"></asp:TextBox>
                         </div>
-                        <div class="w-50 float-end">
+                        <div class="w-50">
                           <div class="mb-2">
                             <asp:Label runat="server" Text="Label">Horas Extras:</asp:Label>
                            
@@ -200,7 +198,7 @@
                         </div>
                         </div>
                       
-                        <div class="w-50 float-end">
+                        <div class="w-50">
                           <div class="mb-2">
                             <asp:Label runat="server" Text="Label">Precio de la hora Extra:</asp:Label>
                           
@@ -216,6 +214,7 @@
                         </div>
                        </div>
                    </form>
+                  </div>
                 </div>
         </header>
         <!-- Nominas-->
