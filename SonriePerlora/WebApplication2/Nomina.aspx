@@ -64,13 +64,12 @@
                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtApellidos" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>
-                            <asp:Label runat="server" Text="Género"></asp:Label>
-                            <asp:RadioButtonList ID="rdGenero" runat="server"> 
-                                <asp:ListItem Value="Masculino">Masculino</asp:ListItem>
-                                <asp:ListItem Value="Femenino">Femenino</asp:ListItem>
-                                <asp:ListItem Value="Otro">Otro</asp:ListItem>
-                            </asp:RadioButtonList>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="rdGenero" ForeColor="Red"></asp:RequiredFieldValidator>
+                             <asp:Label runat="server" Text="Género"></asp:Label>
+                             <asp:RadioButton ID="rdMasculino" GroupName="genero" runat="server" Text="Masculino"/>
+                             <asp:RadioButton ID="rdFemenino"  GroupName="genero" runat="server" Text="Femenino" />
+                             <asp:RadioButton ID="rdOtro" GroupName="genero"  runat="server" Text="Otro" />
+                            
+                            <!--<asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="rdGenero" ForeColor="Red"></asp:RequiredFieldValidator>-->
                         </div>
                         <div  class="mb-2">
                             <asp:Label runat="server" Text="Label">DNI:</asp:Label> 
@@ -177,12 +176,12 @@
               </div>
                         <!-- Submit Buttons-->
                               <div class="d-grid">
-                                  <asp:Button ID="btnAlta" runat="server" class="btn btn-primary" Text="Alta"  />
-                               
-                               <asp:Button ID="btnBajaP" value="BajaP" runat="server" class="btn btn-primary" Text="Baja" />
-                               <asp:Button ID="btnModiP" value="ModiP" runat="server" class="btn btn-primary" Text="Modificación" />
-                               <asp:Button ID="btnConsultaP" value="ConsultaP" runat="server" class="btn btn-primary" Text="Consulta" />
-                            </div>
+                                  <asp:Button ID="btnAlta" runat="server" class="btn btn-primary" Text="Alta" OnClick="btnAlta_Click" />
+                                  <asp:Button ID="btnBajaP" value="BajaP" runat="server" class="btn btn-primary" Text="Baja" OnClick="btnBajaP_Click" />
+                                  <asp:Button ID="btnModiP" value="ModiP" runat="server" class="btn btn-primary" Text="Modificación" OnClick="btnModiP_Click" />
+                                  <asp:Button ID="btnConsultaP" value="ConsultaP" runat="server" class="btn btn-primary" Text="Consulta" OnClick="btnConsultaP_Click" />
+                              </div>
+                      <asp:Label ID="lblConfirmacionP" runat="server" Text=""></asp:Label>
              </form>
           </div>
         </header>

@@ -172,3 +172,4 @@ C:\Users\AsataTarde\Desktop\curso_net\inesmallada\curso_net\SonriePerlora\WebApp
 C:\Users\AsataTarde\Desktop\curso_net\inesmallada\curso_net\SonriePerlora\WebApplication2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\AsataTarde\Desktop\curso_net\inesmallada\curso_net\SonriePerlora\WebApplication2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\AsataTarde\Desktop\curso_net\inesmallada\curso_net\SonriePerlora\WebApplication2\obj\Debug\SonriePerlora.csproj.CopyComplete
+C:\Users\AsataTarde\Desktop\curso_net\inesmallada\curso_net\SonriePerlora\WebApplication2\obj\Debug\SonriePerlora.csproj.AssemblyReference.cache
