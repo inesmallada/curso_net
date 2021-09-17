@@ -71,7 +71,7 @@ namespace WebApplication2
             conexion.Open();
             
             try
-            {   string genero;
+            {   string genero="";
               //  comando.ExecuteNonQuery();
                 //si algun textbox está en blanco no funcionaría en if
                 if (txtID.Text == "" || txtNombre.Text == "" || txtApellidos.Text == "" || txtDNI.Text == "" || txtNSS.Text == "" || txtLocalidad.Text == "" || txtCpostal.Text == "" || txtID_Departamento.Text == "" || ddlPuesto.Text == "")
