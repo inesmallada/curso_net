@@ -12,6 +12,19 @@ namespace WebApplication2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            DataClasses1DataContext SonriePerlora = new DataClasses1DataContext();
+            cargarCombo();
+            cargarGrid();
+        }
+        void cargarCombo() {
+            var cargarCombo = from p in SonriePerlora.Personal //QUË OCURREEEEEEEEEE TODO
+                              select p.DNI;
+            ddlConsulta.DataSource = cargarCombo; //TODO crear un botón de consulta
+        }
+
+        void cargarGrid() {
+            var cargarGrid = from p in SonriePerlora.Personal select p; //QUË OCURREEEEEEEEEE TODO
+            GridView1.DataSource = cargarGrid;
         }
 
         protected void btnAlta_Click(object sender, EventArgs e)
@@ -19,7 +32,7 @@ namespace WebApplication2
             string s = System.Configuration.ConfigurationManager.ConnectionStrings["cadenaconexion1"].ConnectionString;
             SqlConnection conexion = new SqlConnection(s);
             conexion.Open();
-            String genero;
+            string genero;
             int op=0;
                 switch (op)
                 {
@@ -40,9 +53,11 @@ namespace WebApplication2
                         break;
                 }
 
-            SqlCommand comando = new SqlCommand("insert into Personal(ID_Personal,Nombre,Apellidos,Genero,DNI, NSS, Localidad, Cpostal, ID_Departamento, TipoContrato, Puesto, TipoJornada, SalarioBruto, SalarioNeto) VALUES('" + this.txtID.Text + "','" + this.txtNombre.Text + "','" + this.txtApellidos.Text + "','" + genero + "','" + this.txtDNI.Text + "','" + this.txtNSS.Text + "','" + this.txtLocalidad.Text + "','" + this.txtCpostal.Text + "','" + this.txtID_Departamento.Text + "','" + this.ddlPuesto.Text + "')", conexion);
+            SqlCommand comando = new SqlCommand("insert into Personal(ID_Personal,Nombre,Apellidos,Genero,DNI, NSS, Localidad, Cpostal, ID_Departamento,Puesto) VALUES('" + this.txtID.Text + "','" + this.txtNombre.Text + "','" + this.txtApellidos.Text + "','" + genero + "','" + this.txtDNI.Text + "','" + this.txtNSS.Text + "','" + this.txtLocalidad.Text + "','" + this.txtCpostal.Text + "','" + this.txtID_Departamento.Text + "','" + this.ddlPuesto.Text + "')", conexion);
             comando.ExecuteNonQuery();
             lblConfirmacionP.Text = "Personal Laboral registrado";
+            Personal.SonriePerlora.SubmitChanges();//QUË OCURREEEEEEEEEE TODO
+            cargarGrid();
             conexion.Close();
         }
 
@@ -51,15 +66,19 @@ namespace WebApplication2
             string s = System.Configuration.ConfigurationManager.ConnectionStrings["cadenaconexion1"].ConnectionString;
             SqlConnection conexion = new SqlConnection(s);
             conexion.Open();
-            SqlCommand comando = new SqlCommand("delete from Personal where ID_Personal='" + this.txtID.Text + "'", conexion);
-            int ID = comando.ExecuteNonQuery();
-            if (ID == 1)
+            SqlCommand comando = new SqlCommand("delete from Personal where DNI='" + this.ddlConsulta.SelectedItem.ToString() + "'", conexion);
+            
+            SonriePerlora.Personal.DeleteOnSubmit();//Qué DEMONIOS Pasa aquí!!!!
+            SonriePerlora.Personal.SubmitChanges();
+
+            int DNI = comando.ExecuteNonQuery();
+            if (DNI == 1)
             {
-                this.txtID.Text = "Se dió de baja correctamente";
+                lblConfirmacionP.Text = "Se dió de baja correctamente";
             }
             else
             {
-                this.txtID.Text = "No existe una persona con ese ID";
+                lblConfirmacionP.Text = "No existe una persona con ese DNI";
                 conexion.Close();
             }
         }

@@ -195,57 +195,57 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator10;
 
         /// <summary>
-        /// Control btnAltaC.
+        /// Control btnAlta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAltaC;
+        protected global::System.Web.UI.WebControls.LinkButton btnAlta;
 
         /// <summary>
-        /// Control btnBajaC.
+        /// Control btnBajaP.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBajaC;
+        protected global::System.Web.UI.WebControls.LinkButton btnBajaP;
 
         /// <summary>
-        /// Control btnModiC.
+        /// Control btnModiP.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnModiC;
+        protected global::System.Web.UI.WebControls.LinkButton btnModiP;
 
         /// <summary>
-        /// Control btnConsultaC.
+        /// Control btnConsultaP.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConsultaC;
+        protected global::System.Web.UI.WebControls.LinkButton btnConsultaP;
 
         /// <summary>
-        /// Control lblConfirmacionC.
+        /// Control lblConfirmacionP.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblConfirmacionC;
+        protected global::System.Web.UI.WebControls.Label lblConfirmacionP;
 
         /// <summary>
-        /// Control GridView2.
+        /// Control GridView1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView2;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

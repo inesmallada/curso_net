@@ -761,7 +761,7 @@ progress {
 
 .col-2 {
     flex: 0 0 auto;
-    width: 16.66666667%;
+    width: 19%;
 }
 
 .col-3 {
@@ -776,7 +776,7 @@ progress {
 
 .col-5 {
     flex: 0 0 auto;
-    width: 41.66666667%;
+    width: 29%;
 }
 
 .col-6 {
@@ -12110,11 +12110,13 @@ header.masthead {
         .orden {
             float:left;
             margin-right:3%;
+        
         }
         .orden2 {
             float: left;
             clear: right;
-        }
+    
+}
         .mybtn {
             display:inline-block;
             width: 100%;
