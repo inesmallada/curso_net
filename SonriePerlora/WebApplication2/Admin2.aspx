@@ -42,7 +42,7 @@
         <header class="masthead">
             <div class="container px-4 px-lg-5 h-100">
                             <!-- Usuario input-->
-                            <div class="form-floating mb-3">
+                            <div class=" mb-3">
                                 <input class="form-control" id="usuario" type="text" placeholder="Introduce usuario..." data-sb-validations="required" />
                                 <label for="name">Usuario</label>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">*El usuario es obligatorio</div>

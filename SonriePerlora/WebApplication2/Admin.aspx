@@ -5,8 +5,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta name="description" content="Acceso de los distintos usuarios de la aplicacion" />
+        <meta name="author" content="Ines Mallada" />
         <title>Acceso Admin</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -25,14 +25,14 @@
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="#page-top">Sonríe en Perlora</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+               <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#acceso">Acceso de Usuarios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Default.aspx#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Default.aspx#services">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Default.aspx#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Default.aspx#contact">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Default.aspx#acceso">Acceso de Usuarios</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,15 +43,15 @@
                  <div>
                      <form runat="server" id="datosPersonal" server="perlora.database.windows.net">
                             <!-- Usuario input-->
-                            <div class="form-floating mb-3">
+                            <div class="mb-3">
                                 <input class="form-control" id="txtUsuario" runat="server" type="text" placeholder="Introduce usuario..." />
-                                <label for="name">Usuario</label>
+                               <!-- <label for="name">Usuario</label>-->
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtUsuario" ForeColor="Red"></asp:RequiredFieldValidator>
                             </div>
                             <!-- Password input-->
-                            <div class="form-floating mb-3">
+                            <div class="mb-3">
                                 <input class="form-control" id="txtPass" runat="server" type="password" placeholder="Contraseña"  />
-                                <label for="email">Contraseña</label>
+                                <!--<label for="email">Contraseña</label>-->
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtPass" ForeColor="Red"></asp:RequiredFieldValidator>
                             </div>
                                <!-- Submit Button-->

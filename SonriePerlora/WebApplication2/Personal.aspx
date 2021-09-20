@@ -5,9 +5,9 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Creative - Start Bootstrap Theme</title>
+        <meta name="description" content="Gestion de las reservas y los clientes de Sonrie en Perlora, Asturias" />
+        <meta name="author" content="Ines Mallada" />
+        <title>Gestion del Personal</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap Icons-->
@@ -24,15 +24,15 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand" href="#page-top">Sonríe en Perlora</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Acceso de Usuarios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Default.aspx#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Default.aspx#services">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Default.aspx#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Default.aspx#contact">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Default.aspx#acceso">Acceso de Usuarios</a></li>
                     </ul>
                 </div>
             </div>
@@ -40,67 +40,80 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container px-4 px-lg-5 h-100">
-                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                    <div class="col-lg-8 align-self-end">
-                        <h1 class="text-white font-weight-bold">Your Favorite Place for Free Bootstrap Themes</h1>
-                        <hr class="divider" />
+               <form id="form1" runat="server">
+                 <div class="form-datos"> <!--Primera columna-->
+                            <div class="mb-2 orden col-5">
+                                <asp:Label runat="server" Text="Label">ID Cliente:</asp:Label>
+                                <asp:TextBox ID="txtID_Cliente" class="form-control" runat="server"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtID_Cliente" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </div>
+                        <div class="mb-2 orden2 col-5">
+                            <asp:Label runat="server" Text="Label">Nombre:</asp:Label>
+                            <asp:TextBox ID="txtNombreC" runat="server" class="form-control"></asp:TextBox>
+                              <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtNombreC" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </div>
+                         <div class="mb-2 orden col-5">
+                            <asp:Label runat="server" Text="Label">Apellidos:</asp:Label>
+                            <asp:TextBox ID="txtApellidosC" runat="server" class="form-control"></asp:TextBox>
+                               <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtApellidosC" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </div>
+                        <div class="mb-4 mt-2 orden2 col-5 pb-3">
+                            <div><asp:Label runat="server" Text="Género:"></asp:Label></div>
+                             <asp:RadioButton ID="rdMasculinoC" GroupName="genero" runat="server" Text="Masculino"/>
+                             <asp:RadioButton ID="rdFemeninoC"  GroupName="genero" runat="server" Text="Femenino" />
+                             <asp:RadioButton ID="rdOtroC" GroupName="genero"  runat="server" Text="Otro" />
+                        </div>
+                        <div  class="mb-2 orden col-5">
+                            <asp:Label runat="server" Text="Label">DNI:</asp:Label> 
+                            <asp:TextBox ID="txtDNIC" runat="server" class="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtDNIC" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </div>
+                            <div  class="mb-2 orden2 col-5">
+                                <asp:Label runat="server" Text="Label"></asp:Label>
+                                <asp:TextBox ID="txtNSS" runat="server" class="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtNSS" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </div>
+                            <div  class="mb-2 orden col-5">
+                                <asp:Label runat="server" Text="Label">Localidad:</asp:Label>
+                                <asp:TextBox ID="txtLocalidadC" runat="server" class="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtLocalidadC" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </div>
+                             <div  class="mb-2 orden2 col-5">
+                                <asp:Label runat="server" Text="Label">Código Postal:</asp:Label>
+                                <asp:TextBox ID="txtCpostalC" runat="server" class="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtCpostalC" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </div>
+                             <div class="mb-2 orden col-5" >
+                                <asp:Label runat="server" Text="Label">ID Departamento:</asp:Label>
+                                <asp:TextBox ID="txtID_DepartamentoC" runat="server" class="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtID_DepartamentoC" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </div>
+                       <%-- <div class="mb-2 orden2">
+                            <asp:Label runat="server" Text="Label">Puesto:</asp:Label>
+                            <asp:DropDownList ID="ddlPuesto" class="form-control" runat="server">
+                                 <asp:ListItem Value="Direccion">Direccion</asp:ListItem>
+                                 <asp:ListItem Value="Gerente">Gerente</asp:ListItem>
+                                 <asp:ListItem Value="Monitoras">Monitoras</asp:ListItem>
+                                 <asp:ListItem Value="Chef">Chef</asp:ListItem>
+                                 <asp:ListItem Value="Restauracion">Servicio restauracion</asp:ListItem>
+                                 <asp:ListItem Value="Mantenimiento">Mantenimiento</asp:ListItem>
+                                 <asp:ListItem Value="Guia">Guia</asp:ListItem>
+                             </asp:DropDownList>
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="ddlPuesto" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </div>--%>
                     </div>
-                    <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
-                        <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
-                    </div>
+            <!-- Submit Buttons-->
+                <div class="d-grid">
+                       <asp:Button ID="btnAltaC" value="AltaC" runat="server" class="btn btn-primary orden mybtn mb-2" Text="Alta"/>
+                       <asp:Button ID="btnBajaC" value="BajaC" runat="server" class="btn btn-primary orden mybtn mb-2" Text="Baja"/>
+                       <asp:Button ID="btnModiC" value="ModiC" runat="server" class="btn btn-primary orden mybtn mb-2" Text="Modificación"/>
+                       <asp:Button ID="btnConsultaC" value="ConsultaC" runat="server" class="btn btn-primary orden mybtn mb-2" Text="Consulta"/>
                 </div>
-            </div>
+                       <asp:Label ID="lblConfirmacionC" runat="server" Text=""></asp:Label>
+                       <asp:GridView ID="GridView2" class="orden2" runat="server">
+                       </asp:GridView>
+             </form>
+          </div>
         </header>
-        <!-- About-->
-        <section class="page-section bg-primary" id="about">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">We've got what you need!</h2>
-                        <hr class="divider divider-light" />
-                        <p class="text-white-75 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
-                        <a class="btn btn-light btn-xl" href="#services">Get Started!</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Services-->
-        <section class="page-section" id="services">
-            <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">At Your Service</h2>
-                <hr class="divider" />
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Sturdy Themes</h3>
-                            <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Up to Date</h3>
-                            <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Ready to Publish</h3>
-                            <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Made with Love</h3>
-                            <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-   </body>
+    </body>
 </html>

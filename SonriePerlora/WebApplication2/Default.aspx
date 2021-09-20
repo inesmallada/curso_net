@@ -74,35 +74,35 @@
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">At Your Service</h2>
+                <h2 class="text-center mt-0">¿Qué te ofrecemos?</h2>
                 <hr class="divider" />
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Sturdy Themes</h3>
-                            <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+                            <div class="mb-2"><i class="bi bi-house fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Alojamiento para todas</h3>
+                            <p class="text-muted mb-0">Vuestras necesidades están cubiertas, sean las que sean.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Up to Date</h3>
-                            <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
+                            <div class="mb-2"><i class="bi bi-water bi-alarm bi-tree fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Playas y merenderos</h3>
+                            <p class="text-muted mb-0">Todo disponible para exprimir al máximo la experiencia en Perlora.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Ready to Publish</h3>
-                            <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
+                            <div class="mb-2"><i class="bi bi-bicycle fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Explora</h3>
+                            <p class="text-muted mb-0">Preciosas rutas por el concejo de Carreño al Cabu Peñes.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
                             <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Made with Love</h3>
-                            <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                            <h3 class="h4 mb-2">Hecho con AMOR...</h3>
+                            <p class="text-muted mb-0">A la naturaleza, a los animales y a grandes y peques.</p>
                         </div>
                     </div>
                 </div>
@@ -113,56 +113,56 @@
             <div class="container-fluid p-0">
                 <div class="row g-0">
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Menudo Público">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="zona de juegos infantiles" />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Categoría</div>
+                                <div class="project-name">"Menudo" Público</div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="[re]Descubriendo Perlora a pie o en bici">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="Rutas y Paseos por Perlora" />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Categoría</div>
+                                <div class="project-name">[re]Descubriendo Perlora a pie o en bici</div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Merenderos públicos">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="Merenderos públicos con vistas al mar" />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Categoría</div>
+                                <div class="project-name">Merenderos públicos</div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="Alojamiento 3R">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="uno de los tipos de alojamiento en Perlora" />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Categoría</div>
+                                <div class="project-name">Alojamiento 3R (Reducir, Reutilizar y Reciclar.)</div>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Playas inolvidables">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="playas paradisíacas" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Categoría</div>
+                                <div class="project-name">Playas inolvidables</div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Men sana y corpore sano">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="instalaciones deportivas" />
                             <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Categoría</div>
+                                <div class="project-name">Men sana y corpore sano</div>
                             </div>
                         </a>
                     </div>
@@ -172,8 +172,8 @@
         <!-- Call to action-->
         <section class="page-section bg-dark text-white">
             <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-                <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
+                <h2 class="mb-4">No dejes pasar la oportunidad</h2>
+                <a class="btn btn-light btn-xl" href="#contact">¡Regístrate YA!</a>
             </div>
         </section>
         <!-- Contact-->
@@ -181,9 +181,9 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Let's Get In Touch!</h2>
+                        <h2 class="mt-0">¡Vamos, ya casi lo tienes!</h2>
                         <hr class="divider" />
-                        <p class="text-muted mb-5">Ready to start your next project with us? Send us a messages and we will get back to you as soon as possible!</p>
+                        <p class="text-muted mb-5">[re]Inventa tus vacaciones con Sonríe en Perlora. Regístrate y comienza a planificar vacaciones en familia, con amigas y amigos, en campamentos para mayores y menores en un entorno inmejorable.</p>
                     </div>
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">

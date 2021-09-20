@@ -123,12 +123,6 @@ namespace WebApplication2
             conexion.Close();
         }//FIN método
 
-
-
-
-
-        
-
         protected void btnConsultaP_Click (object sender, EventArgs e)
         {
             string s = System.Configuration.ConfigurationManager.ConnectionStrings["cadenaconexion1"].ConnectionString;
@@ -146,6 +140,6 @@ namespace WebApplication2
                 this.txtID.Text = "No existe una persona contratada con dicho ID";
                 conexion.Close();
             }
-    }
+        }
     }
 }

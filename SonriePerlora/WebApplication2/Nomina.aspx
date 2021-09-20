@@ -5,9 +5,9 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Home</title>
+        <meta name="description" content="Gestion del personal laboral de Sonrie en Perlora, Asturias. Altas, bajas, modificaciones y búsquedas" />
+        <meta name="author" content="Ines Mallada" />
+        <title>Gestion de los</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap Icons-->
@@ -25,14 +25,14 @@
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="#page-top">Sonríe en Perlora</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+               <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#acceso">Acceso de Usuarios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Default.aspx#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Default.aspx#services">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Default.aspx#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Default.aspx#contact">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Default.aspx#acceso">Acceso de Usuarios</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,62 +43,60 @@
                   <form id="form1" runat="server">
          <!--Los datos de la empresa quizás ponerlos en la parte inicial de la página-->  
                         <div>
-                            <asp:Label runat="server" Text="Label">Direccion de la empresa:</asp:Label>
-                            <asp:Label runat="server" Text="Label">Código de cuenta:</asp:Label>
+                            <asp:Label runat="server" Text="Label">Perlora 33491, Asturias</asp:Label>
+                            <asp:Label runat="server" Text="Label">CCC:33 123456789</asp:Label>
                         </div>
-          <div>
-                    <div class="w-40"> <!--Primera columna-->
-                        <div class="mb-2">
+          <div >
+                    <div class="form-datos"> <!--Primera columna-->
+                        <div class="mb-2 orden col-5">
                             <asp:Label runat="server" Text="Label">ID Personal:</asp:Label>
-                            <asp:TextBox ID="txtID" runat="server" Width="150px"></asp:TextBox>
+                            <asp:TextBox ID="txtID" class="form-control w-30" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtID" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
-                        <div  class="mb-2">
+                        <div  class="mb-2 orden2 col-5">
                             <asp:Label runat="server" Text="Label">Nombre:</asp:Label>
-                            <asp:TextBox ID="txtNombre" runat="server" Width="150px"></asp:TextBox>
+                            <asp:TextBox ID="txtNombre" runat="server" class="form-control"></asp:TextBox>
                               <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtNombre" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
-                         <div  class="mb-2">
+                         <div  class="mb-2 orden col-5">
                             <asp:Label runat="server" Text="Label">Apellidos:</asp:Label>
-                            <asp:TextBox ID="txtApellidos" runat="server" Width="150px"></asp:TextBox>
+                            <asp:TextBox ID="txtApellidos" runat="server" class="form-control"></asp:TextBox>
                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtApellidos" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
-                        <div>
-                             <asp:Label runat="server" Text="Género"></asp:Label>
+                        <div class="mb-4 mt-2 orden2 col-5 pb-3">
+                            <div><asp:Label runat="server" Text="Género:"></asp:Label></div>
                              <asp:RadioButton ID="rdMasculino" GroupName="genero" runat="server" Text="Masculino"/>
                              <asp:RadioButton ID="rdFemenino"  GroupName="genero" runat="server" Text="Femenino" />
                              <asp:RadioButton ID="rdOtro" GroupName="genero"  runat="server" Text="Otro" />
-                            
-                            <!--<asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="rdGenero" ForeColor="Red"></asp:RequiredFieldValidator>-->
                         </div>
-                        <div  class="mb-2">
+                        <div  class="mb-2 orden  col-5">
                             <asp:Label runat="server" Text="Label">DNI:</asp:Label> 
-                            <asp:TextBox ID="txtDNI" runat="server" Width="150px"></asp:TextBox>
+                            <asp:TextBox ID="txtDNI" runat="server" class="form-control"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtDNI" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
-                        <div  class="mb-2">
+                        <div  class="mb-2 orden2 col-5">
                             <asp:Label runat="server" Text="Label">Número Seguridad Social:</asp:Label>
-                            <asp:TextBox ID="txtNSS" runat="server" Width="150px"></asp:TextBox>
+                            <asp:TextBox ID="txtNSS" runat="server" class="form-control"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtNSS" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
-                        <div  class="mb-2">
+                        <div  class="mb-2 orden col-5">
                             <asp:Label runat="server" Text="Label">Localidad:</asp:Label>
-                            <asp:TextBox ID="txtLocalidad" runat="server" Width="150px"></asp:TextBox>
+                            <asp:TextBox ID="txtLocalidad" runat="server" class="form-control"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtLocalidad" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
-                         <div  class="mb-2">
+                         <div  class="mb-2 orden2 col-5">
                             <asp:Label runat="server" Text="Label">Código Postal:</asp:Label>
-                            <asp:TextBox ID="txtCpostal" runat="server" Width="150px"></asp:TextBox>
+                            <asp:TextBox ID="txtCpostal" runat="server" class="form-control"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtCpostal" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
-                         <div class="mb-2" >
+                         <div class="mb-2 orden col-5" >
                             <asp:Label runat="server" Text="Label">ID Departamento:</asp:Label>
-                            <asp:TextBox ID="txtID_Departamento" runat="server" Width="150px"></asp:TextBox>
+                            <asp:TextBox ID="txtID_Departamento" runat="server" class="form-control"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtID_Departamento" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
-                        <div class="mb-2">
+                        <div class="mb-2 orden2 col-5">
                             <asp:Label runat="server" Text="Label">Puesto:</asp:Label>
-                            <asp:DropDownList ID="ddlPuesto" runat="server">
+                            <asp:DropDownList ID="ddlPuesto" class="form-control" runat="server">
                                  <asp:ListItem Value="Direccion">Direccion</asp:ListItem>
                                  <asp:ListItem Value="Gerente">Gerente</asp:ListItem>
                                  <asp:ListItem Value="Monitoras">Monitoras</asp:ListItem>
@@ -175,13 +173,17 @@
                         </div>--%>
               </div>
                         <!-- Submit Buttons-->
-                              <div class="d-grid">
-                                  <asp:Button ID="btnAlta" runat="server" class="btn btn-primary" Text="Alta" OnClick="btnAlta_Click" />
-                                  <asp:Button ID="btnBajaP" value="BajaP" runat="server" class="btn btn-primary" Text="Baja" OnClick="btnBajaP_Click" />
-                                  <asp:Button ID="btnModiP" value="ModiP" runat="server" class="btn btn-primary" Text="Modificación" OnClick="btnModiP_Click" />
-                                  <asp:Button ID="btnConsultaP" value="ConsultaP" runat="server" class="btn btn-primary" Text="Consulta" OnClick="btnConsultaP_Click" />
+                              <div class="d-grid mybtn">
+                                  <asp:LinkButton ID="btnAlta" runat="server" class="btn btn-primary orden mybtn mb-2" Text="" OnClick="btnAlta_Click"> <i class="bi bi-person-plus">Alta</i> </asp:LinkButton>
+                                  <asp:LinkButton ID="btnBajaP" value="BajaP" runat="server" class="btn btn-primary orden mybtn mb-2" Text="" OnClick="btnBajaP_Click"><i class="bi bi-trash"> Baja</i></asp:LinkButton>
+                                  <asp:LinkButton ID="btnModiP" value="ModiP" runat="server" class="btn btn-primary orden mybtn mb-2" Text="" OnClick="btnModiP_Click"><i class="bi bi-tools">Modificación</i></asp:LinkButton> 
+                                  <asp:LinkButton ID="btnConsultaP" value="ConsultaP" runat="server" class="btn btn-primary orden mybtn mb-2" Text="" OnClick="btnConsultaP_Click"><i class="bi bi-search">Consulta</i></asp:LinkButton>
                               </div>
+                      <br />
+                      <br />
                       <asp:Label ID="lblConfirmacionP" runat="server" Text=""></asp:Label>
+                      <asp:GridView ID="GridView1" class="orden2" runat="server">
+                      </asp:GridView>
              </form>
           </div>
         </header>

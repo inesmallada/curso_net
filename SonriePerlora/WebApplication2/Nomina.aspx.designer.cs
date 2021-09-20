@@ -105,15 +105,6 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.RadioButton rdOtro;
 
         /// <summary>
-        /// Control RequiredFieldValidator12.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator12;
-
-        /// <summary>
         /// Control txtDNI.
         /// </summary>
         /// <remarks>
@@ -228,7 +219,7 @@ namespace WebApplication2
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAlta;
+        protected global::System.Web.UI.WebControls.LinkButton btnAlta;
 
         /// <summary>
         /// Control btnBajaP.
@@ -237,7 +228,7 @@ namespace WebApplication2
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBajaP;
+        protected global::System.Web.UI.WebControls.LinkButton btnBajaP;
 
         /// <summary>
         /// Control btnModiP.
@@ -246,7 +237,7 @@ namespace WebApplication2
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnModiP;
+        protected global::System.Web.UI.WebControls.LinkButton btnModiP;
 
         /// <summary>
         /// Control btnConsultaP.
@@ -255,7 +246,7 @@ namespace WebApplication2
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConsultaP;
+        protected global::System.Web.UI.WebControls.LinkButton btnConsultaP;
 
         /// <summary>
         /// Control lblConfirmacionP.
@@ -265,5 +256,14 @@ namespace WebApplication2
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblConfirmacionP;
+
+        /// <summary>
+        /// Control GridView1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }
