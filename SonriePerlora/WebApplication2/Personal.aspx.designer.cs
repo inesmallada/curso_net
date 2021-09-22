@@ -51,15 +51,6 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.TextBox txtID_Cliente;
 
         /// <summary>
-        /// Control RequiredFieldValidator14.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator14;
-
-        /// <summary>
         /// Control txtNombreC.
         /// </summary>
         /// <remarks>
@@ -69,15 +60,6 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.TextBox txtNombreC;
 
         /// <summary>
-        /// Control RequiredFieldValidator15.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator15;
-
-        /// <summary>
         /// Control txtApellidosC.
         /// </summary>
         /// <remarks>
@@ -85,15 +67,6 @@ namespace WebApplication2
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtApellidosC;
-
-        /// <summary>
-        /// Control RequiredFieldValidator16.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator16;
 
         /// <summary>
         /// Control rdMasculinoC.
@@ -132,15 +105,6 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.TextBox txtDNIC;
 
         /// <summary>
-        /// Control RequiredFieldValidator17.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator17;
-
-        /// <summary>
         /// Control txtLocalidadC.
         /// </summary>
         /// <remarks>
@@ -150,15 +114,6 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.TextBox txtLocalidadC;
 
         /// <summary>
-        /// Control RequiredFieldValidator18.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator18;
-
-        /// <summary>
         /// Control txtCpostalC.
         /// </summary>
         /// <remarks>
@@ -166,15 +121,6 @@ namespace WebApplication2
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCpostalC;
-
-        /// <summary>
-        /// Control RequiredFieldValidator19.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator19;
 
         /// <summary>
         /// Control cblActividades.

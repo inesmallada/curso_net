@@ -18,25 +18,39 @@ namespace WebApplication2
 
         protected void btnAltaC_Click(object sender, EventArgs e)
         {
-            string s = System.Configuration.ConfigurationManager.ConnectionStrings["SonriePerloraConnectionString1"].ConnectionString.ToString();
-            SqlConnection conexion = new SqlConnection(s);
-            conexion.Open();
-            string genero="";
-            string alergias = "";
-            string alojamiento = "";
+            if (txtID_Cliente.Text == "" || txtNombreC.Text == "" || txtApellidosC.Text == "" || txtDNIC.Text == "" || txtLocalidadC.Text == "" || txtCpostalC.Text == "")
+            {
+                lblConfirmacionC.Text = "FALTA ALGÚN DATO POR RELLENAR";
+            }
+            else
+            {
 
-            if (rdMasculinoC.Checked == true)
-            {
-                genero = "Masculino";
+                string s = System.Configuration.ConfigurationManager.ConnectionStrings["SonriePerloraConnectionString1"].ConnectionString.ToString();
+                SqlConnection conexion = new SqlConnection(s);
+                conexion.Open();
+                string genero = "";
+                if (rdMasculinoC.Checked == true)
+                {
+                    genero = "Masculino";
+                }
+                else if (rdFemeninoC.Checked == true)
+                {
+                    genero = "Femenino";
+                }
+                else if (rdOtroC.Checked == true)
+                {
+                    genero = "Otro";
+                }
+                SqlCommand comando = new SqlCommand("insert into Cliente(ID_Cliente,Nombre,Apellidos,Genero, DNI, Edad, Localidad, NumPersonas, Animales, Habitacion, Precio, FechaInicio, FechaFin,PackCamp, Dieta, Alergias,DiversidadFuncional,ID_Departamento) VALUES('" + txtID_Cliente.Text + "','" + this.txtNombreC.Text + "','" + this.txtApellidosC.Text + "', " + genero + " , '" + this.txtDNIC.Text + "', '" + 0 + "', '" + this.txtLocalidadC.Text + "','" + 0+ "','" + this.cblActividades.Text + "','" + "" + "',"' + "" + '")", conexion);
+                comando.ExecuteNonQuery();
+                SqlCommand comando2 = new SqlCommand("insert into Admin(usuario,pass, tipo)VALUES('" + this.txtUsuarioC.Text + "','" + this.txtPassC.Text + "','" + "Personal" + "')", conexion);
+                lblConfirmacionC.Text = "Registro hecho correctamente.";
+                Response.Redirect("Personal.aspx", true);
+                conexion.Close();
+
             }
-            else if (rdFemeninoC.Checked == true)
-            {
-                genero = "Femenino";
-            }
-            else if (rdOtroC.Checked == true)
-            {
-                genero = "Otro";
-            }
+
+          
            //SqlCommand comando1 = new SqlCommand("insert into Cliente(ID_Cliente,Nombre,Apellidos,Genero, DNI, Edad, Localidad, NumPersonas, Animales, Habitacion, Precio, FechaInicio, FechaFin,PackCamp, Dieta, Alergias,DiversidadFuncional,ID_Departamento)" +
            //    "VALUES('" + this.txtID_Cliente.Text + "','" + this.txtNombreC.Text + "','" + this.txtApellidosC.Text + "', "+ genero + " , '" + this.txtDNIC.Text + "', '" +0+ "', '" + this.txtLocalidadC.Text + "','" + this.txtNumPersonas.Valu + "','" + this.cblActividades.Text + "',"+ alergias+","+alojamiento+ ")", conexion);
            // //'" + this.calAnio.Text + "',*/'" + this.txtNumPersonas.Text + "','"+ this.ddlDieta.Value +"' OJOOOOOOOOOOOOO

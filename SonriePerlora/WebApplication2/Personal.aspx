@@ -54,22 +54,19 @@
                         </div>
                         <div class="row">
                             <div class="mb-2 orden col-sm-5 col-10">
-                                <asp:Label runat="server" Text="Label">ID Cliente:</asp:Label>
+                                <asp:Label runat="server" Text="">ID Cliente:</asp:Label>
                                 <asp:TextBox ID="txtID_Cliente" class="form-control" runat="server"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtID_Cliente" ForeColor="Red"></asp:RequiredFieldValidator>
                             </div>
                         <div class="mb-2 orden2 col-sm-5 col-10">
                             <asp:Label runat="server" Text="">Nombre:</asp:Label>
                             <asp:TextBox ID="txtNombreC" runat="server" class="form-control"></asp:TextBox>
-                              <asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtNombreC" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         </div>
                         <div class="row">
                          <div class="mb-2 orden col-sm-5 col-10">
                             <asp:Label runat="server" Text="">Apellidos:</asp:Label>
                             <asp:TextBox ID="txtApellidosC" runat="server" class="form-control"></asp:TextBox>
-                               <asp:RequiredFieldValidator ID="RequiredFieldValidator16" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtApellidosC" ForeColor="Red"></asp:RequiredFieldValidator>
-                        </div>
+                         </div>
                         <div class="mb-4 mt-2 orden2 col-sm-5 col-10 pb-3">
                             <div><asp:Label runat="server" Text="Género:"></asp:Label></div>
                              <asp:RadioButton ID="rdMasculinoC" GroupName="genero" runat="server" Text="Masculino"/>
@@ -78,23 +75,20 @@
                         </div>
                         </div>
                         <div class="row">
-                        <div  class="mb-2 orden col-sm-5 col-10">
-                            <asp:Label runat="server" Text="">DNI:</asp:Label> 
-                            <asp:TextBox ID="txtDNIC" runat="server" class="form-control"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator17" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtDNIC" ForeColor="Red"></asp:RequiredFieldValidator>
-                        </div>
+                            <div  class="mb-2 orden col-sm-5 col-10">
+                                <asp:Label runat="server" Text="">DNI:</asp:Label> 
+                                <asp:TextBox ID="txtDNIC" runat="server" class="form-control"></asp:TextBox>
+                            </div>
                             <div  class="mb-2 orden2 col-sm-5 col-10">
                                 <asp:Label runat="server" Text="">Localidad:</asp:Label>
                                 <asp:TextBox ID="txtLocalidadC" runat="server" class="form-control"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator18" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtLocalidadC" ForeColor="Red"></asp:RequiredFieldValidator>
-                            </div>
+                             </div>
                         </div>
                         <div class="row">                             
                             <div  class="mb-2 orden col-sm-5 col-10">
                                 <asp:Label runat="server" Text="">Código Postal:</asp:Label>
                                 <asp:TextBox ID="txtCpostalC" runat="server" class="form-control"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator19" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtCpostalC" ForeColor="Red"></asp:RequiredFieldValidator>
-                        </div>
+                            </div>
                         <div class="mb-2 orden2 col-sm-5 col-10" >
                            <div class="mb-2 orden2 col-5">
                                <asp:Label runat="server" Text="">Actividades:</asp:Label>
@@ -130,24 +124,19 @@
                        <asp:Label ID="lblConfirmacionC" runat="server" Text=""></asp:Label>
                    <asp:GridView ID="GridView2" class="orden2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="ID_Cliente">
                        <Columns>
-                           <asp:BoundField DataField="ID_Cliente" HeaderText="ID_Cliente" ReadOnly="True" SortExpression="ID_Cliente"></asp:BoundField>
                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre"></asp:BoundField>
                            <asp:BoundField DataField="Apellidos" HeaderText="Apellidos" SortExpression="Apellidos"></asp:BoundField>
                            <asp:BoundField DataField="Genero" HeaderText="Genero" SortExpression="Genero"></asp:BoundField>
                            <asp:BoundField DataField="DNI" HeaderText="DNI" SortExpression="DNI"></asp:BoundField>
-                           <asp:BoundField DataField="Edad" HeaderText="Edad" SortExpression="Edad"></asp:BoundField>
                            <asp:BoundField DataField="Localidad" HeaderText="Localidad" SortExpression="Localidad"></asp:BoundField>
                            <asp:BoundField DataField="NumPersonas" HeaderText="NumPersonas" SortExpression="NumPersonas"></asp:BoundField>
                            <asp:BoundField DataField="Animales" HeaderText="Animales" SortExpression="Animales"></asp:BoundField>
                            <asp:BoundField DataField="Habitacion" HeaderText="Habitacion" SortExpression="Habitacion"></asp:BoundField>
                            <asp:BoundField DataField="Precio" HeaderText="Precio" SortExpression="Precio"></asp:BoundField>
-                           <asp:BoundField DataField="FechaInicio" HeaderText="FechaInicio" SortExpression="FechaInicio"></asp:BoundField>
-                           <asp:BoundField DataField="FechaFin" HeaderText="FechaFin" SortExpression="FechaFin"></asp:BoundField>
                            <asp:BoundField DataField="PackCamp" HeaderText="PackCamp" SortExpression="PackCamp"></asp:BoundField>
                            <asp:BoundField DataField="Dieta" HeaderText="Dieta" SortExpression="Dieta"></asp:BoundField>
                            <asp:BoundField DataField="Alergias" HeaderText="Alergias" SortExpression="Alergias"></asp:BoundField>
                            <asp:BoundField DataField="DiversidadFuncional" HeaderText="DiversidadFuncional" SortExpression="DiversidadFuncional"></asp:BoundField>
-                           <asp:BoundField DataField="ID_Departamento" HeaderText="ID_Departamento" SortExpression="ID_Departamento"></asp:BoundField>
                        </Columns>
                    </asp:GridView>
 

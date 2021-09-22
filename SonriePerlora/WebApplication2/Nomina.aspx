@@ -57,19 +57,16 @@
                         <div class="mb-2 orden col-sm-5 col-10">
                             <asp:Label runat="server" Text="">ID Personal:</asp:Label>
                             <asp:TextBox ID="txtID" class="form-control w-30" runat="server"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtID" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div  class="mb-2 orden2 col-sm-5 col-10">
                             <asp:Label runat="server" Text="">Nombre:</asp:Label>
                             <asp:TextBox ID="txtNombre" runat="server" class="form-control required"></asp:TextBox>
-                              <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtNombre" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         </div>
                          <div class="row">
                          <div  class="mb-2 orden col-sm-5 col-10">
                             <asp:Label runat="server" Text="">Apellidos:</asp:Label>
                             <asp:TextBox ID="txtApellidos" runat="server" class="form-control"></asp:TextBox>
-                               <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtApellidos" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div class="mb-4 mt-2 orden2 col-sm-5 pb-3 col-10">
                             <div><asp:Label runat="server" Text="Género:"></asp:Label></div>
@@ -82,31 +79,26 @@
                         <div  class="mb-2 orden col-10 col-sm-5">
                             <asp:Label runat="server" Text="">DNI:</asp:Label> 
                             <asp:TextBox ID="txtDNI" runat="server" class="form-control"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtDNI" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div  class="mb-2 orden2 col-sm-5 col-10">
                             <asp:Label runat="server" Text="">Número Seguridad Social:</asp:Label>
                             <asp:TextBox ID="txtNSS" runat="server" class="form-control"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtNSS" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         </div>
                         <div class="row">
                         <div  class="mb-2 orden col-sm-5 col-10">
                             <asp:Label runat="server" Text="">Localidad:</asp:Label>
                             <asp:TextBox ID="txtLocalidad" runat="server" class="form-control"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtLocalidad" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                          <div  class="mb-2 orden2 col-sm-5 col-10">
                             <asp:Label runat="server" Text="">Código Postal:</asp:Label>
                             <asp:TextBox ID="txtCpostal" runat="server" class="form-control"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtCpostal" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         </div>
                          <div class="row">
                          <div class="mb-2 orden col-sm-5 col-10">
                             <asp:Label runat="server" Text="">ID Departamento:</asp:Label>
                             <asp:TextBox ID="txtID_Departamento" runat="server" class="form-control"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtID_Departamento" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div class="mb-2 orden2 col-sm-5 col-10">
                             <asp:Label runat="server" Text="">Puesto:</asp:Label>
@@ -119,7 +111,6 @@
                                  <asp:ListItem Value="Mantenimiento">Mantenimiento</asp:ListItem>
                                  <asp:ListItem Value="Guia">Guia</asp:ListItem>
                              </asp:DropDownList>
-                             <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="ddlPuesto" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         </div>
                          <div class="row">
