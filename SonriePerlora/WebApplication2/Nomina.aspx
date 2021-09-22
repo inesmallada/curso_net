@@ -40,65 +40,75 @@
           <!-- Masthead-->
         <header class="masthead">
             <div class="container px-4 px-lg-5 h-100">
-                  <form id="form1" runat="server">
-         <!--Los datos de la empresa quizás ponerlos en la parte inicial de la página-->  
-                        <div>
-                            <asp:Label runat="server" Text="Label">Perlora 33491, Asturias</asp:Label>
-                            <asp:Label runat="server" Text="Label">CCC:33 123456789</asp:Label>
-                        </div>
-          <div >
-                    <div class="form-datos"> <!--Primera columna-->
-                        <div class="mb-2 orden col-5">
-                            <asp:DropDownList ID="ddlConsulta"  runat="server"></asp:DropDownList>
-                        </div>
-                        <div class="mb-2 orden col-5">
-                            <asp:Label runat="server" Text="Label">ID Personal:</asp:Label>
+                  <form id="form1" runat="server" class="was-validated">
+                    <div class="form-datos"> <!--Primera columna en el caso de preparar la nómina del personal-->
+                    <!--Los datos de la empresa quizás ponerlos en la parte inicial de la página-->  
+                      <div class="row">
+                        <div class="mb-2 orden col-sm-5 col-10">
+                            <asp:Label runat="server" Text="">Perlora 33491, Asturias</asp:Label>
+                            <asp:Label runat="server" Text="">CCC:33 123456789</asp:Label>
+                      </div>
+                      <div class="mb-2 orden2 col-sm-5 col-10">
+                            <asp:DropDownList ID="ddlConsulta" runat="server"></asp:DropDownList>
+                      </div>
+                      </div>
+                      <div class="row">
+                        <div class="mb-2 orden col-sm-5 col-10">
+                            <asp:Label runat="server" Text="">ID Personal:</asp:Label>
                             <asp:TextBox ID="txtID" class="form-control w-30" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtID" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
-                        <div  class="mb-2 orden2 col-5">
-                            <asp:Label runat="server" Text="Label">Nombre:</asp:Label>
-                            <asp:TextBox ID="txtNombre" runat="server" class="form-control"></asp:TextBox>
+                        <div  class="mb-2 orden2 col-sm-5 col-10">
+                            <asp:Label runat="server" Text="">Nombre:</asp:Label>
+                            <asp:TextBox ID="txtNombre" runat="server" class="form-control required"></asp:TextBox>
                               <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtNombre" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
-                         <div  class="mb-2 orden col-5">
-                            <asp:Label runat="server" Text="Label">Apellidos:</asp:Label>
+                        </div>
+                         <div class="row">
+                         <div  class="mb-2 orden col-sm-5 col-10">
+                            <asp:Label runat="server" Text="">Apellidos:</asp:Label>
                             <asp:TextBox ID="txtApellidos" runat="server" class="form-control"></asp:TextBox>
                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtApellidos" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
-                        <div class="mb-4 mt-2 orden2 col-5 pb-3">
+                        <div class="mb-4 mt-2 orden2 col-sm-5 pb-3 col-10">
                             <div><asp:Label runat="server" Text="Género:"></asp:Label></div>
                              <asp:RadioButton ID="rdMasculino" GroupName="genero" runat="server" Text="Masculino"/>
                              <asp:RadioButton ID="rdFemenino"  GroupName="genero" runat="server" Text="Femenino" />
                              <asp:RadioButton ID="rdOtro" GroupName="genero"  runat="server" Text="Otro" />
                         </div>
-                        <div  class="mb-2 orden  col-5">
-                            <asp:Label runat="server" Text="Label">DNI:</asp:Label> 
+                        </div>
+                        <div class="row">
+                        <div  class="mb-2 orden col-10 col-sm-5">
+                            <asp:Label runat="server" Text="">DNI:</asp:Label> 
                             <asp:TextBox ID="txtDNI" runat="server" class="form-control"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtDNI" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
-                        <div  class="mb-2 orden2 col-5">
-                            <asp:Label runat="server" Text="Label">Número Seguridad Social:</asp:Label>
+                        <div  class="mb-2 orden2 col-sm-5 col-10">
+                            <asp:Label runat="server" Text="">Número Seguridad Social:</asp:Label>
                             <asp:TextBox ID="txtNSS" runat="server" class="form-control"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtNSS" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
-                        <div  class="mb-2 orden col-5">
-                            <asp:Label runat="server" Text="Label">Localidad:</asp:Label>
+                        </div>
+                        <div class="row">
+                        <div  class="mb-2 orden col-sm-5 col-10">
+                            <asp:Label runat="server" Text="">Localidad:</asp:Label>
                             <asp:TextBox ID="txtLocalidad" runat="server" class="form-control"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtLocalidad" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
-                         <div  class="mb-2 orden2 col-5">
-                            <asp:Label runat="server" Text="Label">Código Postal:</asp:Label>
+                         <div  class="mb-2 orden2 col-sm-5 col-10">
+                            <asp:Label runat="server" Text="">Código Postal:</asp:Label>
                             <asp:TextBox ID="txtCpostal" runat="server" class="form-control"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtCpostal" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
-                         <div class="mb-2 orden col-5" >
-                            <asp:Label runat="server" Text="Label">ID Departamento:</asp:Label>
+                        </div>
+                         <div class="row">
+                         <div class="mb-2 orden col-sm-5 col-10">
+                            <asp:Label runat="server" Text="">ID Departamento:</asp:Label>
                             <asp:TextBox ID="txtID_Departamento" runat="server" class="form-control"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtID_Departamento" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
-                        <div class="mb-2 orden2 col-5">
-                            <asp:Label runat="server" Text="Label">Puesto:</asp:Label>
+                        <div class="mb-2 orden2 col-sm-5 col-10">
+                            <asp:Label runat="server" Text="">Puesto:</asp:Label>
                             <asp:DropDownList ID="ddlPuesto" class="form-control" runat="server">
                                  <asp:ListItem Value="Direccion">Direccion</asp:ListItem>
                                  <asp:ListItem Value="Gerente">Gerente</asp:ListItem>
@@ -109,6 +119,16 @@
                                  <asp:ListItem Value="Guia">Guia</asp:ListItem>
                              </asp:DropDownList>
                              <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="ddlPuesto" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </div>
+                        </div>
+                         <div class="row">
+                          <div  class="mb-2 orden col-sm-5 col-10">
+                            <asp:Label runat="server" Text="">Usuario:</asp:Label>
+                            <asp:TextBox ID="txtUsuario" runat="server" class="form-control"></asp:TextBox>
+                        </div>
+                         <div  class="mb-2 orden2 col-sm-5 col-10">
+                            <asp:Label runat="server" Text="">Contraseña:</asp:Label>
+                            <asp:TextBox ID="txtPass" runat="server" class="form-control"></asp:TextBox>
                         </div>
                     </div>
                    <%-- <div class="w-40 float-end"> <!--Segunda columna-->
@@ -177,21 +197,21 @@
               </div>
                         <!-- Submit Buttons-->
                               <div class="d-grid mybtn">
-                                  <asp:LinkButton ID="btnAlta" runat="server" class="btn btn-primary orden mybtn mb-2" Text="" OnClick="btnAlta_Click"> <i class="bi bi-person-plus"> Alta</i> </asp:LinkButton>
-                                  <asp:LinkButton ID="btnBajaP" value="BajaP" runat="server" class="btn btn-primary orden mybtn mb-2" Text="" OnClick="btnBajaP_Click"> <i class="bi bi-trash"> Baja</i></asp:LinkButton>
-                                  <asp:LinkButton ID="btnModiP" value="ModiP" runat="server" class="btn btn-primary orden mybtn mb-2" Text="" OnClick="btnModiP_Click"> <i class="bi bi-tools"> Modificación</i></asp:LinkButton> 
-                                  <asp:LinkButton ID="btnConsultaP" value="ConsultaP" runat="server" class="btn btn-primary orden mybtn mb-2" Text="" OnClick="btnConsultaP_Click"> <i class="bi bi-search"> Consulta</i></asp:LinkButton>
+                                  <asp:LinkButton ID="btnAlta" runat="server" class="btn btn-primary orden mybtn mb-2" Text="" OnClick="btnAlta_Click"> <i class="bi bi-person-plus">Alta</i> </asp:LinkButton>
+                                  <asp:LinkButton ID="btnBajaP" value="BajaP" runat="server" class="btn btn-primary orden mybtn mb-2" Text="" OnClick="btnBajaP_Click"><i class="bi bi-trash"> Baja</i></asp:LinkButton>
+                                  <asp:LinkButton ID="btnModiP" value="ModiP" runat="server" class="btn btn-primary orden mybtn mb-2" Text="" OnClick="btnModiP_Click"><i class="bi bi-tools">Modificación</i></asp:LinkButton> 
+                                  <asp:LinkButton ID="btnConsultaP" value="ConsultaP" runat="server" class="btn btn-primary orden mybtn mb-2" Text="" OnClick="btnConsultaP_Click"><i class="bi bi-search">Consulta</i></asp:LinkButton>
                               </div>
                       <br />
                       <br />
                       <asp:Label ID="lblConfirmacionP" runat="server" Text=""></asp:Label>
-                      <asp:GridView ID="GridView1" class="orden2" runat="server">
+                      <asp:GridView ID="GridView1" class="orden2" runat="server" DataSourceID="SqlDataSource1">
                       </asp:GridView>
+                      <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
              </form>
           </div>
         </header>
-           <!-- Footer-->
-        <footer class="bg-light py-5">
+          <footer class="bg-light py-5">
             <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Sonríe en Perlora</div></div>
         </footer>
         <!-- Bootstrap core JS-->

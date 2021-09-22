@@ -40,165 +40,133 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container px-4 px-lg-5 h-100">
-               <form id="form1" runat="server">
+               <form id="form3" runat="server">
                     <div class="form-datos"> <!--Primera columna-->
-                            <div class="mb-2 orden col-3">
-                                <asp:Label runat="server" Text="">ID Cliente:</asp:Label>
-                                <asp:TextBox ID="txtID_Cliente" class="form-control" runat="server"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtID_Cliente" ForeColor="Red"></asp:RequiredFieldValidator>
+                        
+                        <div>
+                            <asp:Label ID="txtReclamo" runat="server" Text="Haz ahora tu reserva"></asp:Label>
+                        </div>
+                        <div class="row">
+                        <div  class="mb-2 orden col-sm-5 col-10">
+                            <asp:Label runat="server" Text="">Nombre:</asp:Label>
+                            <asp:TextBox ID="txtNombreC" runat="server" class="form-control"></asp:TextBox>
+                              <asp:RequiredFieldValidator ID="RequiredFieldValidator20" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtNombreC" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </div>
+                         <div  class="mb-2 orden2 col-sm-5 col-10">
+                            <asp:Label runat="server" Text="">Apellidos:</asp:Label>
+                            <asp:TextBox ID="txtApellidosC" runat="server" class="form-control"></asp:TextBox>
+                               <asp:RequiredFieldValidator ID="RequiredFieldValidator21" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtApellidosC" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="mb-4 mt-2 orden col-sm-5 col-10 pb-3">
+                            <div><asp:Label runat="server" Text="Género:"></asp:Label></div>
+                             <asp:RadioButton ID="rdMasculinoC" GroupName="genero" runat="server" Text="Masculino"/>
+                             <asp:RadioButton ID="rdFemeninoC"  GroupName="genero" runat="server" Text="Femenino" />
+                             <asp:RadioButton ID="rdOtroC" GroupName="genero"  runat="server" Text="Otro" />
+                        </div>
+                        <div  class="mb-2 orden2 col-sm-5 col-10">
+                            <asp:Label runat="server" Text="Label">DNI:</asp:Label> 
+                            <asp:TextBox ID="txtDNIC" runat="server" class="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator22" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtDNIC" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div  class="mb-2 orden col-sm-5 col-10">
+                            <asp:Label runat="server" Text="Label">Localidad:</asp:Label>
+                            <asp:TextBox ID="txtLocalidadC" runat="server" class="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator23" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtLocalidadC" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </div>
+                         <div  class="mb-2 orden2 col-sm-5 col-10">
+                            <asp:Label runat="server" Text="Label">Código Postal:</asp:Label>
+                            <asp:TextBox ID="txtCpostalC" runat="server" class="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator24" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtCpostalC" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </div>
+                        </div>
+                        <div class="row">
+                           <div class="mb-2 orden col-sm-5 col-10">
+                               <asp:Label runat="server" Text="Label">Actividades:</asp:Label>
+                               <asp:CheckBoxList ID="cblActividades" runat="server">
+                                     <asp:ListItem Value="1">Deportes Acuáticos</asp:ListItem>
+                                     <asp:ListItem Value="2">Senderismo</asp:ListItem>
+                                     <asp:ListItem Value="3">Relajación</asp:ListItem>
+                                     <asp:ListItem Value="4">Rutas en bici</asp:ListItem>
+                                     <asp:ListItem Value="5">Expresión Corporal</asp:ListItem>
+                                     <asp:ListItem Value="6">Arte efímero</asp:ListItem>
+                               </asp:CheckBoxList>
                             </div>
-                            <div  class="mb-2 orden col-3">
-                                <asp:Label runat="server" Text="Label">Nombre:</asp:Label>
-                                <asp:TextBox ID="txtNombreC" runat="server" class="form-control"></asp:TextBox>
-                                  <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtNombreC" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <div class="mb-2 orden2 col-sm-5 col-10"> 
+                                <asp:Label runat="server" Text="">Año Nacimiento:</asp:Label>
+                                <asp:Calendar ID="calAnio"  class="form-control" runat="server"></asp:Calendar>
                             </div>
-                             <div  class="mb-2 orden2 col-3">
-                                <asp:Label runat="server" Text="Label">Apellidos:</asp:Label>
-                                <asp:TextBox ID="txtApellidosC" runat="server" class="form-control"></asp:TextBox>
-                                   <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtApellidosC" ForeColor="Red"></asp:RequiredFieldValidator>
-                            </div> 
-                        <div  class="mb-2 orden col-3">
-                                <asp:Label runat="server" Text="Label">DNI:</asp:Label> 
-                                <asp:TextBox ID="txtDNIC" runat="server" class="form-control"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtDNIC" ForeColor="Red"></asp:RequiredFieldValidator>
-                            </div>
-                           
-                            <div class="mt-2 orden col-3 pb-3">
-                                <div><asp:Label runat="server" Text="Género:"></asp:Label></div>
-                                 <asp:RadioButton ID="rdMasculinoC" GroupName="genero" runat="server" Text="Masculino"/>
-                                 <asp:RadioButton ID="rdFemeninoC"  GroupName="genero" runat="server" Text="Femenino" />
-                                 <asp:RadioButton ID="rdOtroC" GroupName="genero"  runat="server" Text="Otro" />
-                            </div>
-                           
-                            <div  class="mb-2 orden2 col-3">
-                                <asp:Label runat="server" Text="Label">Localidad:</asp:Label>
-                                <asp:TextBox ID="txtLocalidadC" runat="server" class="form-control"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtLocalidadC" ForeColor="Red"></asp:RequiredFieldValidator>
-                            </div>
-                         <div class="mt-2 orden col-3 pb-3">
-                                 <div><asp:Label runat="server" Text="Animales:"></asp:Label></div>
-                                 <asp:RadioButton ID="rdSi" GroupName="animales" runat="server" Text="Sí"/>
-                                 <asp:RadioButton ID="RdNo"  GroupName="animales" runat="server" Text="No" />
-                            </div>
-                         <div class="mt-2 orden col-3 pb-3">
-                                <div><asp:Label runat="server" Text="Pack Camp:"></asp:Label></div>
-                                 <asp:RadioButton ID="rdNun" GroupName="packCamp" runat="server" Text="No"/>
-                               <asp:RadioButton ID="rdGrandes" GroupName="packCamp"  runat="server" Text="Grandes" />
-                                 <asp:RadioButton ID="rdMayores"  GroupName="packCamp" runat="server" Text="Mayores" />
-                                 <asp:RadioButton ID="rdMenores" GroupName="packCamp"  runat="server" Text="Menores" />
-                            </div>
-                            <div class="mb-2 orden2 col-3">
-                                <asp:Label runat="server" Text="">Nº Personas:</asp:Label>
-                                <asp:TextBox ID="txtNumPersonas" runat="server" class="form-control"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtNumPersonas" ForeColor="Red"></asp:RequiredFieldValidator>
-                            </div>
-
-                             <div class="mb-2 orden col-3">
-                                 <asp:Label runat="server" Text="">Dieta:</asp:Label>
-                                 <asp:DropDownList ID="DropDownList1" class="form-control" runat="server">
+                        </div>
+                        <div class="row">
+                         <div class="mb-2 orden col-sm-3 col-10">
+                            <asp:Label runat="server" Text="">Nº Personas:</asp:Label>
+                            <asp:TextBox ID="txtNumPersonas" runat="server" class="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator25" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtNumPersonas" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </div>
+                        <div class="mb-2 orden col-sm-3 col-10">
+                            <asp:Label runat="server" Text="">Dieta:</asp:Label>
+                            <asp:DropDownList ID="ddlDieta" class="form-control" runat="server">
                                  <asp:ListItem Value="omnivoros">Omnívora</asp:ListItem>
                                  <asp:ListItem Value="ovolacteovegetariana">Ovolácteovegetariana</asp:ListItem>
                                  <asp:ListItem Value="vegetariana">Vegetariana</asp:ListItem>
-                                  <asp:ListItem Value="vegana">Vegana</asp:ListItem>
-                                  </asp:DropDownList>
-                                  <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="ddlDepartamento" ForeColor="Red"></asp:RequiredFieldValidator>
-                                  </div>
-                             <div class="mb-2 orden col-3">
+                                 <asp:ListItem Value="vegana">Vegana</asp:ListItem>
+                                 <asp:ListItem Value="repunantina">Repunantina</asp:ListItem>
+                             </asp:DropDownList>
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator26" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="ddlDieta" ForeColor="Red"></asp:RequiredFieldValidator>
+                        </div>
+                        </div>
+                         <div class="mb-2 orden col-sm-3 col-10">
                             <asp:Label runat="server" Text="">Alergias:</asp:Label>
-                            <asp:DropDownList ID="DropDownList2" class="form-control" runat="server">
+                            <asp:CheckBoxList ID="chkbAlergias" runat="server">
                                  <asp:ListItem Value="lactosa">Lactosa</asp:ListItem>
                                  <asp:ListItem Value="gluten">Glúten</asp:ListItem>
                                  <asp:ListItem Value="nueces">Cacahuetes y Nueces</asp:ListItem>
                                  <asp:ListItem Value="marisco">Marisco</asp:ListItem>
-                             </asp:DropDownList>
-                             <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="ddlDepartamento" ForeColor="Red"></asp:RequiredFieldValidator>
+                           </asp:CheckBoxList>
                         </div>
-                        <div class="mb-2 orden2 col-3">
-                            <asp:Label runat="server" Text="">Diversidades:</asp:Label>
-                            <asp:DropDownList ID="DropDownList3" class="form-control" runat="server">
-                                 <asp:ListItem Value="lactosa"> Física o motriz</asp:ListItem>
-                                 <asp:ListItem Value="gluten">Visual</asp:ListItem>
-                                 <asp:ListItem Value="nueces">Auditiva</asp:ListItem>
-                                 <asp:ListItem Value="marisco">Intelectual y psíquica</asp:ListItem>
-                                 <asp:ListItem Value="marisco">Multisensorial</asp:ListItem>
-                             </asp:DropDownList>
-                             <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="ddlDepartamento" ForeColor="Red"></asp:RequiredFieldValidator>
-                        </div>
-                    
-                            <div class="mb-4 mt-2 orden col-11">
-                                   <div><asp:Label runat="server" Text="Alojamiento:"></asp:Label></div>
-                                    <div class=" orden col-2">
-                                        <figure>
-                                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/7.jpg" alt="vivienda unifamiliar" />
-                                             <figcaption><asp:RadioButton ID="rbv1" GroupName="alojamiento" runat="server" Text="Tipo 1, "/>
-                                            <asp:Label ID="lblPrecio1" runat="server" Text="10 euros/noche"></asp:Label></figcaption>
-                                       </figure>
-                                    </div>
-                                    <div  class="orden col-2">
-                                         <figure>
-                                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/8.jpg" alt="vivienda unifamiliar" />
-                                            <figcaption><asp:RadioButton ID="rbv2" GroupName="alojamiento" runat="server" Text="Tipo 2,"/>
-                                             <asp:Label ID="lblPrecio2" runat="server" Text="15 euros/noche"></asp:Label></figcaption>
-                                        </figure>
-                                    </div>
-                                    <div  class=" orden col-2">
-                                        <figure>
-                                        <img class="img-fluid" src="assets/img/portfolio/thumbnails/9.jpg" alt="vivienda unifamiliar" />
-                                        <figcaption><asp:RadioButton ID="rbv3" GroupName="alojamiento" runat="server" Text="Tipo 3,"/>
-                                        <asp:Label ID="lblPrecio3" runat="server" Text="20 euros/noche"></asp:Label></figcaption>
-                                         </figure>
-                                    </div>
-                                    <div  class="orden col-2">
-                                        <figure>
-                                        <figcaption><img class="img-fluid" src="assets/img/portfolio/thumbnails/10.jpg" alt="vivienda unifamiliar" />
-                                        <asp:RadioButton ID="rbv4" GroupName="alojamiento" runat="server" Text="Tipo 4,"/>
-                                         <asp:Label ID="lblPrecio4" runat="server" Text="25 euros/noche"></asp:Label></figcaption></figure>
-                                    </div>
-                              </div>
-                               <!--Fecha inicio y fin de la reserva-->
-                          <div class="mb-4 mt-2 orden2 col-11">
-                                <div  class="mb-2 orden col-3">
-                                        <asp:Label runat="server" Text="">Año de nacimiento</asp:Label>
-                                        <asp:Calendar ID="calAnio" class="form-control" runat="server"></asp:Calendar>
-                                    </div>    
-                                <div  class="mb-2 orden col-3">
-                                        <asp:Label runat="server" Text="">Fecha Inicio</asp:Label>
-                                        <asp:Calendar ID="calInicio" class="form-control" runat="server"></asp:Calendar>
-                                    </div>
-                                 <div  class="mb-2 orden2 col-3">
-                                        <asp:Label runat="server" Text="">Fecha Fin</asp:Label>
-                                        <asp:Calendar ID="calFin" class="form-control" runat="server"></asp:Calendar>
-                                    </div>
-                              </div>
-                           <div class="mb-2 orden2 col-11">
-                            <asp:Label runat="server" Text="Label">¿Te interesarían las siguientes actividades?</asp:Label>
-                            <asp:DropDownList ID="ddlDepartamento" class="form-control" runat="server">
-                                 <asp:ListItem Value="1">Deportes Acuáticos</asp:ListItem>
-                                 <asp:ListItem Value="2">Senderismo</asp:ListItem>
-                                 <asp:ListItem Value="3">Meditación</asp:ListItem>
-                                 <asp:ListItem Value="4">Rutas en bici</asp:ListItem>
-                                 <asp:ListItem Value="5">Expresión Corporal</asp:ListItem>
-                                 <asp:ListItem Value="6">Arte efímero</asp:ListItem>
-                             </asp:DropDownList>
-                             <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="ddlDepartamento" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <div class="row">
+                        <div class="mb-4 mt-2 row orden2 col-10 pb-3">
+                           <div><asp:Label runat="server" Text="Alojamiento:"></asp:Label></div>
+                            <div class="col-sm-3 col-10" >
+                                <figure>
+                                <img class="img-fluid" src="assets/img/portfolio/thumbnails/7.jpg" alt="vivienda unifamiliar" />
+                                <figcaption><asp:RadioButton ID="rbv1" GroupName="alojamiento" runat="server" Text="Tipo 1"/></figcaption>
+                                </figure> 
+                            </div>
+                            <div  class="col-sm-3 col-10">
+                                <figure>
+                                <img class="img-fluid" src="assets/img/portfolio/thumbnails/8.jpg" alt="vivienda unifamiliar" />
+                               <figcaption><asp:RadioButton ID="rbv2" GroupName="alojamiento" runat="server" Text="Tipo 2" /></figcaption> 
+                                </figure>
+                            </div>
+                            <div  class="col-sm-3 col-10">
+                                <figure>
+                                <img class="img-fluid" src="assets/img/portfolio/thumbnails/9.jpg" alt="vivienda unifamiliar" />
+                                <figcaption><asp:RadioButton ID="rbv3" GroupName="alojamiento" runat="server" Text="Tipo 3"/></figcaption> 
+                                </figure>
+                            </div>
+                            <div  class="col-sm-3 col-10">
+                                <figure>
+                                <img class="img-fluid" src="assets/img/portfolio/thumbnails/10.jpg" alt="vivienda unifamiliar" />
+                                <figcaption><asp:RadioButton ID="rbv4" GroupName="alojamiento" runat="server" Text="Tipo 4"/></figcaption> 
+                                </figure>
+                            </div>
+                           </div>
                         </div>
                     </div>
             <!-- Submit Buttons-->
-                <div class="d-grid">  
-                    <asp:Button ID="btnReserva" value="Reserva" runat="server" class="btn btn-primary mb-3 mt-3 w-100" Text="Reserva"/>
+                <div class="d-grid">
+                       <asp:Button ID="btnReserva" value="Reserva" runat="server" class="btn btn-primary mt-2 w-100" Text="Reserva"/>
                 </div>
                        <asp:Label ID="lblConfirmacionC" runat="server" Text=""></asp:Label>
-             </form>       
+                       <asp:GridView ID="GridView3" class="orden2 mt-3" runat="server"></asp:GridView>
+             </form>
           </div>
         </header>
-          <!-- About-->
-        <section class="page-section bg-primary" id="acceso">
-            <div class="container px-4 px-lg-5">
-                 <asp:GridView ID="GridView3" class="orden2 mt-3" runat="server"></asp:GridView>
-           </div>
-          </section>
-           <!-- Footer-->
-        <footer class="bg-light py-5">
+          <footer class="bg-light py-5">
             <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Sonríe en Perlora</div></div>
         </footer>
         <!-- Bootstrap core JS-->

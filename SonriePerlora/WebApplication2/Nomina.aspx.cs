@@ -12,19 +12,6 @@ namespace WebApplication2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataClasses1DataContext SonriePerlora = new DataClasses1DataContext();
-            cargarCombo();
-            cargarGrid();
-        }
-        void cargarCombo() {
-            var cargarCombo = from p in SonriePerlora.Personal //QUË OCURREEEEEEEEEE TODO
-                              select p.DNI;
-            ddlConsulta.DataSource = cargarCombo; //TODO crear un botón de consulta
-        }
-
-        void cargarGrid() {
-            var cargarGrid = from p in SonriePerlora.Personal select p; //QUË OCURREEEEEEEEEE TODO
-            GridView1.DataSource = cargarGrid;
         }
 
         protected void btnAlta_Click(object sender, EventArgs e)
@@ -32,32 +19,20 @@ namespace WebApplication2
             string s = System.Configuration.ConfigurationManager.ConnectionStrings["cadenaconexion1"].ConnectionString;
             SqlConnection conexion = new SqlConnection(s);
             conexion.Open();
-            string genero;
-            int op=0;
-                switch (op)
-                {
-                    case 1 :
-                    rdMasculino.Checked = true;
-                        genero = "Masculino";
-                        break;
-                    case 2:
-                    rdFemenino.Checked = true;
-                        genero = "Femenino";
-                        break;
-                    case 3:
-                    rdFemenino.Checked = true; 
-                        genero = "Otro";
-                        break;
-                    default:
-                        genero = "error";
-                        break;
-                }
+            String genero="";
 
-            SqlCommand comando = new SqlCommand("insert into Personal(ID_Personal,Nombre,Apellidos,Genero,DNI, NSS, Localidad, Cpostal, ID_Departamento,Puesto) VALUES('" + this.txtID.Text + "','" + this.txtNombre.Text + "','" + this.txtApellidos.Text + "','" + genero + "','" + this.txtDNI.Text + "','" + this.txtNSS.Text + "','" + this.txtLocalidad.Text + "','" + this.txtCpostal.Text + "','" + this.txtID_Departamento.Text + "','" + this.ddlPuesto.Text + "')", conexion);
+            if (rdMasculino.Checked == true) {
+                genero = "Masculino";
+            } else if (rdFemenino.Checked == true) {
+                genero = "Femenino";
+            } else if (rdOtro.Checked == true) {
+                genero = "Otro";
+            }
+             
+            SqlCommand comando = new SqlCommand("insert into Personal(ID_Personal,Nombre,Apellidos,Genero,DNI, NSS, Localidad, Cpostal, ID_Departamento, TipoContrato, Puesto, TipoJornada, SalarioBruto, SalarioNeto) VALUES('" + this.txtID.Text + "','" + this.txtNombre.Text + "','" + this.txtApellidos.Text + "','" + genero + "','" + this.txtDNI.Text + "','" + this.txtNSS.Text + "','" + this.txtLocalidad.Text + "','" + this.txtCpostal.Text + "','" + this.txtID_Departamento.Text + "','" + this.ddlPuesto.Text + "')", conexion);
             comando.ExecuteNonQuery();
-            lblConfirmacionP.Text = "Personal Laboral registrado";
-            Personal.SonriePerlora.SubmitChanges();//QUË OCURREEEEEEEEEE TODO
-            cargarGrid();
+            SqlCommand comando2 = new SqlCommand("insert into Admin(usuario,pass, tipo)VALUES('" + this.txtUsuario.Text + "','" + this.txtPass.Text + "','"+"Personal"+"')", conexion);
+            lblConfirmacionP.Text = "Personal Laboral registrado.";
             conexion.Close();
         }
 
@@ -66,19 +41,15 @@ namespace WebApplication2
             string s = System.Configuration.ConfigurationManager.ConnectionStrings["cadenaconexion1"].ConnectionString;
             SqlConnection conexion = new SqlConnection(s);
             conexion.Open();
-            SqlCommand comando = new SqlCommand("delete from Personal where DNI='" + this.ddlConsulta.SelectedItem.ToString() + "'", conexion);
-            
-            SonriePerlora.Personal.DeleteOnSubmit();//Qué DEMONIOS Pasa aquí!!!!
-            SonriePerlora.Personal.SubmitChanges();
-
-            int DNI = comando.ExecuteNonQuery();
-            if (DNI == 1)
+            SqlCommand comando = new SqlCommand("delete from Personal where Nombre='" + this.ddlConsulta.Text + "'", conexion);
+            int Nombre = comando.ExecuteNonQuery();
+            if (Nombre == 1)
             {
-                lblConfirmacionP.Text = "Se dió de baja correctamente";
+                this.txtNombre.Text = "Se dió de baja correctamente.";
             }
             else
             {
-                lblConfirmacionP.Text = "No existe una persona con ese DNI";
+                this.txtNombre.Text = "No existe una persona con ese Nombre.";
                 conexion.Close();
             }
         }
@@ -108,14 +79,14 @@ namespace WebApplication2
                    
 
                     //definimos la cadena sql y la lanzamos
-                    string cadena = "Update Personal set ID_Personal ='" + ID + "', Nombre=" + nombre + "', Apellidos = " + apellidos + "', Genero = " + genero +"', DNI = '" + DNI + "', NSS = '" + NSS + "',Localidad = " + Localidad + "', Cpostal = " + Cpostal +"where id=" + ID;
+                    string cadena = "Update Personal set ID_Personal ='" + ID + "', Nombre=" + nombre + "', Apellidos = " + apellidos + "', Genero = " + genero +"', DNI = '" + DNI + "', NSS = '" + NSS + "',Localidad = " + Localidad + "', Cpostal = " + Cpostal +"', where id=" + ID;
                     SqlCommand comando = new SqlCommand(cadena, conexion);
                     int cant;
                     //EN CASP DE MODIFICARSE CON EXITO SE GUARDA EN LA VARIABLE CANT
                     cant = comando.ExecuteNonQuery();
                     if (cant == 1)
                     {
-                        lblConfirmacionP.Text="Se modificaron los datos del artículo";
+                        lblConfirmacionP.Text="Se modificaron los datos correctamente.";
                         txtID.Text="";
                         txtNombre.Text="";
                         txtApellidos.Text = "";
@@ -129,7 +100,7 @@ namespace WebApplication2
                     }
                     else
                     {
-                        lblConfirmacionP.Text = "No existe ninguna persona con el ID ingresado";
+                        lblConfirmacionP.Text = "No existe ninguna persona con el Nombre ingresado.";
                         conexion.Close();
                         
                     }
@@ -137,7 +108,7 @@ namespace WebApplication2
             } //FIN try
             catch
             {
-                lblConfirmacionP.Text = "Ha habido algún error";
+                lblConfirmacionP.Text = "Ha habido algún error.";
             }
             conexion.Close();
         }//FIN método

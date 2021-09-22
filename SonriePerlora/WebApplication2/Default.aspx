@@ -227,8 +227,8 @@
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
                                     <div class="fw-bolder">Formulario de registro hecho. </div>
-                                   <p> Para continuar con la reserva, sigue el siguiente link</p>
-                                    <button class="btn btn-primary btn-xl disabled" type="submit" href="Cliente.aspx"></button>
+                                   <p> Para continuar con la reserva, haz click en el botón</p>
+                                    <button class="btn btn-primary btn-xl" type="submit" href="Admin.aspx"></button>
                                 </div>
                             </div>
                             <!-- Submit error message-->
@@ -244,7 +244,7 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-4 text-center mb-5 mb-lg-0">
                         <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                        <div>+1 (555) 123-4567</div>
+                        <div>+34 (985) 123-4567</div>
                     </div>
                 </div>
             </div>
