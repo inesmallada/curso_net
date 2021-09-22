@@ -105,7 +105,7 @@
                             <asp:Label runat="server" Text="">Nº Personas:</asp:Label>
                             <asp:TextBox ID="txtNumPersonas" runat="server" class="form-control"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator25" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtNumPersonas" ForeColor="Red"></asp:RequiredFieldValidator>
-                        </div>
+                         </div>
                         <div class="mb-2 orden col-sm-3 col-10">
                             <asp:Label runat="server" Text="">Dieta:</asp:Label>
                             <asp:DropDownList ID="ddlDieta" class="form-control" runat="server">
@@ -132,29 +132,51 @@
                            <div><asp:Label runat="server" Text="Alojamiento:"></asp:Label></div>
                             <div class="col-sm-3 col-10" >
                                 <figure>
-                                <img class="img-fluid" src="assets/img/portfolio/thumbnails/7.jpg" alt="vivienda unifamiliar" />
-                                <figcaption><asp:RadioButton ID="rbv1" GroupName="alojamiento" runat="server" Text="Tipo 1"/></figcaption>
+                                   <img class="img-fluid" src="assets/img/portfolio/thumbnails/7.jpg" alt="vivienda unifamiliar" />
+                                   <figcaption><asp:RadioButton ID="rbv1" GroupName="alojamiento" runat="server" Text="Tipo 1, "/>
+                                   <asp:Label ID="lblPrecio1" runat="server" Text="10 euros/noche"></asp:Label></figcaption>
                                 </figure> 
                             </div>
                             <div  class="col-sm-3 col-10">
                                 <figure>
-                                <img class="img-fluid" src="assets/img/portfolio/thumbnails/8.jpg" alt="vivienda unifamiliar" />
-                               <figcaption><asp:RadioButton ID="rbv2" GroupName="alojamiento" runat="server" Text="Tipo 2" /></figcaption> 
+                                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/8.jpg" alt="vivienda unifamiliar" />
+                                    <figcaption><asp:RadioButton ID="rbv2" GroupName="alojamiento" runat="server" Text="Tipo 2,"/>
+                                    <asp:Label ID="lblPrecio2" runat="server" Text="15 euros/noche"></asp:Label></figcaption>
                                 </figure>
                             </div>
                             <div  class="col-sm-3 col-10">
-                                <figure>
-                                <img class="img-fluid" src="assets/img/portfolio/thumbnails/9.jpg" alt="vivienda unifamiliar" />
-                                <figcaption><asp:RadioButton ID="rbv3" GroupName="alojamiento" runat="server" Text="Tipo 3"/></figcaption> 
-                                </figure>
+                                 <figure>
+                                    <img class="img-fluid" src="assets/img/portfolio/thumbnails/9.jpg" alt="vivienda unifamiliar" />
+                                    <figcaption><asp:RadioButton ID="rbv3" GroupName="alojamiento" runat="server" Text="Tipo 3,"/>
+                                    <asp:Label ID="lblPrecio3" runat="server" Text="20 euros/noche"></asp:Label></figcaption>
+                                 </figure>
                             </div>
                             <div  class="col-sm-3 col-10">
-                                <figure>
-                                <img class="img-fluid" src="assets/img/portfolio/thumbnails/10.jpg" alt="vivienda unifamiliar" />
-                                <figcaption><asp:RadioButton ID="rbv4" GroupName="alojamiento" runat="server" Text="Tipo 4"/></figcaption> 
+                               <figure>
+                                   <img class="img-fluid" src="assets/img/portfolio/thumbnails/10.jpg" alt="vivienda unifamiliar" />
+                                   <figcaption><asp:RadioButton ID="rbv4" GroupName="alojamiento" runat="server" Text="Tipo 4,"/>
+                                   <asp:Label ID="lblPrecio4" runat="server" Text="25 euros/noche"></asp:Label></figcaption>
                                 </figure>
                             </div>
                            </div>
+                            <div class="row">  <!--Fecha inicio y fin de la reserva-->
+                            <div class="mb-4 mt-2 orden2 col-sm-3 col-10">
+                                <div  class="mb-2 orden col-3">
+                                        <asp:Label runat="server" Text="">Año de nacimiento</asp:Label>
+                                        <asp:Calendar ID="Calendar1" class="form-control" runat="server"></asp:Calendar>
+                                    </div>    
+                                <div  class="mb-2 orden col-sm-3 col-10">
+                                        <asp:Label runat="server" Text="">Fecha Inicio</asp:Label>
+                                        <asp:Calendar ID="calInicio" class="form-control" runat="server"></asp:Calendar>
+                                    </div>
+                                 <div  class="mb-2 orden2 col-sm-3 col-10">
+                                        <asp:Label runat="server" Text="">Fecha Fin</asp:Label>
+                                        <asp:Calendar ID="calFin" class="form-control" runat="server"></asp:Calendar>
+                                    </div>
+                              </div>
+
+
+                            </div>
                         </div>
                     </div>
             <!-- Submit Buttons-->

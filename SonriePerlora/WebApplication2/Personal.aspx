@@ -48,7 +48,8 @@
                             <asp:Label runat="server" Text="">CCC:33 123456789</asp:Label>
                       </div>
                       <div class="mb-2 orden2 col-sm-5 col-10">
-                            <asp:DropDownList ID="ddlConsultaC" runat="server"></asp:DropDownList>
+                          <asp:DropDownList ID="ddlConsultaC" runat="server" DataSourceID="SqlDataSource3" DataTextField="Nombre" DataValueField="Nombre"></asp:DropDownList>
+                          <asp:SqlDataSource runat="server" ID="SqlDataSource3" ConnectionString='<%$ ConnectionStrings:SonriePerloraConnectionString1 %>' SelectCommand="SELECT [Nombre] FROM [Cliente]"></asp:SqlDataSource>
                       </div>
                         </div>
                         <div class="row">
@@ -127,8 +128,31 @@
                                   <asp:LinkButton ID="btnConsultaC" runat="server" class="btn btn-primary orden mybtn mb-2" Text="" OnClick="btnConsultaC_Click"><i class="bi bi-search">Consulta</i></asp:LinkButton>
                               </div>
                        <asp:Label ID="lblConfirmacionC" runat="server" Text=""></asp:Label>
-                       <asp:GridView ID="GridView2" class="orden2" runat="server"></asp:GridView>
-             </form>
+                   <asp:GridView ID="GridView2" class="orden2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="ID_Cliente">
+                       <Columns>
+                           <asp:BoundField DataField="ID_Cliente" HeaderText="ID_Cliente" ReadOnly="True" SortExpression="ID_Cliente"></asp:BoundField>
+                           <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre"></asp:BoundField>
+                           <asp:BoundField DataField="Apellidos" HeaderText="Apellidos" SortExpression="Apellidos"></asp:BoundField>
+                           <asp:BoundField DataField="Genero" HeaderText="Genero" SortExpression="Genero"></asp:BoundField>
+                           <asp:BoundField DataField="DNI" HeaderText="DNI" SortExpression="DNI"></asp:BoundField>
+                           <asp:BoundField DataField="Edad" HeaderText="Edad" SortExpression="Edad"></asp:BoundField>
+                           <asp:BoundField DataField="Localidad" HeaderText="Localidad" SortExpression="Localidad"></asp:BoundField>
+                           <asp:BoundField DataField="NumPersonas" HeaderText="NumPersonas" SortExpression="NumPersonas"></asp:BoundField>
+                           <asp:BoundField DataField="Animales" HeaderText="Animales" SortExpression="Animales"></asp:BoundField>
+                           <asp:BoundField DataField="Habitacion" HeaderText="Habitacion" SortExpression="Habitacion"></asp:BoundField>
+                           <asp:BoundField DataField="Precio" HeaderText="Precio" SortExpression="Precio"></asp:BoundField>
+                           <asp:BoundField DataField="FechaInicio" HeaderText="FechaInicio" SortExpression="FechaInicio"></asp:BoundField>
+                           <asp:BoundField DataField="FechaFin" HeaderText="FechaFin" SortExpression="FechaFin"></asp:BoundField>
+                           <asp:BoundField DataField="PackCamp" HeaderText="PackCamp" SortExpression="PackCamp"></asp:BoundField>
+                           <asp:BoundField DataField="Dieta" HeaderText="Dieta" SortExpression="Dieta"></asp:BoundField>
+                           <asp:BoundField DataField="Alergias" HeaderText="Alergias" SortExpression="Alergias"></asp:BoundField>
+                           <asp:BoundField DataField="DiversidadFuncional" HeaderText="DiversidadFuncional" SortExpression="DiversidadFuncional"></asp:BoundField>
+                           <asp:BoundField DataField="ID_Departamento" HeaderText="ID_Departamento" SortExpression="ID_Departamento"></asp:BoundField>
+                       </Columns>
+                   </asp:GridView>
+
+                   <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:SonriePerloraConnectionString1 %>' SelectCommand="SELECT * FROM [Cliente]"></asp:SqlDataSource>
+               </form>
           </div>
         </header>
           <footer class="bg-light py-5">
