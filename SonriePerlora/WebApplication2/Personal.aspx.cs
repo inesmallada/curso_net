@@ -18,7 +18,7 @@ namespace WebApplication2
 
         protected void btnAltaC_Click(object sender, EventArgs e)
         {
-            string s = System.Configuration.ConfigurationManager.ConnectionStrings["cadenaconexion1"].ConnectionString.ToString();
+            string s = System.Configuration.ConfigurationManager.ConnectionStrings["SonriePerloraConnectionString1"].ConnectionString.ToString();
             SqlConnection conexion = new SqlConnection(s);
             conexion.Open();
             string genero="";
@@ -37,9 +37,10 @@ namespace WebApplication2
             {
                 genero = "Otro";
             }
-           SqlCommand comando1 = new SqlCommand("insert into Cliente(Nombre,Apellidos,Genero, DNI, Localidad, CPpostal, Departamento, FNacimiento, NumPersonas, Dieta, Alergias,  )VALUES('" + this.txtNombreC.Text + "','" + this.txtApellidosC.Text + "', "+ genero + " , '" + this.txtDNIC.Text + "', '" + this.txtLocalidadC.Text + "','" + this.txtCpostalC.Text + "','" + this.cblActividades.Text + "',"+ alergias+","+alojamiento+ ")", conexion);
-            //'" + this.calAnio.Text + "',*/'" + this.txtNumPersonas.Text + "','"+ this.ddlDieta.Value +"' OJOOOOOOOOOOOOO
-            SqlCommand comando2 = new SqlCommand("insert into Admin(usuario,pass, tipo)VALUES('" + this.txtUsuarioC.Text + "','" + this.txtPassC.Text + "','" + "Cliente" + "')", conexion);
+           //SqlCommand comando1 = new SqlCommand("insert into Cliente(ID_Cliente,Nombre,Apellidos,Genero, DNI, Edad, Localidad, NumPersonas, Animales, Habitacion, Precio, FechaInicio, FechaFin,PackCamp, Dieta, Alergias,DiversidadFuncional,ID_Departamento)" +
+           //    "VALUES('" + this.txtID_Cliente.Text + "','" + this.txtNombreC.Text + "','" + this.txtApellidosC.Text + "', "+ genero + " , '" + this.txtDNIC.Text + "', '" +0+ "', '" + this.txtLocalidadC.Text + "','" + this.txtNumPersonas.Valu + "','" + this.cblActividades.Text + "',"+ alergias+","+alojamiento+ ")", conexion);
+           // //'" + this.calAnio.Text + "',*/'" + this.txtNumPersonas.Text + "','"+ this.ddlDieta.Value +"' OJOOOOOOOOOOOOO
+           // SqlCommand comando2 = new SqlCommand("insert into Admin(usuario,pass, tipo)VALUES('" + this.txtUsuarioC.Text + "','" + this.txtPassC.Text + "','" + "Cliente" + "')", conexion);
         }
 
         protected void btnBajaC_Click(object sender, EventArgs e)
@@ -49,7 +50,7 @@ namespace WebApplication2
 
         protected void btnModiC_Click(object sender, EventArgs e)
         {
-            string s = System.Configuration.ConfigurationManager.ConnectionStrings["cadenaconexion1"].ConnectionString.ToString();
+            string s = System.Configuration.ConfigurationManager.ConnectionStrings["SonriePerloraConnectionString1"].ConnectionString.ToString();
             SqlConnection conexion = new SqlConnection(s);
             conexion.Open();
 

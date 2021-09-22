@@ -213,6 +213,15 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.CheckBoxList chkbAlergias;
 
         /// <summary>
+        /// Control DropDownList3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
+
+        /// <summary>
         /// Control rbv1.
         /// </summary>
         /// <remarks>
@@ -337,5 +346,14 @@ namespace WebApplication2
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView3;
+
+        /// <summary>
+        /// Control SqlDataSource4.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource4;
     }
 }

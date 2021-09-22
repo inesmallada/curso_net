@@ -101,32 +101,44 @@
                             </div>
                         </div>
                         <div class="row">
-                         <div class="mb-2 orden col-sm-3 col-10">
-                            <asp:Label runat="server" Text="">Nº Personas:</asp:Label>
-                            <asp:TextBox ID="txtNumPersonas" runat="server" class="form-control"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator25" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtNumPersonas" ForeColor="Red"></asp:RequiredFieldValidator>
-                         </div>
-                        <div class="mb-2 orden col-sm-3 col-10">
-                            <asp:Label runat="server" Text="">Dieta:</asp:Label>
-                            <asp:DropDownList ID="ddlDieta" class="form-control" runat="server">
-                                 <asp:ListItem Value="omnivoros">Omnívora</asp:ListItem>
-                                 <asp:ListItem Value="ovolacteovegetariana">Ovolácteovegetariana</asp:ListItem>
-                                 <asp:ListItem Value="vegetariana">Vegetariana</asp:ListItem>
-                                 <asp:ListItem Value="vegana">Vegana</asp:ListItem>
-                                 <asp:ListItem Value="repunantina">Repunantina</asp:ListItem>
-                             </asp:DropDownList>
-                             <asp:RequiredFieldValidator ID="RequiredFieldValidator26" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="ddlDieta" ForeColor="Red"></asp:RequiredFieldValidator>
+                             <div class="mb-2 orden col-sm-5 col-10">
+                                <asp:Label runat="server" Text="">Nº Personas:</asp:Label>
+                                <asp:TextBox ID="txtNumPersonas" runat="server" class="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator25" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="txtNumPersonas" ForeColor="Red"></asp:RequiredFieldValidator>
+                             </div>
+                            <div class="mb-2 orden col-sm-5 col-10">
+                                <asp:Label runat="server" Text="">Dieta:</asp:Label>
+                                <asp:DropDownList ID="ddlDieta" class="form-control" runat="server">
+                                     <asp:ListItem Value="omnivoros">Omnívora</asp:ListItem>
+                                     <asp:ListItem Value="ovolacteovegetariana">Ovolácteovegetariana</asp:ListItem>
+                                     <asp:ListItem Value="vegetariana">Vegetariana</asp:ListItem>
+                                     <asp:ListItem Value="vegana">Vegana</asp:ListItem>
+                                     <asp:ListItem Value="repunantina">Repunantina</asp:ListItem>
+                                 </asp:DropDownList>
+                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator26" runat="server" ErrorMessage="Campo Obligatorio" ControlToValidate="ddlDieta" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </div>
                         </div>
-                        </div>
-                         <div class="mb-2 orden col-sm-3 col-10">
-                            <asp:Label runat="server" Text="">Alergias:</asp:Label>
-                            <asp:CheckBoxList ID="chkbAlergias" runat="server">
-                                 <asp:ListItem Value="lactosa">Lactosa</asp:ListItem>
-                                 <asp:ListItem Value="gluten">Glúten</asp:ListItem>
-                                 <asp:ListItem Value="nueces">Cacahuetes y Nueces</asp:ListItem>
-                                 <asp:ListItem Value="marisco">Marisco</asp:ListItem>
-                           </asp:CheckBoxList>
-                        </div>
+                        <div class="row">
+                            <div class="mb-2 orden col-sm-3 col-10">
+                                <asp:Label runat="server" Text="">Alergias:</asp:Label>
+                                <asp:CheckBoxList ID="chkbAlergias" runat="server">
+                                     <asp:ListItem Value="lactosa">Lactosa</asp:ListItem>
+                                     <asp:ListItem Value="gluten">Glúten</asp:ListItem>
+                                     <asp:ListItem Value="nueces">Cacahuetes y Nueces</asp:ListItem>
+                                     <asp:ListItem Value="marisco">Marisco</asp:ListItem>
+                               </asp:CheckBoxList>
+                            </div>
+                             <div class="mb-2 orden2 col-sm-3 col-10">
+                                <asp:Label runat="server" Text="">Diversidades:</asp:Label>
+                                <asp:DropDownList ID="DropDownList3" class="form-control" runat="server">
+                                     <asp:ListItem Value="lactosa"> Física o motriz</asp:ListItem>
+                                     <asp:ListItem Value="gluten">Visual</asp:ListItem>
+                                     <asp:ListItem Value="nueces">Auditiva</asp:ListItem>
+                                     <asp:ListItem Value="marisco">Intelectual y psíquica</asp:ListItem>
+                                     <asp:ListItem Value="marisco">Multisensorial</asp:ListItem>
+                                 </asp:DropDownList>
+                            </div>
+                        </div> 
                         <div class="row">
                         <div class="mb-4 mt-2 row orden2 col-10 pb-3">
                            <div><asp:Label runat="server" Text="Alojamiento:"></asp:Label></div>
@@ -174,8 +186,6 @@
                                         <asp:Calendar ID="calFin" class="form-control" runat="server"></asp:Calendar>
                                     </div>
                               </div>
-
-
                             </div>
                         </div>
                     </div>
@@ -184,8 +194,30 @@
                        <asp:Button ID="btnReserva" value="Reserva" runat="server" class="btn btn-primary mt-2 w-100" Text="Reserva"/>
                 </div>
                        <asp:Label ID="lblConfirmacionC" runat="server" Text=""></asp:Label>
-                       <asp:GridView ID="GridView3" class="orden2 mt-3" runat="server"></asp:GridView>
-             </form>
+                   <asp:GridView ID="GridView3" class="orden2 mt-3" runat="server" AutoGenerateColumns="False" DataKeyNames="ID_Cliente" DataSourceID="SqlDataSource4">
+                       <Columns>
+                           <asp:BoundField DataField="ID_Cliente" HeaderText="ID_Cliente" ReadOnly="True" SortExpression="ID_Cliente"></asp:BoundField>
+                           <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre"></asp:BoundField>
+                           <asp:BoundField DataField="Apellidos" HeaderText="Apellidos" SortExpression="Apellidos"></asp:BoundField>
+                           <asp:BoundField DataField="Genero" HeaderText="Genero" SortExpression="Genero"></asp:BoundField>
+                           <asp:BoundField DataField="DNI" HeaderText="DNI" SortExpression="DNI"></asp:BoundField>
+                           <asp:BoundField DataField="Edad" HeaderText="Edad" SortExpression="Edad"></asp:BoundField>
+                           <asp:BoundField DataField="Localidad" HeaderText="Localidad" SortExpression="Localidad"></asp:BoundField>
+                           <asp:BoundField DataField="NumPersonas" HeaderText="NumPersonas" SortExpression="NumPersonas"></asp:BoundField>
+                           <asp:BoundField DataField="Animales" HeaderText="Animales" SortExpression="Animales"></asp:BoundField>
+                           <asp:BoundField DataField="Habitacion" HeaderText="Habitacion" SortExpression="Habitacion"></asp:BoundField>
+                           <asp:BoundField DataField="Precio" HeaderText="Precio" SortExpression="Precio"></asp:BoundField>
+                           <asp:BoundField DataField="FechaInicio" HeaderText="FechaInicio" SortExpression="FechaInicio"></asp:BoundField>
+                           <asp:BoundField DataField="FechaFin" HeaderText="FechaFin" SortExpression="FechaFin"></asp:BoundField>
+                           <asp:BoundField DataField="PackCamp" HeaderText="PackCamp" SortExpression="PackCamp"></asp:BoundField>
+                           <asp:BoundField DataField="Dieta" HeaderText="Dieta" SortExpression="Dieta"></asp:BoundField>
+                           <asp:BoundField DataField="Alergias" HeaderText="Alergias" SortExpression="Alergias"></asp:BoundField>
+                           <asp:BoundField DataField="DiversidadFuncional" HeaderText="DiversidadFuncional" SortExpression="DiversidadFuncional"></asp:BoundField>
+                           <asp:BoundField DataField="ID_Departamento" HeaderText="ID_Departamento" SortExpression="ID_Departamento"></asp:BoundField>
+                       </Columns>
+                   </asp:GridView>
+                   <asp:SqlDataSource runat="server" ID="SqlDataSource4" ConnectionString='<%$ ConnectionStrings:SonriePerloraConnectionString1 %>' SelectCommand="SELECT * FROM [Cliente]"></asp:SqlDataSource>
+               </form>
           </div>
         </header>
           <footer class="bg-light py-5">

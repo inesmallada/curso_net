@@ -49,8 +49,9 @@
                             <asp:Label runat="server" Text="">CCC:33 123456789</asp:Label>
                       </div>
                       <div class="mb-2 orden2 col-sm-5 col-10">
-                            <asp:DropDownList ID="ddlConsulta" runat="server"></asp:DropDownList>
-                      </div>
+                            <asp:DropDownList ID="ddlConsulta" runat="server" DataSourceID="SqlDataSource2" DataTextField="Nombre" DataValueField="Nombre"></asp:DropDownList>
+    <asp:SqlDataSource runat="server" ID="SqlDataSource2" ConnectionString='<%$ ConnectionStrings:SonriePerloraConnectionString1 %>' SelectCommand="SELECT [ID_Personal], [Nombre], [Apellidos], [Genero], [DNI], [NSS], [Localidad], [Cpostal], [ID_Departamento], [Puesto] FROM [Personal]"></asp:SqlDataSource>
+</div>
                       </div>
                       <div class="row">
                         <div class="mb-2 orden col-sm-5 col-10">
@@ -205,9 +206,21 @@
                       <br />
                       <br />
                       <asp:Label ID="lblConfirmacionP" runat="server" Text=""></asp:Label>
-                      <asp:GridView ID="GridView1" class="orden2" runat="server" DataSourceID="SqlDataSource1">
-                      </asp:GridView>
-                      <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+                      <asp:GridView ID="GridView1" class="orden2" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" DataKeyNames="ID_Personal">
+        <Columns>
+            <asp:BoundField DataField="ID_Personal" HeaderText="ID_Personal" ReadOnly="True" SortExpression="ID_Personal"></asp:BoundField>
+            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre"></asp:BoundField>
+            <asp:BoundField DataField="Apellidos" HeaderText="Apellidos" SortExpression="Apellidos"></asp:BoundField>
+            <asp:BoundField DataField="Genero" HeaderText="Genero" SortExpression="Genero"></asp:BoundField>
+            <asp:BoundField DataField="DNI" HeaderText="DNI" SortExpression="DNI"></asp:BoundField>
+            <asp:BoundField DataField="NSS" HeaderText="NSS" SortExpression="NSS"></asp:BoundField>
+            <asp:BoundField DataField="Localidad" HeaderText="Localidad" SortExpression="Localidad"></asp:BoundField>
+            <asp:BoundField DataField="Cpostal" HeaderText="Cpostal" SortExpression="Cpostal"></asp:BoundField>
+            <asp:BoundField DataField="Puesto" HeaderText="Puesto" SortExpression="Puesto"></asp:BoundField>
+            <asp:BoundField DataField="ID_Departamento" HeaderText="ID_Departamento" SortExpression="ID_Departamento"></asp:BoundField>
+        </Columns>
+    </asp:GridView>
+                      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ ConnectionStrings:SonriePerloraConnectionString1 %>' SelectCommand="SELECT [ID_Personal], [Nombre], [Apellidos], [Genero], [DNI], [NSS], [Localidad], [Cpostal], [Puesto], [ID_Departamento] FROM [Personal]"></asp:SqlDataSource>
              </form>
           </div>
         </header>
