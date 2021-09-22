@@ -15,11 +15,8 @@ namespace WebApplication2
 
         }
 
-      
-
         protected void btnAcceso_Click(object sender, EventArgs e)
         {   
-        
             var usuario = txtUsuario.Value;
             var pass = txtPass.Value;
             if (usuario == "admin" && pass == "1234")
@@ -30,7 +27,6 @@ namespace WebApplication2
             {
                 lblConfirmacion.Text = "Usuario no existente";
             }
-         
         }
     }
 } 

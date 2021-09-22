@@ -41,25 +41,37 @@ namespace WebApplication2
                 {
                     genero = "Otro";
                 }
-                SqlCommand comando = new SqlCommand("insert into Cliente(ID_Cliente,Nombre,Apellidos,Genero, DNI, Edad, Localidad, NumPersonas, Animales, Habitacion, Precio, FechaInicio, FechaFin,PackCamp, Dieta, Alergias,DiversidadFuncional,ID_Departamento) VALUES('" + txtID_Cliente.Text + "','" + this.txtNombreC.Text + "','" + this.txtApellidosC.Text + "', " + genero + " , '" + this.txtDNIC.Text + "', '" + 0 + "', '" + this.txtLocalidadC.Text + "','" + 0+ "','" + this.cblActividades.Text + "','" + "" + "',"' + "" + '")", conexion);
+                SqlCommand comando = new SqlCommand("insert into Cliente(ID_Cliente,Nombre,Apellidos,Genero, DNI, Edad, Localidad, NumPersonas, Animales, Habitacion, Precio, FechaInicio, FechaFin,PackCamp, Dieta, Alergias,DiversidadFuncional,ID_Departamento) VALUES('" + txtID_Cliente.Text + "','" + this.txtNombreC.Text + "','" + this.txtApellidosC.Text + "', " + genero + " , '" + this.txtDNIC.Text + "', '" + 0 + "', '" + this.txtLocalidadC.Text + "','" + 0+ "','" + "" + "','" + "" + "','" + 0 + "','" + ""+ "','" + "" + "','" + "" + "','" +"" + "','" +"" + "','" + "" + "')", conexion);
                 comando.ExecuteNonQuery();
-                SqlCommand comando2 = new SqlCommand("insert into Admin(usuario,pass, tipo)VALUES('" + this.txtUsuarioC.Text + "','" + this.txtPassC.Text + "','" + "Personal" + "')", conexion);
+                SqlCommand comando2 = new SqlCommand("insert into Admin(usuario,pass, tipo)VALUES('" + this.txtUsuarioC.Text + "','" + this.txtPassC.Text + "','" + "Cliente" + "')", conexion);
                 lblConfirmacionC.Text = "Registro hecho correctamente.";
                 Response.Redirect("Personal.aspx", true);
                 conexion.Close();
 
             }
-
-          
-           //SqlCommand comando1 = new SqlCommand("insert into Cliente(ID_Cliente,Nombre,Apellidos,Genero, DNI, Edad, Localidad, NumPersonas, Animales, Habitacion, Precio, FechaInicio, FechaFin,PackCamp, Dieta, Alergias,DiversidadFuncional,ID_Departamento)" +
-           //    "VALUES('" + this.txtID_Cliente.Text + "','" + this.txtNombreC.Text + "','" + this.txtApellidosC.Text + "', "+ genero + " , '" + this.txtDNIC.Text + "', '" +0+ "', '" + this.txtLocalidadC.Text + "','" + this.txtNumPersonas.Valu + "','" + this.cblActividades.Text + "',"+ alergias+","+alojamiento+ ")", conexion);
-           // //'" + this.calAnio.Text + "',*/'" + this.txtNumPersonas.Text + "','"+ this.ddlDieta.Value +"' OJOOOOOOOOOOOOO
-           // SqlCommand comando2 = new SqlCommand("insert into Admin(usuario,pass, tipo)VALUES('" + this.txtUsuarioC.Text + "','" + this.txtPassC.Text + "','" + "Cliente" + "')", conexion);
         }
 
         protected void btnBajaC_Click(object sender, EventArgs e)
         {
+            string s = System.Configuration.ConfigurationManager.ConnectionStrings["SonriePerloraConnectionString1"].ConnectionString.ToString();
+            SqlConnection conexion = new SqlConnection(s);
+            conexion.Open();
 
+
+            SqlCommand comando = new SqlCommand("delete from Cliente where Nombre='" + this.ddlConsultaC.Text + "'", conexion);
+            int Nombre = comando.ExecuteNonQuery();
+            if (Nombre == 1)
+            {
+
+                this.lblConfirmacionC.Text = "Se dió de baja correctamente.";
+                //TODO
+                Response.Redirect("Personal.aspx", true);
+            }
+            else
+            {
+                this.lblConfirmacionC.Text = "No existe una persona con ese Nombre.";
+                conexion.Close();
+            }
         }
 
         protected void btnModiC_Click(object sender, EventArgs e)
@@ -149,7 +161,25 @@ namespace WebApplication2
 
         protected void btnConsultaC_Click(object sender, EventArgs e)
         {
-
+            string s = System.Configuration.ConfigurationManager.ConnectionStrings["SonriePerloraConnectionString1"].ConnectionString.ToString();
+            SqlConnection conexion = new SqlConnection(s);
+            conexion.Open();
+            SqlCommand comando = new SqlCommand("select ID_Cliente,Nombre,Apellidos,Genero, DNI, Edad, Localidad, NumPersonas, Animales, Habitacion, Precio, FechaInicio, FechaFin,PackCamp, Dieta, Alergias,DiversidadFuncional,ID_Departamento from Cliente " +
+                "where Nombre='" + this.ddlConsultaC.Text + "'", conexion);
+            SqlDataReader registro = comando.ExecuteReader();
+            if (registro.Read())
+            {   
+                this.txtID_Cliente.Text = registro["ID_Cliente"].ToString();
+                this.txtNombreC.Text = registro["Nombre"].ToString();
+                this.txtApellidosC.Text = registro["Apellidos"].ToString();
+                this.txtLocalidadC.Text = registro["Genero"].ToString();
+                this.txtDNIC.Text = registro["DNI"].ToString();   
+            }
+            else
+            {
+                this.lblConfirmacionC.Text = "No existe una persona contratada con dicho Nombre";
+                conexion.Close();
+            }
         }
     }
 }
