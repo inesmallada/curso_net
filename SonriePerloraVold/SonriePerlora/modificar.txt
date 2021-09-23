@@ -1,0 +1,86 @@
+string s = System.Configuration.ConfigurationManager.ConnectionStrings["SonriePerloraConnectionString1"].ConnectionString.ToString();
+            SqlConnection conexion = new SqlConnection(s);
+            conexion.Open();
+            
+            try
+            {
+                //si algun textbox está en blanco no funcionaría en if
+                if (txtID.Text == "" || txtNombre.Text == "" || txtApellidos.Text == "" || txtDNI.Text == "" || txtNSS.Text == "" || txtLocalidad.Text == "" || txtCpostal.Text == "" || txtID_Departamento.Text == "" || ddlPuesto.Text == "")
+                {
+                    SqlCommand comando1 = new SqlCommand("select ID_Personal, Nombre, Apellidos, DNI, NSS, Localidad, Cpostal, ID_Departamento, Puesto from Personal " +
+                 "where Nombre='" + this.ddlConsulta.Text + "'", conexion);
+                    SqlDataReader registro = comando1.ExecuteReader();
+                    if (registro.Read())
+                    {
+                        this.txtNombre.Text = registro["Nombre"].ToString();
+                        this.txtID.Text = registro["ID_Personal"].ToString();
+                        this.txtApellidos.Text = registro["Apellidos"].ToString();
+                        this.txtDNI.Text = registro["DNI"].ToString();
+                        this.txtNSS.Text = registro["NSS"].ToString();
+                        this.txtLocalidad.Text = registro["Localidad"].ToString();
+                        this.txtCpostal.Text = registro["Cpostal"].ToString();
+                        this.txtID_Departamento.Text = registro["ID_Departamento"].ToString();
+                        this.ddlPuesto.Text = registro["Puesto"].ToString();
+
+                    }
+                }
+                else 
+                {
+                    string ID = txtID.Text;
+                    string nombre = txtNombre.Text;
+                    string apellidos = txtApellidos.Text;
+                    string DNI = txtDNI.Text;
+                    string NSS = txtNSS.Text;
+                    string Localidad = txtLocalidad.Text;
+                    string Cpostal = txtCpostal.Text;
+                    string ID_Departamento = txtID_Departamento.Text;
+                    string Puesto = ddlPuesto.Text;
+                    //valor del radio button Genero
+                    string genero = "";
+                    if (rdMasculino.Checked == true)
+                    {
+                        genero = "Masculino";
+                    }
+                    else if (rdFemenino.Checked == true)
+                    {
+                        genero = "Femenino";
+                    }
+                    else if (rdOtro.Checked == true)
+                    {
+                        genero = "Otro";
+                    }
+                    //definimos la cadena sql y la lanzamos
+                    string cadena = "Update Personal set ID_Personal ='" + ID + "', Nombre='" + nombre + "', Apellidos = '" + apellidos + "', Genero = '" + genero + "', DNI = '" + DNI + "', NSS = '" + NSS + "', Localidad = '" + Localidad + "', Cpostal = '" + Cpostal + "', ID_Departamento = '" + ID_Departamento + "', Puesto = '" + Puesto + "', where Nombre='" + nombre;
+                    SqlCommand comando = new SqlCommand(cadena, conexion);
+                    int cant;
+
+                    //EN CASP DE MODIFICARSE CON EXITO SE GUARDA EN LA VARIABLE CANT
+                    cant = comando.ExecuteNonQuery();
+                    if (cant == 1)
+                    {
+                        lblConfirmacionP.Text = "Se modificaron los datos correctamente.";
+                        txtID.Text = "";
+                        txtNombre.Text = "";
+                        txtApellidos.Text = "";
+                        txtDNI.Text = "";
+                        txtNSS.Text = "";
+                        txtLocalidad.Text = "";
+                        txtCpostal.Text = "";
+                        txtID_Departamento.Text = "";
+                        ddlPuesto.Text = "";
+                        Response.Redirect("Nomina.aspx", true);
+                    }
+                    else
+                    {
+                        lblConfirmacionP.Text = "No existe ninguna persona con el Nombre ingresado.";
+                        conexion.Close();
+                    }
+                
+                }//FIN IF ELSE
+            } //FIN try
+            catch
+            {
+                lblConfirmacionP.Text = "Ha habido algún error.";
+            }
+            conexion.Close();
+        }//FIN método
